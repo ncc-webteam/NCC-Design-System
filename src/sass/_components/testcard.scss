@@ -1,0 +1,21 @@
+.card-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.test-card {
+  max-width: 300px;
+  max-height: 400px;
+  border: solid orange 2px;
+  background-color: skyblue;
+
+  .card-body {
+    .card-title {
+      // background-color: red;
+      color: #151515;
+    }
+    .card-text {
+      color: #444;
+    }
+  }
+}

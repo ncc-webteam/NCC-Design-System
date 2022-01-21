@@ -1,0 +1,17 @@
+{% macro testcard(title, text) %}
+
+  <div class="test-card">
+    <div class="card-body">
+
+      {% if title|length %}
+      <h2 class="card-title">{{ title }}</h2>
+      {% else %}{% endif %}
+
+      {% if text|length %}
+      <p class="card-text">{{ text }}</p>
+      {% else %}{% endif %}
+      
+    </div>
+  </div>
+
+{% endmacro %}

@@ -1,0 +1,21 @@
+{% extends "template.njk" %}
+
+{% import "_pattern_macros/testcard.njk" as testcard %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+
+<h2>This is the home page</h2>
+
+<p>This is a paragraph.</p>
+
+<p class="red-text">This is another paragraph.</p>
+
+<div class="card-wrapper">
+  {{ testcard.testcard('A Card Title', 'This is some random text for the card') }}
+  {{ testcard.testcard('Card 2', '') }}
+  {{ testcard.testcard('Card 3', 'Some more text!') }}
+</div>
+
+{% endblock %}

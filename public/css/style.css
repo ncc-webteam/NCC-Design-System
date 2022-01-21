@@ -1,0 +1,39 @@
+.card-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.test-card {
+  max-width: 300px;
+  max-height: 400px;
+  border: solid orange 2px;
+  background-color: skyblue;
+}
+.test-card .card-body .card-title {
+  color: #151515;
+}
+.test-card .card-body .card-text {
+  color: #444;
+}
+
+html {
+  background-color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  background-color: #111;
+}
+main h2 {
+  color: aqua;
+}
+main p {
+  font-size: 1.125rem;
+  color: #eee;
+}
+
+footer {
+  color: #aaa;
+}
+
+/*# sourceMappingURL=style.css.map */
