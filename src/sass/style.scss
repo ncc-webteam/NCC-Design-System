@@ -1,5 +1,9 @@
 @import "_bootstrap/bootstrap";
-@import "_components/testcard";
+
+@import
+  "_components/testcard",
+  "_components/footer"
+;
 
 html {
   background-color: $light;
@@ -25,11 +29,4 @@ p {
   color: white;
   padding: 10px 40px;
   p { color: white; }
-}
-
-footer {
-  background-color: $dark;
-  p { color: $gray-500; }
-  padding: 30px;
-  text-align: center;
 }

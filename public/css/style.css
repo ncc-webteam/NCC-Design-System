@@ -11136,6 +11136,15 @@ textarea.form-control-lg {
   color: #444;
 }
 
+footer {
+  background-color: #212529;
+  padding: 30px;
+  text-align: center;
+}
+footer p {
+  color: #adb5bd;
+}
+
 html {
   background-color: #f8f9fa;
 }
@@ -11161,15 +11170,6 @@ p {
 }
 .homepage-stage p {
   color: white;
-}
-
-footer {
-  background-color: #212529;
-  padding: 30px;
-  text-align: center;
-}
-footer p {
-  color: #adb5bd;
 }
 
 /*# sourceMappingURL=style.css.map */
