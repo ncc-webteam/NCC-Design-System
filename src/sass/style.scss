@@ -1,22 +1,24 @@
+@import "_bootstrap/bootstrap";
 @import "_components/testcard";
 
 html {
-  background-color: #eee;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  margin: 0;
+  background-color: $light;
+  // font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
-  min-height: calc(100vh - 110px);
-  
-  p {
-    font-size: 1.125rem;
-    color: #111;
-  }
+  min-height: calc(100vh - 100px);
 }
+
+p {
+  font-size: 1.125rem;
+  color: $dark;
+}
+.lead {
+  font-weight: 600;
+  font-size: 1.375rem;
+}
+
 
 .homepage-stage {
   background-color: #006666;
@@ -26,9 +28,8 @@ main {
 }
 
 footer {
-  background-color: #333;
-  color: #bbb;
+  background-color: $dark;
+  p { color: $gray-500; }
   padding: 30px;
   text-align: center;
-  
 }
