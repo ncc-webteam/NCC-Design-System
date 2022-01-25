@@ -3,7 +3,7 @@ let Nunjucks = require("nunjucks");
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src/sass/");
-  eleventyConfig.addPassthroughCopy("./src/css/");
+  eleventyConfig.addPassthroughCopy("./src/img/");
 
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader("src/_includes")
