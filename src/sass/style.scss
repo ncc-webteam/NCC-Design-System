@@ -1,8 +1,26 @@
-@import "_bootstrap/bootstrap";
+@import "bootstrap";
+
+$focus-colour: #ffdd00;
+$focus-text-colour: #0b0c0c;
+
+$body-colour: #111;
+$body-text-colour: $light;
+// light theme
+$body-colour-light: $light;
+$body-text-colour-light: $dark;
+
+@mixin ani {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    transition: none;
+  }
+}
+
 
 @import
-  "_components/testcard",
-  "_components/footer"
+  "components/testcard",
+  "components/footer"
 ;
 
 html {
