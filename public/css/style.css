@@ -11137,20 +11137,29 @@ textarea.form-control-lg {
 }
 
 footer {
+  flex-shrink: 0;
   background-color: #212529;
   padding: 30px;
   text-align: center;
 }
 footer p {
   color: #adb5bd;
+  margin: 0;
 }
 
 html {
   background-color: #f8f9fa;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  min-height: calc(100vh - 103px);
+  flex: 1 0 auto;
 }
 
 p {
