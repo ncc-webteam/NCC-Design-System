@@ -11192,4 +11192,28 @@ h2 code, .h2 code {
   font-size: 1.5rem;
 }
 
+#componentsListAccordion {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  #componentsListAccordion {
+    display: block;
+  }
+}
+
+#componentsListSidebar {
+  display: block;
+}
+@media (max-width: 767.98px) {
+  #componentsListSidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-item {
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
