@@ -11281,6 +11281,230 @@ textarea.form-control-lg {
   color: #495057;
 }
 
+header {
+  background-color: #350C78;
+}
+header .content-skip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+}
+header .content-skip .skip-to {
+  font-weight: bold;
+  border: none;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  position: absolute;
+}
+header .content-skip:focus-within .skip-to {
+  background-color: #ffdd00;
+  color: #0b0c0c;
+  outline: none;
+  border: none;
+  height: auto;
+  width: 100%;
+  overflow: visible;
+  position: static;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.375rem;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  header .container {
+    flex-direction: column;
+  }
+}
+
+.top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .top-wrapper {
+    width: 100%;
+    align-self: flex-start;
+  }
+}
+.top-wrapper #main-logo {
+  display: flex;
+  flex-direction: column;
+  color: #f8f9fa;
+}
+.top-wrapper #main-logo .top {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.top-wrapper #main-logo .bottom {
+  font-weight: 200;
+  font-size: 1.25rem;
+}
+.top-wrapper #main-logo:hover {
+  text-decoration: underline;
+}
+@media (max-width: 575.98px) {
+  .top-wrapper #main-logo .top {
+    font-size: 1.125rem;
+  }
+  .top-wrapper #main-logo .bottom {
+    font-size: 0.875rem;
+  }
+}
+.top-wrapper #navbarToggler {
+  display: none;
+  border: solid white 2px;
+  border-radius: 6px;
+  min-height: 50px;
+  width: 92px;
+  color: white;
+  transition: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .top-wrapper #navbarToggler {
+    animation: none;
+    transition: none;
+  }
+}
+.top-wrapper #navbarToggler svg {
+  transform: translateY(-10%);
+}
+.top-wrapper #navbarToggler:active {
+  outline: none;
+  box-shadow: none;
+}
+.top-wrapper #navbarToggler:hover {
+  background-color: #212529;
+}
+.top-wrapper #navbarToggler:focus {
+  transition: none;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  border-color: #ffdd00;
+  outline: none;
+  box-shadow: none;
+}
+.top-wrapper #navbarToggler:focus path {
+  fill: #0b0c0c;
+}
+@media (max-width: 767.98px) {
+  .top-wrapper #navbarToggler {
+    display: block;
+  }
+}
+
+.navbar {
+  background-color: white;
+}
+@media (max-width: 767.98px) {
+  .navbar {
+    padding: 0;
+  }
+}
+.navbar a {
+  color: #212529;
+  font-size: 1.125rem;
+}
+.navbar a:hover {
+  color: black;
+}
+.navbar a:active {
+  color: black;
+}
+.navbar a:focus {
+  transition: none;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  outline: none;
+}
+
+.main-search-area {
+  height: 40px;
+}
+@media (max-width: 767.98px) {
+  .main-search-area {
+    width: 100%;
+    margin: 10px 0 10px 0;
+  }
+}
+.main-search-area input {
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+}
+.main-search-area input:focus {
+  transition: none;
+  border-color: #ffdd00;
+  outline: solid 4px #ffdd00;
+  box-shadow: none;
+}
+.main-search-area button {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  font-size: 1rem;
+  font-weight: 600;
+  align-items: center;
+}
+@media (max-width: 575.98px) {
+  .main-search-area button {
+    height: 40px;
+  }
+}
+.main-search-area button:hover {
+  color: white;
+  background-color: #212529;
+}
+.main-search-area button:focus {
+  transition: none;
+  border-color: #ffdd00;
+  background-color: #ffdd00;
+  color: #0b0c0c;
+  outline: none;
+  box-shadow: none;
+}
+.main-search-area button:focus path {
+  fill: #0b0c0c;
+}
+.main-search-area button:active:focus {
+  box-shadow: none;
+}
+.main-search-area button svg {
+  transform: translateX(-20%);
+  margin-right: 5px;
+}
+
+.offcanvas-nav {
+  text-align: center;
+  list-style: none;
+}
+.offcanvas-nav .nav-link {
+  color: #212529;
+  font-size: 1.375rem;
+}
+.offcanvas-nav .nav-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+.offcanvas-nav .nav-link:focus {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  text-decoration: underline;
+  outline: none;
+  border: none;
+  transition: none;
+}
+
 footer {
   flex-shrink: 0;
   background-color: #212529;

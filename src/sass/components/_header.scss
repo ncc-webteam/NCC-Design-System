@@ -1,0 +1,259 @@
+// .navbar {
+//   background-color: #350C78;
+
+//   #navbarSupportedContent {
+//     .navbar-nav {
+//       display: none;
+
+//       @include media-breakpoint-down(md) { display: block; }
+//     }
+//   }
+
+//   .navbar-brand {
+//     display: flex;
+//     flex-direction: column;
+    
+//     .top {
+//       font-weight: 600;
+//       font-size: 1.5rem;
+//     }
+//     .bottom {
+//       font-weight: 200;
+//       font-size: 1.25rem;
+//     }
+
+//     &:hover {
+//       text-decoration: underline;
+//     }
+//   }
+// }
+
+header {
+
+  .content-skip {
+    .skip-to {
+      font-weight: bold;
+      border: none;
+      height: 1px; 
+      width: 1px; 
+      overflow: hidden;
+      clip: rect(1px,1px,1px,1px);
+      padding: 0;
+      position: absolute;
+    }
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    
+    
+    &:focus-within {
+      .skip-to {
+        background-color: $focus-colour;
+        color: $focus-text-colour;
+        outline: none;
+        border: none;
+        height: auto; 
+        width: 100%; 
+        overflow: visible;
+        position: static;
+        padding: 15px;
+        text-align: center;
+        font-size: 1.375rem;
+      }
+    }
+  }
+
+  background-color: #350C78;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+}
+
+.top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    align-self: flex-start;
+  }
+  
+  #main-logo {
+    display: flex;
+    flex-direction: column;
+    color: $light;
+        
+    .top {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+    .bottom {
+      font-weight: 200;
+      font-size: 1.25rem;
+    }
+    
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include media-breakpoint-down(sm) {
+      .top { font-size: 1.125rem; }
+      .bottom { font-size: 0.875rem; }
+    }
+  }
+
+  #navbarToggler {
+    display: none;
+    border: solid white 2px;
+    border-radius: 6px;
+    min-height: 50px;
+    width: 92px;
+    color: white;
+    transition: none;
+    @include ani;
+    
+    svg {
+      transform: translateY(-10%);
+    }
+    
+    &:active {
+      outline: none;
+      box-shadow: none;
+    }
+    
+    &:hover {
+      background-color: $dark;
+    }
+    
+    &:focus {
+      transition: none;
+      color: $focus-text-colour;
+      background-color: $focus-colour;
+      border-color: $focus-colour;
+      outline: none;
+      box-shadow: none;
+      
+      path {
+        fill: $focus-text-colour;
+      }
+    }
+
+    @include media-breakpoint-down(md) { display: block; }
+  }
+}
+
+.navbar {
+  background-color: white;
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+
+  a {
+    color: $dark;
+    font-size: 1.125rem;
+    
+    &:hover {
+      color: black;
+    }
+    &:active {
+      color: black;
+    }
+    &:focus {
+      transition: none;
+      color: $focus-text-colour;
+      background-color: $focus-colour;
+      outline: none;
+    }
+  }
+}
+
+.main-search-area {
+  height: 40px;
+  
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    margin: 10px 0 10px 0;
+  }
+  
+  input { 
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    &:focus {
+      transition: none;
+      border-color: $focus-colour;
+      outline: solid 4px $focus-colour;
+      box-shadow: none;
+    } 
+  }
+  button {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 1rem;
+    font-weight: 600;
+    align-items: center;
+    
+    @include media-breakpoint-down(sm) {
+      height: 40px;
+    }
+    
+    &:hover {
+      color: white;
+      background-color: $dark; 
+    }
+    
+    &:focus {
+      transition: none;
+      border-color: $focus-colour;
+      background-color: $focus-colour;
+      color: $focus-text-colour;
+      outline: none;
+      box-shadow: none;
+      path {
+        fill: $focus-text-colour;
+      }
+    } 
+    &:active:focus { box-shadow: none; }
+    
+    svg {
+      transform: translateX(-20%);
+      margin-right: 5px;
+    }
+  }
+}
+
+.offcanvas-nav {
+  text-align: center;
+  list-style: none;
+  
+  
+  .nav-link {
+    color: $dark;
+    font-size: 1.375rem;
+    
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
+    &:focus {
+      color: $focus-text-colour;
+      background-color: $focus-colour;
+      text-decoration: underline;
+      outline: none;
+      border: none;
+      transition: none;
+    }
+  }
+}

@@ -1,13 +1,18 @@
 <header class="mb-5">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{ '/' | url }}">NCC Design System</a>
+{# <nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{{ '/' | url }}"><span class="top">Norfolk County Council</span><span class="bottom">Design system</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <form class="form-inline d-flex main-search-area" action="/search.html">
+        <input class="form-control" type="search" placeholder="Search all museums" aria-label="Search">
+        <button id="header-search-button" class="btn btn-outline-light d-inline-flex justify-content-between" type="submit"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z" fill="white"/></svg>Search</button>
+      </form>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" href="{{ '/get-started/' | url }}">Get Started</a>
         </li>
@@ -17,6 +22,101 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> #}
+
+
+<div class="container py-3">
+    
+    <div class="content-skip">
+      <a href="#main" class="skip-to">Skip to content</a>
+    </div>
+    
+    <div class="top-wrapper">
+
+      <a class="navbar-brand" id="main-logo" href="{{ '/' | url }}"><span class="top">Norfolk County Council</span><span class="bottom">Design system</span></a>
+    
+      <button id="navbarToggler" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHeader" aria-controls="offcanvasHeader">
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z" fill="white"/>
+</svg>
+        Menu</button>
+      
+    </div>
+    
+    <form class="form-inline d-flex main-search-area" action="{{ '/' | url }}">
+      <input class="form-control" type="search" placeholder="Search all museums" aria-label="Search">
+      <button id="header-search-button" class="btn btn-outline-light d-inline-flex justify-content-between" type="submit"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z" fill="white"/>
+</svg>
+Search</button>
+    </form>
+  </div>
+  
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbar-main">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item mx-3">
+            <a href="{{ '/get-started/' | url }}" class="nav-link">Get Started</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="{{ '/components/' | url }}" class="nav-link">Components</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="{{ '/' | url }}" class="nav-link">Content</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="{{ '/' | url }}" class="nav-link">Media creation</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="{{ '/' | url }}" class="nav-link">Styles</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="{{ '/' | url }}" class="nav-link">Patterns</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="{{ '/' | url }}" class="nav-link">Page templates</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="{{ '/' | url }}" class="nav-link">Community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasHeader">
+    <div class="offcanvas-header justify-content-end">
+      <button type="button" class="offcanvas-close-button btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="offcanvas-nav mx-auto">
+        <li class="nav-item mx-3">
+          <a href="{{ '/get-started/' | url }}" class="nav-link">Get Started</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="{{ '/components/' | url }}" class="nav-link">Components</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="{{ '/' | url }}" class="nav-link">Content</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="{{ '/' | url }}" class="nav-link">Media creation</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="{{ '/' | url }}" class="nav-link">Styles</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="{{ '/' | url }}" class="nav-link">Patterns</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="{{ '/' | url }}" class="nav-link">Page templates</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="{{ '/' | url }}" class="nav-link">Community</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
 </header>
