@@ -10,7 +10,7 @@
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
     "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "env NODE_ENV=production npm-run-all build:* --pathprefix 'Eleventy-testing'",
+    "build": "env NODE_ENV=production npx eleventy --pathprefix 'Eleventy-testing'",
     "debug": "DEBUG=* npm-run-all build:*"
   },
   "keywords": [],
