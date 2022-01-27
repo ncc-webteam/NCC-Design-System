@@ -12,41 +12,210 @@
   
   <header class="mb-5">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/Eleventy-testing/public/">NCC Design hub</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="/Eleventy-testing/public/get-started/">Get Started</a>
+
+
+
+<div class="container py-3">
+    
+    <div class="content-skip">
+      <a href="#main" class="skip-to">Skip to content</a>
+    </div>
+    
+    <div class="top-wrapper">
+
+      <a class="navbar-brand" id="main-logo" href="/Eleventy-testing/public/"><span class="top">Norfolk County Council</span><span class="bottom">Design system</span></a>
+    
+      <button id="navbarToggler" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHeader" aria-controls="offcanvasHeader">
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z" fill="white"/>
+</svg>
+        Menu</button>
+      
+    </div>
+    
+    <form class="form-inline d-flex main-search-area" action="/Eleventy-testing/public/">
+      <input class="form-control" type="search" placeholder="Search all museums" aria-label="Search">
+      <button id="header-search-button" class="btn btn-outline-light d-inline-flex justify-content-between" type="submit"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z" fill="white"/>
+</svg>
+Search</button>
+    </form>
+  </div>
+  
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbar-main">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item mx-3">
+            <a href="/Eleventy-testing/public/get-started/" class="nav-link">Get Started</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="/Eleventy-testing/public/components/" class="nav-link">Components</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="/Eleventy-testing/public/" class="nav-link">Content</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="/Eleventy-testing/public/" class="nav-link">Media creation</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="/Eleventy-testing/public/" class="nav-link">Styles</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="/Eleventy-testing/public/" class="nav-link">Patterns</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="/Eleventy-testing/public/" class="nav-link">Page templates</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="/Eleventy-testing/public/" class="nav-link">Community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasHeader">
+    <div class="offcanvas-header justify-content-end">
+      <button type="button" class="offcanvas-close-button btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="offcanvas-nav mx-auto">
+        <li class="nav-item mx-3">
+          <a href="/Eleventy-testing/public/get-started/" class="nav-link">Get Started</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/Eleventy-testing/public/components/">Components</a>
+        <li class="nav-item mx-3">
+          <a href="/Eleventy-testing/public/components/" class="nav-link">Components</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/Eleventy-testing/public/" class="nav-link">Content</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/Eleventy-testing/public/" class="nav-link">Media creation</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/Eleventy-testing/public/" class="nav-link">Styles</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/Eleventy-testing/public/" class="nav-link">Patterns</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/Eleventy-testing/public/" class="nav-link">Page templates</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/Eleventy-testing/public/" class="nav-link">Community</a>
         </li>
       </ul>
     </div>
   </div>
-</nav>
 
 </header>
   <main>
     
 
-<div class="container">
-  <h1>Norfolk County Council Design Hub</h1>
+<div class="container mb-5">
+  <h1>Norfolk County Council Design System</h1>
   <p class="lead">Use this design system to create pages with consistent and uniform styling, and use components appropriately.</p>
   <hr>
 </div>
 
 
 <div class="container">
-  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-  <p>Standard paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus vehicula ligula nec finibus. Donec a elit dolor. Quisque ultricies felis at ligula mollis, quis mattis lacus efficitur. In aliquet in arcu ac gravida. Nam leo velit, mattis in faucibus id, faucibus sed velit. Aenean ut augue quam. Vestibulum commodo lacinia nibh non sagittis. Proin consectetur, nibh et porta molestie, velit velit porttitor lacus, a mollis tortor elit eu tellus. Quisque tristique ultrices sem vel placerat. Maecenas lobortis, felis quis faucibus fermentum, magna neque egestas urna, eget vestibulum lectus ipsum mattis sapien. Donec a pharetra lectus. Aliquam feugiat, ligula quis dapibus blandit, ex odio faucibus velit, ac efficitur leo magna et mi. Duis nec enim purus. Mauris varius sem a lacus vulputate porta.</p>
-  <h2 class="mt-5">There could be 3 ways ways to get set up.</h2>
-  <p>Clone the repository of an existing site, fork the starter template to start a new site, or start a new site from scratch (advanced)?</p>
+  <h2>What do you want to do?</h2>
+  <div class="row my-4">
+    <div class="col-4">
+      
+
+<div class="card card-light h-100" data-component="72">
+
+  
+
+  <div class="card-body">
+
+    
+
+    
+
+    
+    <h3 class="card-title h3"><a class="stretched-link" href="#">Contribute to an existing project</a></h3>
+    
+
+    
+
+    
+
+    
+    <p class="card-text">Clone the repository and set up a development environment.</p>
+    
+
+  </div>
+</div>
+
+
+    </div>
+    <div class="col-4">
+      
+
+<div class="card card-light h-100" data-component="72">
+
+  
+
+  <div class="card-body">
+
+    
+
+    
+
+    
+    <h3 class="card-title h3"><a class="stretched-link" href="#">Start a new project</a></h3>
+    
+
+    
+
+    
+
+    
+    <p class="card-text">Use the starter template to start up a new site</p>
+    
+
+  </div>
+</div>
+
+
+    </div>
+    <div class="col-4">
+      
+
+<div class="card card-light h-100" data-component="72">
+
+  
+
+  <div class="card-body">
+
+    
+
+    
+
+    
+    <h3 class="card-title h3"><a class="stretched-link" href="#">Learn how to set up a project from scratch</a></h3>
+    
+
+    
+    <span class="flair flair-full">Advanced</span>
+    
+
+    
+
+    
+    <p class="card-text">Follow the instructions on setting up Eleventy, Node.js, and Git</p>
+    
+
+  </div>
+</div>
+
+
+    </div>
+  </div>
 </div>
 
 
