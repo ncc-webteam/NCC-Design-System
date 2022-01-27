@@ -20,6 +20,6 @@ module.exports = function(eleventyConfig) {
       output: "public"
     },
 
-    pathPrefix: "/Eleventy-testing/"
+    pathPrefix: "/Eleventy-testing/public/"
   };
 };
