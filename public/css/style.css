@@ -11136,6 +11136,151 @@ textarea.form-control-lg {
   color: #444;
 }
 
+/*** start of cards.scss ***/
+.card {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #212529;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+    transition: none;
+  }
+}
+.card .card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.card .img-wrapper {
+  overflow: hidden;
+  object-fit: contain;
+}
+.card .card-location {
+  color: #d2982c;
+  font-weight: 700;
+  margin: 5px 0px;
+}
+.card .card-date {
+  font-size: 1rem;
+  color: #adb5bd;
+  margin: 5px 0px;
+}
+.card .card-extra-info {
+  font-size: 1rem;
+  color: #f8f9fa;
+  margin: 5px 0px;
+}
+.card .card-title {
+  margin: 0px 0px 5px 0px;
+}
+.card .card-title a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.375rem;
+  color: #f8f9fa;
+}
+.card .flair {
+  padding: 4px 10px;
+  margin: 5px 0px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+  color: #f8f9fa;
+}
+.card .flair-full {
+  background-color: #BE4600;
+}
+.card .flair-available {
+  color: #BE4600;
+}
+.card .card-text {
+  margin: 5px 0px 0px 0px;
+  color: #adb5bd;
+  font-weight: 600;
+}
+.card img {
+  border-radius: 0px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  object-fit: cover;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card img {
+    animation: none;
+    transition: none;
+  }
+}
+.card:hover {
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.5);
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+.card:hover .card-title {
+  text-decoration: underline;
+}
+.card:focus-within {
+  background-color: #ffdd00;
+  outline: solid 4px #ffdd00;
+  transition: none;
+}
+.card:focus-within img {
+  transform: scale(1.1);
+}
+.card:focus-within .card-text {
+  color: #0b0c0c;
+}
+.card:focus-within .card-location {
+  color: #0b0c0c;
+}
+.card:focus-within .card-date {
+  color: #0b0c0c;
+}
+.card:focus-within .card-extra-info {
+  color: #0b0c0c;
+}
+.card:focus-within .flair {
+  color: white;
+  background-color: #0b0c0c;
+}
+.card:focus-within .card-title a {
+  color: #0b0c0c;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  text-decoration: underline;
+}
+
+.card-rounded {
+  border-radius: 10px;
+}
+
+.card-light {
+  background-color: #f8f9fa;
+}
+.card-light .card-location {
+  color: #be4600;
+}
+.card-light .card-date {
+  color: #6c757d;
+}
+.card-light .card-extra-info {
+  color: #6c757d;
+}
+.card-light .card-title a {
+  color: #212529;
+}
+.card-light .card-text {
+  color: #495057;
+}
+
 footer {
   flex-shrink: 0;
   background-color: #212529;

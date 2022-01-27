@@ -1,0 +1,40 @@
+{% macro generalcard(title, location, date, flair, extra, text, img, link, options) %}
+
+<div class="card {{options}} h-100" data-component="72">
+
+  {% if img|length %}
+  <div class="img-wrapper ratio ratio-16x9">
+    <img src="https://assets.codepen.io/t-2237/lb_16x9.jpg" class="card-img-top" alt="image for {{title}}">
+  </div>
+  {% else %}{% endif %}
+
+  <div class="card-body">
+
+    {% if location|length %}
+    <p class="card-location">{{ location }}</p>
+    {% else %}{% endif %}
+
+    {% if date|length %}
+    <p class="card-date">{{ date }}</p>
+    {% else %}{% endif %}
+
+    {% if title|length %}
+    <h3 class="card-title h3"><a class="stretched-link" href="{{link}}">{{ title }}</a></h3>
+    {% else %}{% endif %}
+
+    {% if flair|length %}
+    <span class="flair flair-full">{{ flair }}</span>
+    {% else %}{% endif %}
+
+    {% if extra|length %}
+    <p class="card-extra-info">{{ extra }}</p>
+    {% else %}{% endif %}
+
+    {% if text|length %}
+    <p class="card-text">{{ text }}</p>
+    {% else %}{% endif %}
+
+  </div>
+</div>
+
+{% endmacro %}

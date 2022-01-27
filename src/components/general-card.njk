@@ -1,6 +1,7 @@
 {% extends "template.njk" %}
 
 {% import "_pattern_macros/testcard.njk" as testcard %}
+{% import "_pattern_macros/general_card.njk" as generalcard %}
 
 {% block title %}General Card{% endblock %}
 
@@ -53,7 +54,11 @@
     </div>
     <div class="components-main-section col-8">
       <h2>General Card</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est obcaecati rem consequatur itaque nemo iusto ipsa amet nostrum nulla expedita! Possimus commodi modi dicta quaerat suscipit porro vero ab perspiciatis inventore fuga, illum ut mollitia quae sed dignissimos explicabo facilis. A dicta eaque vero quo dolor reprehenderit ex atque magni dignissimos sit libero quibusdam laudantium, sint, maiores nam incidunt assumenda unde ducimus nulla accusantium saepe numquam. Odit dolore saepe vero sit, esse accusantium itaque eum illo doloribus sunt consequuntur corrupti quibusdam, est, debitis voluptate. Officia placeat cupiditate quam perspiciatis est ex facere fugit odio, tempore ipsa deserunt, voluptate maxime totam.</p>
+      <div class="row">
+        <div class="col-6">
+          {{ generalcard.generalcard('Card Title', 'James Paget Hospital • Gorleston', '29th July 2020 • 8.27pm', 'Course full', '5 sessions • course full', 'Card content / descriptive text goes here', '/img/lb_16x9.jpg', '#', 'card-rounded') }}
+        </div>
+      </div>
     </div>
   </div>
   
