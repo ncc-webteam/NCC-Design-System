@@ -1,11 +1,36 @@
 footer {
   flex-shrink: 0;
-  background-color: $dark;
+  background-color: $gray-200;
   padding: 30px;
-  text-align: center;
 
   p {
-    color: $gray-500;
+    color: $dark;
     margin: 0;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cookie-link {
+    color: $dark;
+    text-decoration: underline;
+    margin-right: 20px;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .bottom-text, .bottom-text * {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  .footer-logo {
+    img {
+      max-width: 100%;
+    }
   }
 }
