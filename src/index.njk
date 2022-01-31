@@ -7,26 +7,28 @@
 
 {% block main %}
 
-<div class="container mb-5">
-  <h1>Norfolk County Council Design System</h1>
-  <p class="lead">Use this design system to create pages with consistent and uniform styling, and use components appropriately.</p>
-  <hr>
-</div>
-
-
-<div class="container">
-  <h2>What do you want to do?</h2>
-  <div class="row my-4">
-    <div class="col-4">
-      {{ generalcard.generalcard('Contribute to an existing project', '', '', '', '', 'Clone the repository and set up a development environment.', '', '#', 'card-light') }}
-    </div>
-    <div class="col-4">
-      {{ generalcard.generalcard('Start a new project', '', '', '', '', 'Use the starter template to start up a new site', '', '#', 'card-light') }}
-    </div>
-    <div class="col-4">
-      {{ generalcard.generalcard('Learn how to set up a project from scratch', '', '', 'Advanced', '', 'Follow the instructions on setting up Eleventy, Node.js, and Git', '', '#', 'card-light') }}
+<section class="section_light_theme">
+  <div class="container">
+    <h1>Norfolk County Council Design System</h1>
+    <p class="lead">Use this design system to create pages with consistent and uniform styling, and use components appropriately.</p>
+    <hr>
+  </div>
+</section>
+<section class="section_light_theme">
+  <div class="container">
+    <h2>What do you want to do?</h2>
+    <div class="row my-4">
+      <div class="col-4">
+        {{ generalcard.generalcard('Contribute to an existing project', '', '', '', '', 'Clone the repository and set up a development environment.', '', '#', 'card-light') }}
+      </div>
+      <div class="col-4">
+        {{ generalcard.generalcard('Start a new project', '', '', '', '', 'Use the starter template to start up a new site', '', '#', 'card-light') }}
+      </div>
+      <div class="col-4">
+        {{ generalcard.generalcard('Learn how to set up a project from scratch', '', '', 'Advanced', '', 'Follow the instructions on setting up Eleventy, Node.js, and Git', '', '#', 'card-light') }}
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 {% endblock %}

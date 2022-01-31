@@ -11264,7 +11264,7 @@ textarea.form-control-lg {
 }
 
 .card-light {
-  background-color: #f8f9fa;
+  background-color: white;
 }
 .card-light .card-location {
   color: #be4600;
@@ -11557,6 +11557,23 @@ footer .footer-logo img {
   max-width: 100%;
 }
 
+section.section_dark_theme {
+  width: 100%;
+  background-color: #111;
+  color: #f8f9fa;
+  padding: 20px 0px 20px 0px;
+}
+section.section_dark_theme p {
+  color: #f8f9fa;
+}
+
+section.section_light_theme {
+  width: 100%;
+  background-color: #f8f9fa;
+  color: #212529;
+  padding: 20px 0px 20px 0px;
+}
+
 /*!
   Theme: GitHub Dark Dimmed
   Description: Dark dimmed theme as seen on github.com
@@ -11684,6 +11701,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #f8f9fa;
 }
 
 main {

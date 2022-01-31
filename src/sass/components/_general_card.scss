@@ -106,7 +106,7 @@
 
 // General cards are not affected by 'prefers-color-scheme' - this class enables light cards
 .card-light {
-  background-color: $light;
+  background-color: white;
   
   .card-location { color: #be4600; }
   

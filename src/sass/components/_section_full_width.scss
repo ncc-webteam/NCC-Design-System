@@ -1,0 +1,16 @@
+section.section_dark_theme  {
+  width: 100%;
+  background-color: $body-colour;
+  color: $body-text-colour;
+  p {
+    color: $body-text-colour;
+  }
+  padding: 20px 0px 20px 0px;
+}
+
+section.section_light_theme {
+  width: 100%;
+  background-color: $body-colour-light;
+  color: $body-text-colour-light;
+  padding: 20px 0px 20px 0px;
+}
