@@ -79,6 +79,7 @@
     background-color: $focus-colour;
     outline: solid 4px $focus-colour;
     transition: none;
+    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.5);
     
     img { transform: scale(1.1); }
     

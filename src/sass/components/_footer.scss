@@ -3,6 +3,13 @@ footer {
   background-color: $gray-200;
   padding: 30px;
 
+  a:focus {
+    color: $focus-text-colour;
+    background-color: $focus-colour;
+    text-decoration: underline;
+    outline: none;
+  }
+
   p {
     color: $dark;
     margin: 0;
@@ -21,6 +28,12 @@ footer {
     &:hover {
       color: $primary;
     }
+    &:focus {
+      color: $focus-text-colour;
+      background-color: $focus-colour;
+      text-decoration: underline;
+      outline: none;
+    }
   }
 
   .bottom-text, .bottom-text * {
@@ -29,6 +42,10 @@ footer {
   }
 
   .footer-logo {
+    a:focus {
+      outline: solid $focus-colour 2px;
+      background-color: transparent;
+    }
     img {
       max-width: 100%;
     }

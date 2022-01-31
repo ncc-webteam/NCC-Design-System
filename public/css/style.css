@@ -11230,6 +11230,7 @@ textarea.form-control-lg {
   background-color: #ffdd00;
   outline: solid 4px #ffdd00;
   transition: none;
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.5);
 }
 .card:focus-within img {
   transform: scale(1.1);
@@ -11351,6 +11352,12 @@ header .container {
 }
 .top-wrapper #main-logo:hover {
   text-decoration: underline;
+}
+.top-wrapper #main-logo:focus {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  text-decoration: underline;
+  outline: none;
 }
 @media (max-width: 575.98px) {
   .top-wrapper #main-logo .top {
@@ -11510,6 +11517,12 @@ footer {
   background-color: #e9ecef;
   padding: 30px;
 }
+footer a:focus {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  text-decoration: underline;
+  outline: none;
+}
 footer p {
   color: #212529;
   margin: 0;
@@ -11526,9 +11539,19 @@ footer .cookie-link {
 footer .cookie-link:hover {
   color: #0d6efd;
 }
+footer .cookie-link:focus {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  text-decoration: underline;
+  outline: none;
+}
 footer .bottom-text, footer .bottom-text * {
   font-size: 1rem;
   margin-top: 20px;
+}
+footer .footer-logo a:focus {
+  outline: solid #ffdd00 2px;
+  background-color: transparent;
 }
 footer .footer-logo img {
   max-width: 100%;

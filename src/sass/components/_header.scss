@@ -1,33 +1,3 @@
-// .navbar {
-//   background-color: #350C78;
-
-//   #navbarSupportedContent {
-//     .navbar-nav {
-//       display: none;
-
-//       @include media-breakpoint-down(md) { display: block; }
-//     }
-//   }
-
-//   .navbar-brand {
-//     display: flex;
-//     flex-direction: column;
-    
-//     .top {
-//       font-weight: 600;
-//       font-size: 1.5rem;
-//     }
-//     .bottom {
-//       font-weight: 200;
-//       font-size: 1.25rem;
-//     }
-
-//     &:hover {
-//       text-decoration: underline;
-//     }
-//   }
-// }
-
 header {
 
   .content-skip {
@@ -105,6 +75,13 @@ header {
     
     &:hover {
       text-decoration: underline;
+    }
+
+    &:focus {
+      color: $focus-text-colour;
+      background-color: $focus-colour;
+      text-decoration: underline;
+      outline: none;
     }
 
     @include media-breakpoint-down(sm) {
