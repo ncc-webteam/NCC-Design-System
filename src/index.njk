@@ -1,9 +1,11 @@
 {% extends "template.njk" %}
 
-{% import "_pattern_macros/testcard.njk" as testcard %}
+{% import "_pattern_macros/navigation_card.njk" as navcard %}
 {% import "_pattern_macros/general_card.njk" as generalcard %}
 
 {% set title = "Home" %}
+
+{% set rowDefaults = "mt-0 mb-5 g-md-4 g-2" %}
 
 {% block main %}
 
@@ -17,15 +19,41 @@
 <section class="section_light_theme">
   <div class="container">
     <h2>What do you want to do?</h2>
-    <div class="row my-4">
-      <div class="col-4">
-        {{ generalcard.generalcard('Contribute to an existing project', '', '', '', '', 'Clone the repository and set up a development environment.', '', '#', 'card-light') }}
+    <div class="row {{rowDefaults}}">
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ generalcard.generalcard('Contribute to an existing project', '', '', '', '', 'Clone the repository and set up a development environment', '', '#', 'card-light') }}
       </div>
-      <div class="col-4">
+      <div class="col-12 col-sm-6 col-lg-4">
         {{ generalcard.generalcard('Start a new project', '', '', '', '', 'Use the starter template to start up a new site', '', '#', 'card-light') }}
       </div>
-      <div class="col-4">
+      <div class="col-12 col-sm-6 col-lg-4">
         {{ generalcard.generalcard('Learn how to set up a project from scratch', '', '', 'Advanced', '', 'Follow the instructions on setting up Eleventy, Node.js, and Git', '', '#', 'card-light') }}
+      </div>
+    </div>
+
+    <h2>Interaction and design</h2>
+    <div class="row {{rowDefaults}}">
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ navcard.navcard('Styles', '#', 'Make your service look like GOV.UK with guides for applying layout, typography, colour and images.', '', '') }}
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ navcard.navcard('Components', 'components', 'Save time with reusable, accessible components for forms, navigation, panels, tables and more.', '', '') }}
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ navcard.navcard('Patterns', '#', 'Help users complete common tasks like entering names and addresses, filling in forms and creating accounts.', '', '') }}
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ navcard.navcard('Page templates', '#', 'Make your service look like GOV.UK with guides for applying layout, typography, colour and images.', '', '') }}
+      </div>
+    </div>
+
+    <h2>Content and media creation</h2>
+    <div class="row {{rowDefaults}}">
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ navcard.navcard('Content', '#', 'Make your service look like GOV.UK with guides for applying layout, typography, colour and images.', '', '') }}
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ navcard.navcard('Media creation', '#', 'Make your service look like GOV.UK with guides for applying layout, typography, colour and images.', '', '') }}
       </div>
     </div>
   </div>

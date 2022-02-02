@@ -11118,24 +11118,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.card-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.test-card {
-  max-width: 300px;
-  max-height: 400px;
-  border: solid orange 2px;
-  background-color: skyblue;
-}
-.test-card .card-body .card-title {
-  color: #151515;
-}
-.test-card .card-body .card-text {
-  color: #444;
-}
-
 /*** start of cards.scss ***/
 .card {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
@@ -11155,7 +11137,6 @@ textarea.form-control-lg {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: flex-start;
 }
 .card .img-wrapper {
@@ -11280,6 +11261,45 @@ textarea.form-control-lg {
 }
 .card-light .card-text {
   color: #495057;
+}
+
+.navcard {
+  box-shadow: none;
+  border: solid #dee2e6 1px;
+  border-radius: 3px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #f8f9fa;
+}
+@media (prefers-reduced-motion: reduce) {
+  .navcard {
+    animation: none;
+    transition: none;
+  }
+}
+.navcard .card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.navcard .card-title {
+  margin: 0px 0px 5px 0px;
+}
+.navcard .card-title a {
+  text-decoration: none;
+  border-bottom: 1px solid #006666;
+  color: #006666;
+  font-weight: 700;
+  font-size: 1.375rem;
+}
+.navcard .card-title a:hover {
+  color: #2d5ab4;
+  border-bottom: 2px solid #2d5ab4;
+}
+.navcard .card-text {
+  margin: 5px 0px 0px 0px;
+  color: #212529;
+  font-weight: 500;
 }
 
 header {
