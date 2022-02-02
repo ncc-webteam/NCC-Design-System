@@ -11352,6 +11352,7 @@ header .container {
 }
 .top-wrapper #main-logo:hover {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 .top-wrapper #main-logo:focus {
   color: #0b0c0c;
