@@ -8,8 +8,10 @@
     {% else %}{% endif %}
 
     {% if text|length %}
-    <p class="card-text">{{ text }}</p>
+    <p class="card-text">{{ text | safe }}</p>
     {% else %}{% endif %}
+
+    
 
   </div>
 </div>

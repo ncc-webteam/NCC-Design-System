@@ -31,10 +31,17 @@
       </div>
     </div>
 
+    {% set linkwords = [
+      {word:'GOV.UK', link:'https://design-system.service.gov.uk'},
+      {word:'components', link:'/Eleventy-testing/public/components'}
+    ] %}
+
+    {% set linkedText0 = 'Make your service look like <a href="'+linkwords[0].link+'">' + linkwords[0].word + '</a> with guides for applying layout, typography, colour and images.' %}
+
     <h2>Interaction and design</h2>
     <div class="row {{rowDefaults}}">
       <div class="col-12 col-sm-6 col-lg-4">
-        {{ navcard.navcard('Styles', '#', 'Make your service look like GOV.UK with guides for applying layout, typography, colour and images.', '', '') }}
+        {{ navcard.navcard('Styles', '#', linkedText0, linkwords[0].link, '') }}
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
         {{ navcard.navcard('Components', 'components', 'Save time with reusable, accessible components for forms, navigation, panels, tables and more.', '', '') }}
