@@ -32,8 +32,7 @@
     </div>
 
     {% set linkwords = [
-      {word:'GOV.UK', link:'https://design-system.service.gov.uk'},
-      {word:'components', link:'/Eleventy-testing/public/components'}
+      {word:'GOV.UK', link:'https://design-system.service.gov.uk'}
     ] %}
 
     {% set linkedText0 = 'Make your service look like <a href="'+linkwords[0].link+'">' + linkwords[0].word + '</a> with guides for applying layout, typography, colour and images.' %}
@@ -44,7 +43,8 @@
         {{ navcard.navcard('Styles', '#', linkedText0, linkwords[0].link, '') }}
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
-        {{ navcard.navcard('Components', 'components', 'Save time with reusable, accessible components for forms, navigation, panels, tables and more.', '', '') }}
+        {# This way is MUCH more intuitive: #}
+        {{ navcard.navcard('Components', 'components', 'Save time with reusable, accessible <a href="components">components</a> for forms, navigation, panels, tables and more.', '', '') }}
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
         {{ navcard.navcard('Patterns', '#', 'Help users complete common tasks like entering names and addresses, filling in forms and creating accounts.', '', '') }}
