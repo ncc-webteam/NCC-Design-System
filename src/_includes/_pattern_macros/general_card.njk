@@ -4,7 +4,7 @@
 
   {% if img|length %}
   <div class="img-wrapper ratio ratio-16x9">
-    <img src="https://assets.codepen.io/t-2237/lb_16x9.jpg" class="card-img-top" alt="image for {{title}}">
+    <img src="/Eleventy-testing/public/img/{{img}}" class="card-img-top" alt="image for {{title}}">
   </div>
   {% else %}{% endif %}
 
@@ -19,7 +19,7 @@
     {% else %}{% endif %}
 
     {% if title|length %}
-    <h3 class="card-title h3"><a class="stretched-link" href="{{link}}">{{ title }}</a></h3>
+    <h3 class="card-title h3"><a class="stretched-link" href="/Eleventy-testing/public/{{link}}">{{ title }}</a></h3>
     {% else %}{% endif %}
 
     {% if flair|length %}

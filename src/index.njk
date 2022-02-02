@@ -1,32 +1,69 @@
 {% extends "template.njk" %}
 
-{% import "_pattern_macros/testcard.njk" as testcard %}
+{% import "_pattern_macros/navigation_card.njk" as navcard %}
 {% import "_pattern_macros/general_card.njk" as generalcard %}
 
 {% set title = "Home" %}
 
+{% set rowDefaults = "mt-0 mb-5 g-md-4 g-2" %}
+
 {% block main %}
 
-<div class="container mb-5">
-  <h1>Norfolk County Council Design System</h1>
-  <p class="lead">Use this design system to create pages with consistent and uniform styling, and use components appropriately.</p>
-  <hr>
-</div>
-
-
-<div class="container">
-  <h2>What do you want to do?</h2>
-  <div class="row my-4">
-    <div class="col-4">
-      {{ generalcard.generalcard('Contribute to an existing project', '', '', '', '', 'Clone the repository and set up a development environment.', '', '#', 'card-light') }}
+<section class="section_light_theme">
+  <div class="container">
+    <h1>Norfolk County Council Design System</h1>
+    <p class="lead">Use this design system to create pages with consistent and uniform styling, and use components appropriately.</p>
+    <hr>
+  </div>
+</section>
+<section class="section_light_theme">
+  <div class="container">
+    <h2>What do you want to do?</h2>
+    <div class="row {{rowDefaults}}">
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ generalcard.generalcard('Contribute to an existing project', '', '', '', '', 'Clone the repository and set up a development environment', '', '#', 'card-light') }}
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ generalcard.generalcard('Start a new project', '', '', '', '', 'Use the starter template to start up a new site', '', '#', 'card-light') }}
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ generalcard.generalcard('Learn how to set up a project from scratch', '', '', 'Advanced', '', 'Follow the instructions on setting up Eleventy, Node.js, and Git', '', '#', 'card-light') }}
+      </div>
     </div>
-    <div class="col-4">
-      {{ generalcard.generalcard('Start a new project', '', '', '', '', 'Use the starter template to start up a new site', '', '#', 'card-light') }}
+
+    {% set linkwords = [
+      {word:'GOV.UK', link:'https://design-system.service.gov.uk'}
+    ] %}
+
+    {% set linkedText0 = 'Make your service look like <a href="'+linkwords[0].link+'">' + linkwords[0].word + '</a> with guides for applying layout, typography, colour and images.' %}
+
+    <h2>Interaction and design</h2>
+    <div class="row {{rowDefaults}}">
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ navcard.navcard('Styles', '#', linkedText0, '', '') }}
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        {# This way is MUCH more intuitive: #}
+        {{ navcard.navcard('Components', 'components', 'Save time with reusable, accessible <a href="components">components</a> for forms, navigation, panels, tables and more.', '', '') }}
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ navcard.navcard('Patterns', '#', 'Help users complete common tasks like entering names and addresses, filling in forms and creating accounts.', '', '') }}
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ navcard.navcard('Page templates', '#', 'Make your service look like GOV.UK with guides for applying layout, typography, colour and images.', '', '') }}
+      </div>
     </div>
-    <div class="col-4">
-      {{ generalcard.generalcard('Learn how to set up a project from scratch', '', '', 'Advanced', '', 'Follow the instructions on setting up Eleventy, Node.js, and Git', '', '#', 'card-light') }}
+
+    <h2>Content and media creation</h2>
+    <div class="row {{rowDefaults}}">
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ navcard.navcard('Content', '#', 'Make your service look like GOV.UK with guides for applying layout, typography, colour and images.', '', '') }}
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        {{ navcard.navcard('Media creation', '#', 'Make your service look like GOV.UK with guides for applying layout, typography, colour and images.', '', '') }}
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 {% endblock %}

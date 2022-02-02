@@ -1,0 +1,17 @@
+{% macro navcard(title, titlelink, text, links, options) %}
+
+<div class="navcard {{options}} h-100" data-component="1">
+  <div class="card-body">
+
+    {% if title|length %}
+    <h3 class="card-title h3"><a href="/Eleventy-testing/public/{{titlelink}}">{{ title }}</a></h3>
+    {% else %}{% endif %}
+
+    {% if text|length %}
+    <p class="card-text">{{ text | safe }}</p>
+    {% else %}{% endif %}
+
+  </div>
+</div>
+
+{% endmacro %}

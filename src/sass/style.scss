@@ -1,4 +1,4 @@
-@import "bootstrap";
+@import "bootstrap/bootstrap";
 
 $focus-colour: #ffdd00;
 $focus-text-colour: #0b0c0c;
@@ -19,10 +19,11 @@ $body-text-colour-light: $dark;
 
 
 @import
-  "components/testcard",
   "components/general_card",
+  "components/navigation_card",
   "components/header",
   "components/footer",
+  "components/section_full_width",
   "code_highlights"
 ;
 
@@ -34,6 +35,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: $body-colour-light;
 }
 
 main {
@@ -47,6 +49,15 @@ p {
 .lead {
   font-weight: 600;
   font-size: 1.375rem;
+}
+
+a {
+  font-size: 1.125rem;
+  text-decoration: none;
+  font-weight: 600;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 pre {

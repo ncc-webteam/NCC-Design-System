@@ -1,18 +1,20 @@
 {% extends "template.njk" %}
 
-{% import "_pattern_macros/testcard.njk" as testcard %}
 {% import "_pattern_macros/general_card.njk" as generalcard %}
 
 {% set title = "General Card" %}
 
 {% block main %}
 
+<section class="section_light_theme">
 <div class="container">
   <h1>Components</h1>
   <p class="lead">Documentation for all of the components used in NCC sites including examples, options, and use cases.</p>
   <hr>
 </div>
+</section>
 
+<section class="section_light_theme">
 <div class="container">
   <div class="row">
     <div class="components-list-section col-md-4 col-12">
@@ -52,16 +54,17 @@
       </div>
 
     </div>
-    <div class="components-main-section col-8">
+    <div class="components-main-section col-8 mb-5">
       <h2>General Card</h2>
       <div class="row">
         <div class="col-6">
-          {{ generalcard.generalcard('Card Title', 'James Paget Hospital • Gorleston', '29th July 2020 • 8.27pm', 'Course full', '5 sessions • course full', 'Card content / descriptive text goes here', '/img/lb_16x9.jpg', '#', 'card-rounded') }}
+          {{ generalcard.generalcard('Card Title', 'James Paget Hospital • Gorleston', '29th July 2020 • 8.27pm', 'Course full', '5 sessions • course full', 'Card content / descriptive text goes here', 'lb_16x9.jpg', '#', 'card-rounded') }}
         </div>
       </div>
     </div>
   </div>
   
 </div>
+</section>
 
 {% endblock %}
