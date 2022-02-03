@@ -1,0 +1,38 @@
+.accordion-flush {
+  .accordion-item {
+    background-color: transparent;
+    border: none;
+    .accordion-header {
+      .accordion-button {
+        background-color: $light;
+        font-weight: 600;
+        color: black;
+        padding: 16px 20px 16px 40px;
+
+        &::after {
+          position: absolute;
+          left: 0;
+          transform: rotate(0deg);
+
+        }
+      }
+      .accordion-button.collapsed {
+        color: $gray-700;
+
+        &:hover {
+          color: black;
+        }
+        &::after {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    .accordion-collapse {
+      
+      .accordion-body {
+        
+      }
+    }
+  }
+}
+
