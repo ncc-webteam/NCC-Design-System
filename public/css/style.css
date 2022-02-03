@@ -11461,7 +11461,7 @@ header .navbar #navbar-main .navbar-nav .nav-item {
 header .navbar #navbar-main .navbar-nav .nav-item .nav-link {
   color: #212529;
   font-size: 1.125rem;
-  padding: 8px 8px 8px 0px;
+  padding: 8px 0px;
 }
 header .navbar #navbar-main .navbar-nav .nav-item .nav-link:hover {
   color: black;
@@ -11474,6 +11474,7 @@ header .navbar #navbar-main .navbar-nav .nav-item .nav-link:focus {
   color: #0b0c0c;
   background-color: #ffdd00;
   outline: none;
+  text-decoration: underline;
 }
 header .main-search-area {
   height: 40px;
@@ -11824,6 +11825,12 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+a:focus {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  text-decoration: underline;
+  outline: none;
 }
 
 pre {

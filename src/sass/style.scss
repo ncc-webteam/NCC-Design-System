@@ -59,6 +59,12 @@ a {
   &:hover {
     text-decoration: underline;
   }
+  &:focus {
+    color: $focus-text-colour;
+    background-color: $focus-colour;
+    text-decoration: underline;
+    outline: none;
+  }
 }
 
 pre {
