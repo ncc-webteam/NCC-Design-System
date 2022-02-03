@@ -25,6 +25,12 @@
         color: #2d5ab4;
         border-bottom: 2px solid #2d5ab4;
       }
+      &:focus {
+        color: $focus-text-colour;
+        background-color: $focus-colour;
+        border-bottom: 2px solid $focus-text-colour;
+        outline: none;
+      }
     }
   }
 
@@ -32,5 +38,11 @@
     margin: 5px 0px 0px 0px;
     color: $dark;
     font-weight: 500;
+
+    a:focus {
+      color: $focus-text-colour;
+      background-color: $focus-colour;
+      outline: none;
+    }
   }
 }
