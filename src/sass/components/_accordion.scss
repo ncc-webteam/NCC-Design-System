@@ -10,6 +10,11 @@
         color: black;
         padding: 16px 20px 16px 30px;
 
+        &:focus {
+          box-shadow: none;
+          outline: solid 3px $focus-colour;
+        }
+
         &::after {
           position: absolute;
           left: 0;
@@ -37,6 +42,12 @@
           margin-bottom: 8px;
           a {
             font-weight: 500;
+          }
+          a.active {
+            color: $gray-700;
+            pointer-events: none;
+            user-select: none;
+            font-weight: 400;
           }
         }
       }
