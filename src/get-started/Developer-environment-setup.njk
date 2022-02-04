@@ -1,34 +1,34 @@
-{% extends "template.njk" %}
+{% extends "documentation.njk" %}
 
-{% set title = "Get Started" %}
+{% set title = "Developer environment setup" %}
 
-{% block main %}
-
+{% block breadcrumb %}
 <section class="breadcrumbs">
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb my-2">
         <li class="breadcrumb-item"><a href="{{ '/' | url }}">Home</a></li>
-        <li class="breadcrumb-item active">Get Started</li>
+        <li class="breadcrumb-item"><a href="{{ '/get-started/' | url }}">Get started</a></li>
+        <li class="breadcrumb-item active">Developer environment setup</li>
       </ol>
     </nav>
   </div>
 </section>
+{% endblock %}
 
-<section class="section_light_theme">
-<div class="container">
+{% set collapseID = "collapseOne" %}
+{% set headingID = "headingOneButton" %}
+
+{% block componentdesc %}
+
   <h1>Get Started</h1>
-  <p class="lead mb-4">This page will provide the details of setting up a developer environment on your system. Before you start, make sure you have the latest version of Node.js installed on your system.</p>
-  <hr>
-</div>
+  <p class="lead">This page will provide the details of setting up a developer environment on your system. Before you start, make sure you have the latest version of Node.js installed on your system.</p>
 
-
-<div class="container">
-  <h2 class="h4 mt-5">1. Create a new folder. This will be your project directory. It doesn't matter what you call this folder but make sure it's relevant and memorable to you.</h2> 
-  <h2 class="h4 mt-5">2. Open a terminal window in the project folder and type: <kbd>npm init -y</kbd></h2>
-  <h2 class="h4 mt-5">3. Now type: <kbd>npm install @11ty/eleventy</kbd></h2>
-  <h2 class="h4 mt-5">4. Create the file: <code>.eleventy.js</code></h2>
-  <h2 class="h4 mt-5">5. Insert the following code into <code>.eleventy.js</code>:</h2>
+    <h2 class="h4 mt-5">1. Create a new folder. This will be your project directory. It doesn't matter what you call this folder but make sure it's relevant and memorable to you.</h2> 
+    <h2 class="h4 mt-5">2. Open a terminal window in the project folder and type: <kbd>npm init -y</kbd></h2>
+    <h2 class="h4 mt-5">3. Now type: <kbd>npm install @11ty/eleventy</kbd></h2>
+    <h2 class="h4 mt-5">4. Create the file: <code>.eleventy.js</code></h2>
+    <h2 class="h4 mt-5">5. Insert the following code into <code>.eleventy.js</code>:</h2>
   
 <pre><code class="language-js">let Nunjucks = require(&quot;nunjucks&quot;);
 
@@ -83,8 +83,5 @@ eleventyConfig.addPassthroughCopy("./src/img/");</code></pre>
 
 <h3 class="my-5">Everything should now be fully working!</h2> 
 
-</div>
-
-</section>
 
 {% endblock %}
