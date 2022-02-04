@@ -25,9 +25,6 @@ footer {
     text-decoration: underline;
     margin-right: 20px;
 
-    &:hover {
-      color: $primary;
-    }
     &:focus {
       color: $focus-text-colour;
       background-color: $focus-colour;

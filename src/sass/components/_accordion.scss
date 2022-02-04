@@ -6,14 +6,14 @@
       .accordion-button {
         background-color: $light;
         font-weight: 600;
+        font-size: 1.25rem;
         color: black;
-        padding: 16px 20px 16px 40px;
+        padding: 16px 20px 16px 30px;
 
         &::after {
           position: absolute;
           left: 0;
-          transform: rotate(0deg);
-
+          transform: rotate(90deg) scale(1.2);
         }
       }
       .accordion-button.collapsed {
@@ -23,14 +23,22 @@
           color: black;
         }
         &::after {
-          transform: rotate(-90deg);
+          transform: rotate(0deg) scale(1.2);
         }
       }
     }
-    .accordion-collapse {
-      
-      .accordion-body {
-        
+    .accordion-body {
+      padding: 8px 20px;
+      .accordion-list {
+        list-style: none;
+        padding: 0 0 0 12px;
+
+        li {
+          margin-bottom: 8px;
+          a {
+            font-weight: 500;
+          }
+        }
       }
     }
   }

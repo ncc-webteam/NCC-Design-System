@@ -1,11 +1,10 @@
-{% extends "template.njk" %}
+{% extends "documentation.njk" %}
 
 {% import "_pattern_macros/general_card.njk" as generalcard %}
 
 {% set title = "General Card" %}
 
-{% block main %}
-
+{% block breadcrumb %}
 <section class="breadcrumbs">
   <div class="container">
     <nav aria-label="breadcrumb">
@@ -17,66 +16,20 @@
     </nav>
   </div>
 </section>
+{% endblock %}
 
-<section class="section_light_theme">
-<div class="container">
-  <h1>Components</h1>
-  <p class="lead">Documentation for all of the components used in NCC sites including examples, options, and use cases.</p>
-  <hr>
-</div>
-</section>
+{% block componentdesc %}
 
-<section class="section_light_theme">
-<div class="container">
-  <div class="row">
-    <div class="components-list-section col-md-4 col-12">
-
-      <div class="accordion mb-4" id="componentsListAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">
-              Components
-            </button>
-          </h2>
-          <div id="collapse" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#componentsListAccordion">
-            <div class="accordion-body">
-              <div class="list-group">
-                <a href="{{ '/components/' | url }}" class="list-group-item list-group-item-action">Introduction</a>
-                <a href="{{ '/components/general-card/' | url }}" class="list-group-item list-group-item-action active" aria-current="true">
-                  General card
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">Promo card</a>
-                <a href="#" class="list-group-item list-group-item-action">Section nav component</a>
-                <a href="#" class="list-group-item list-group-item-action">Timeline component</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="list-group" id="componentsListSidebar">
-        <a href="{{ '/components/' | url }}" class="list-group-item list-group-item-action">Introduction</a>
-        <a href="{{ '/components/general-card/' | url }}" class="list-group-item list-group-item-action active" aria-current="true">
-          General card
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">Promo card</a>
-        <a href="#" class="list-group-item list-group-item-action">Section nav component</a>
-        <a href="#" class="list-group-item list-group-item-action">Timeline component</a>
-
-      </div>
-
-    </div>
-    <div class="components-main-section col-8 mb-5">
-      <h2>General Card</h2>
-      <div class="row">
-        <div class="col-6">
-          {{ generalcard.generalcard('Card Title', 'James Paget Hospital • Gorleston', '29th July 2020 • 8.27pm', 'Course full', '5 sessions • course full', 'Card content / descriptive text goes here', 'lb_16x9.jpg', '#', 'card-rounded') }}
-        </div>
+  <div class="components-main-section col-8 mb-5">
+    <h1>General card - #73</h1>
+    <p class="lead">This card can be used for a few things but most importantly as a placeholder component for testing pages.</p>
+    <h2>Other info</h2>
+    <p>Generic placeholder text about the general card Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, assumenda! whatever</p>
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        {{ generalcard.generalcard('Card Title', 'James Paget Hospital • Gorleston', '29th July 2020 • 8.27pm', 'Course full', '5 sessions • course full', 'Card content / descriptive text goes here', 'lb_16x9.jpg', '#', 'card-rounded') }}
       </div>
     </div>
   </div>
-  
-</div>
-</section>
 
 {% endblock %}

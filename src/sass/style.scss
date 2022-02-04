@@ -3,6 +3,9 @@
 $focus-colour: #ffdd00;
 $focus-text-colour: #0b0c0c;
 
+$link-colour: #4840f3;
+$link-colour-hover: darken(#4840f3, 10%);
+
 $body-colour: #111;
 $body-text-colour: $light;
 // light theme
@@ -57,8 +60,10 @@ a {
   font-size: 1.125rem;
   text-decoration: none;
   font-weight: 600;
+  color: $link-colour;
   &:hover {
     text-decoration: underline;
+    color: $link-colour-hover;
   }
   &:focus {
     color: $focus-text-colour;

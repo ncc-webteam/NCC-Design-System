@@ -22,8 +22,8 @@
       font-size: 1.375rem;
 
       &:hover {
-        color: #2d5ab4;
-        border-bottom: 2px solid #2d5ab4;
+        color: $link-colour-hover;
+        border-bottom: 2px solid $link-colour-hover;
       }
       &:focus {
         color: $focus-text-colour;
