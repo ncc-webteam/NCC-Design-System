@@ -10,44 +10,10 @@
     <div class="row">
       <div class="components-list-section col-md-4 col-12">
 
-        {# <div class="accordion mb-4" id="componentsListAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapse">
-                Components
-              </button>
-            </h2>
-            <div id="collapse" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#componentsListAccordion">
-              <div class="accordion-body">
-                <div class="list-group">
-                  <a href="{{ '/components/' | url }}" class="list-group-item list-group-item-action active" aria-current="true">
-                    Introduction
-                  </a>
-                  <a href="{{ '/components/general-card/' | url }}" class="list-group-item list-group-item-action">General card</a>
-                  <a href="#" class="list-group-item list-group-item-action">Promo card</a>
-                  <a href="#" class="list-group-item list-group-item-action">Section nav component</a>
-                  <a href="#" class="list-group-item list-group-item-action">Timeline component</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> #}
-
-        {# <div class="list-group" id="componentsListSidebar">
-          <a href="{{ '/components/' | url }}" class="list-group-item list-group-item-action active" aria-current="true">
-            Introduction
-          </a>
-          <a href="{{ '/components/general-card/' | url }}" class="list-group-item list-group-item-action">General card</a>
-          <a href="#" class="list-group-item list-group-item-action">Promo card</a>
-          <a href="#" class="list-group-item list-group-item-action">Section nav component</a>
-          <a href="#" class="list-group-item list-group-item-action">Timeline component</a>
-
-        </div> #}
-
         <div class="accordion accordion-flush" id="accordionFlushExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <button id="flush-headingOneButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                 Getting Started
               </button>
             </h2>
@@ -57,7 +23,7 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <button id="flush-headingTwoButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                 Content
               </button>
             </h2>
@@ -67,7 +33,7 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <button id="flush-headingThreeButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                 Media Creation
               </button>
             </h2>
@@ -77,7 +43,7 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              <button id="flush-headingFourButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                 Styles
               </button>
             </h2>
@@ -87,7 +53,7 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              <button id="flush-headingFiveButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
                 Patterns
               </button>
             </h2>
@@ -97,7 +63,7 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingSix">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+              <button id="flush-headingSixButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
                 Page templates
               </button>
             </h2>
@@ -107,7 +73,7 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingSeven">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+              <button id="flush-headingSevenButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
                 Components
               </button>
             </h2>
@@ -129,7 +95,7 @@
                   <li><a href="#">Fieldset</a></li>
                   <li><a href="#">File upload</a></li>
                   <li><a href="#">Footer</a></li>
-                  <li><a href="{{ 'general-card' | url }}">#73 - General card</a></li>
+                  <li><a href="{{ '/components/general-card' | url }}">#73 - General card</a></li>
                   <li><a href="#">#205 - Timeline</a></li>
                 </ul>
               </div>
@@ -137,7 +103,7 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingEight">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+              <button id="flush-headingEightButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
                 Community
               </button>
             </h2>
@@ -149,12 +115,25 @@
 
       </div>
 
+      <div class="components-main-section col-8 mb-5">
       {% block componentdesc %}
-      {# <div class="components-main-section col-8">
-        <h2>Introduction</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est obcaecati rem consequatur itaque nemo iusto ipsa amet nostrum nulla expedita! Possimus commodi modi dicta quaerat suscipit porro vero ab perspiciatis inventore fuga, illum ut mollitia quae sed dignissimos explicabo facilis. A dicta eaque vero quo dolor reprehenderit ex atque magni dignissimos sit libero quibusdam laudantium, sint, maiores nam incidunt assumenda unde ducimus nulla accusantium saepe numquam. Odit dolore saepe vero sit, esse accusantium itaque eum illo doloribus sunt consequuntur corrupti quibusdam, est, debitis voluptate. Officia placeat cupiditate quam perspiciatis est ex facere fugit odio, tempore ipsa deserunt, voluptate maxime totam.</p>
-      </div> #}
       {% endblock %}
+      </div>
+      
+      <script>
+        window.onload = function () {
+          openAccordion();
+        }
+
+        function openAccordion() {
+          let heading = document.getElementById("{{headingID}}");
+          let collapse = document.getElementById("{{collapseID}}");
+          
+          heading.classList.remove("collapsed");
+          heading.setAttribute("aria-expanded", "true");
+          collapse.classList.add("show");
+        }
+      </script>
       
     </div>
     
