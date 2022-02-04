@@ -1,16 +1,27 @@
-section.section_dark_theme  {
+section {
+  padding: 20px 0px 20px 0px;
   width: 100%;
+}
+
+section.section_dark_theme  {
   background-color: $body-colour;
   color: $body-text-colour;
-  p {
-    color: $body-text-colour;
-  }
-  padding: 20px 0px 20px 0px;
+  p { color: $body-text-colour; }
 }
 
 section.section_light_theme {
-  width: 100%;
   background-color: $body-colour-light;
   color: $body-text-colour-light;
-  padding: 20px 0px 20px 0px;
+}
+
+section.section_stage_theme {
+  background-color: #350C78;
+  color: $light;
+  .lead {
+    color: $light;
+    font-weight: 400;
+    margin: 40px 0 20px 0;
+  }
+  padding: 40px 0px 40px 0px;
+  margin-bottom: 40px;
 }

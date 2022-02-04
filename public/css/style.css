@@ -11593,21 +11593,34 @@ footer .footer-logo img {
   max-width: 100%;
 }
 
-section.section_dark_theme {
+section {
+  padding: 20px 0px 20px 0px;
   width: 100%;
+}
+
+section.section_dark_theme {
   background-color: #111;
   color: #f8f9fa;
-  padding: 20px 0px 20px 0px;
 }
 section.section_dark_theme p {
   color: #f8f9fa;
 }
 
 section.section_light_theme {
-  width: 100%;
   background-color: #f8f9fa;
   color: #212529;
-  padding: 20px 0px 20px 0px;
+}
+
+section.section_stage_theme {
+  background-color: #350C78;
+  color: #f8f9fa;
+  padding: 40px 0px 40px 0px;
+  margin-bottom: 40px;
+}
+section.section_stage_theme .lead {
+  color: #f8f9fa;
+  font-weight: 400;
+  margin: 40px 0 20px 0;
 }
 
 .breadcrumbs {
