@@ -11689,6 +11689,10 @@ section.section_stage_theme .lead {
   color: black;
   padding: 16px 20px 16px 30px;
 }
+.accordion-flush .accordion-item .accordion-header .accordion-button:focus {
+  box-shadow: none;
+  outline: solid 3px #ffdd00;
+}
 .accordion-flush .accordion-item .accordion-header .accordion-button::after {
   position: absolute;
   left: 0;
@@ -11715,6 +11719,12 @@ section.section_stage_theme .lead {
 }
 .accordion-flush .accordion-item .accordion-body .accordion-list li a {
   font-weight: 500;
+}
+.accordion-flush .accordion-item .accordion-body .accordion-list li a.active {
+  color: #495057;
+  pointer-events: none;
+  user-select: none;
+  font-weight: 400;
 }
 
 /*!
