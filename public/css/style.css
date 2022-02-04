@@ -11614,13 +11614,13 @@ section.section_light_theme {
 section.section_stage_theme {
   background-color: #350C78;
   color: #f8f9fa;
-  padding: 40px 0px 40px 0px;
+  padding: 40px 0px;
   margin-bottom: 40px;
 }
 section.section_stage_theme .lead {
   color: #f8f9fa;
   font-weight: 400;
-  margin: 40px 0 20px 0;
+  margin: 20px 0 10px 0;
 }
 
 .breadcrumbs {
