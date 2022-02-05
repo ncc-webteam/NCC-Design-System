@@ -1,7 +1,6 @@
 footer {
   flex-shrink: 0;
   background-color: $gray-200;
-  padding: 30px;
 
   a:focus {
     color: $focus-text-colour;
@@ -18,6 +17,10 @@ footer {
   .row {
     display: flex;
     justify-content: space-between;
+    
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
   }
 
   .cookie-link {
@@ -45,6 +48,14 @@ footer {
     }
     img {
       max-width: 100%;
+    }
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      justify-content: center;
+      a {
+        max-width: 40%;
+        object-fit: scale-down;
+      }
     }
   }
 }
