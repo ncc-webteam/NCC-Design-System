@@ -11554,7 +11554,6 @@ header .offcanvas-nav .nav-link:focus {
 footer {
   flex-shrink: 0;
   background-color: #e9ecef;
-  padding: 30px;
 }
 footer a:focus {
   color: #0b0c0c;
@@ -11569,6 +11568,11 @@ footer p {
 footer .row {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 991.98px) {
+  footer .row {
+    flex-direction: column;
+  }
 }
 footer .cookie-link {
   color: #212529;
@@ -11591,6 +11595,16 @@ footer .footer-logo a:focus {
 }
 footer .footer-logo img {
   max-width: 100%;
+}
+@media (max-width: 991.98px) {
+  footer .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
+  footer .footer-logo a {
+    max-width: 40%;
+    object-fit: scale-down;
+  }
 }
 
 section {
