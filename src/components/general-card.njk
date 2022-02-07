@@ -24,6 +24,11 @@
 
 {% block componentdesc %}
 
+<div class="components-list-section col-lg-4 col-12">
+  {{ accordion.accordion('7') }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5"> 
   <h1>General card - #73</h1>
   <p class="lead">This card can be used for a few things but most importantly as a placeholder component for testing pages.</p>
   <h2>Other info</h2>
@@ -33,5 +38,6 @@
         {{ generalcard.generalcard('Card Title', 'James Paget Hospital • Gorleston', '29th July 2020 • 8.27pm', 'Course full', '5 sessions • course full', 'Card content / descriptive text goes here', 'lb_16x9.jpg', '#', 'card-rounded') }}
     </div>
   </div>
+</div>
 
 {% endblock %}
