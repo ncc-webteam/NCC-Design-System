@@ -11767,7 +11767,7 @@ section.section_stage_theme .lead {
 */
 .hljs {
   color: #24292e !important;
-  background: #f8f9fa !important;
+  background: #e9ecef !important;
 }
 
 .hljs-doctag,
@@ -11930,7 +11930,7 @@ a:focus {
 pre {
   font-size: 1.125rem;
   border-radius: 6px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
 }
 
 p code {
