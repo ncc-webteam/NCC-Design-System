@@ -11589,6 +11589,14 @@ footer .bottom-text, footer .bottom-text * {
   font-size: 1rem;
   margin-top: 20px;
 }
+footer .logo-hr {
+  display: none;
+}
+@media (max-width: 991.98px) {
+  footer .logo-hr {
+    display: block;
+  }
+}
 footer .footer-logo a:focus {
   outline: solid #ffdd00 2px;
   background-color: transparent;
@@ -11630,6 +11638,9 @@ section.section_stage_theme {
   color: #f8f9fa;
   padding: 40px 0px;
   margin-bottom: 40px;
+}
+section.section_stage_theme h1, section.section_stage_theme .h1 {
+  font-weight: 700;
 }
 section.section_stage_theme .lead {
   color: #f8f9fa;
@@ -11873,6 +11884,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-family: "Mulish";
   background-color: #f8f9fa;
 }
 
