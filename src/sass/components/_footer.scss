@@ -41,6 +41,11 @@ footer {
     margin-top: 20px;
   }
 
+  .logo-hr {
+    display: none;
+    @include media-breakpoint-down(lg) { display: block; }
+  }
+
   .footer-logo {
     a:focus {
       outline: solid $focus-colour 2px;

@@ -17,6 +17,11 @@ section.section_light_theme {
 section.section_stage_theme {
   background-color: #350C78;
   color: $light;
+
+  h1 {
+    font-weight: 700;
+  }
+
   .lead {
     color: $light;
     font-weight: 400;
