@@ -11530,6 +11530,9 @@ header .main-search-area button svg {
   transform: translateX(-20%);
   margin-right: 5px;
 }
+header .offcanvas {
+  max-width: 80%;
+}
 header .offcanvas-nav {
   text-align: center;
   list-style: none;
