@@ -15,17 +15,10 @@
 
       <script>
         window.onload = function () {
-          openAccordion();
+          currentLink();
         }
 
-        function openAccordion() {
-          /* let heading = document.getElementById("{{headingID}}");
-          let collapse = document.getElementById("{{collapseID}}");
-          
-          heading.classList.remove("collapsed");
-          heading.setAttribute("aria-expanded", "true");
-          collapse.classList.add("show"); */
-
+        function currentLink() {
           let link = document.getElementById("{{linkID}}");
           link.classList.add("active");
         }

@@ -525,17 +525,10 @@ Search</button>
 
       <script>
         window.onload = function () {
-          openAccordion();
+          currentLink();
         }
 
-        function openAccordion() {
-          /* let heading = document.getElementById("headingOneButton");
-          let collapse = document.getElementById("collapseOne");
-          
-          heading.classList.remove("collapsed");
-          heading.setAttribute("aria-expanded", "true");
-          collapse.classList.add("show"); */
-
+        function currentLink() {
           let link = document.getElementById("getting-started-link");
           link.classList.add("active");
         }
