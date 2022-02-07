@@ -563,17 +563,10 @@ Search</button>
 
       <script>
         window.onload = function () {
-          openAccordion();
+          currentLink();
         }
 
-        function openAccordion() {
-          /* let heading = document.getElementById("headingSevenButton");
-          let collapse = document.getElementById("collapseSeven");
-          
-          heading.classList.remove("collapsed");
-          heading.setAttribute("aria-expanded", "true");
-          collapse.classList.add("show"); */
-
+        function currentLink() {
           let link = document.getElementById("general-card-link");
           link.classList.add("active");
         }
