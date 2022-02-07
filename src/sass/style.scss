@@ -12,6 +12,9 @@ $body-text-colour: $light;
 $body-colour-light: white;
 $body-text-colour-light: $dark;
 
+$object-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
+$object-shadow-hover: 0px 10px 18px rgba(0, 0, 0, 0.5);
+
 @mixin ani {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   @media (prefers-reduced-motion: reduce) {
@@ -81,7 +84,7 @@ a {
 pre {
   font-size: 1.125rem;
   border-radius: 6px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: $object-shadow;
 }
 
 p code {
