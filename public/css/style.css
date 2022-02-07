@@ -11888,7 +11888,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  font-family: "Mulish";
+  font-family: "Mulish", sans-serif;
   background-color: white;
 }
 
