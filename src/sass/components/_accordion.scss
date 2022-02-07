@@ -4,8 +4,8 @@
     border: none;
     .accordion-header {
       .accordion-button {
-        background-color: $light;
-        font-weight: 600;
+        background-color: $body-colour-light;
+        font-weight: 700;
         font-size: 1.25rem;
         color: black;
         padding: 16px 20px 16px 30px;
@@ -22,7 +22,7 @@
         }
       }
       .accordion-button.collapsed {
-        color: $gray-700;
+        color: $gray-600;
 
         &:hover {
           color: black;
@@ -42,12 +42,17 @@
           margin-bottom: 8px;
           a {
             font-weight: 500;
+            font-size: 1rem;
           }
           a.active {
-            color: $gray-700;
-            pointer-events: none;
-            user-select: none;
-            font-weight: 400;
+            border-left: solid 4px $link-colour;
+            font-weight: 700;
+            padding-left: 10px;
+            margin-left: -14px;
+
+            &:hover {
+              border-color: $link-colour-hover;
+            }
           }
         }
       }

@@ -9,7 +9,7 @@ $link-colour-hover: darken(#4840f3, 10%);
 $body-colour: #111;
 $body-text-colour: $light;
 // light theme
-$body-colour-light: $light;
+$body-colour-light: white;
 $body-text-colour-light: $dark;
 
 @mixin ani {
@@ -46,6 +46,10 @@ body {
 
 main {
   flex: 1 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
 }
 
 p {

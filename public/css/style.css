@@ -11267,7 +11267,7 @@ textarea.form-control-lg {
   border: solid #dee2e6 1px;
   border-radius: 3px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  background-color: #f8f9fa;
+  background-color: white;
 }
 @media (prefers-reduced-motion: reduce) {
   .navcard {
@@ -11629,7 +11629,7 @@ section.section_dark_theme p {
 }
 
 section.section_light_theme {
-  background-color: #f8f9fa;
+  background-color: white;
   color: #212529;
 }
 
@@ -11708,8 +11708,8 @@ section.section_stage_theme .lead {
   border: none;
 }
 .accordion-flush .accordion-item .accordion-header .accordion-button {
-  background-color: #f8f9fa;
-  font-weight: 600;
+  background-color: white;
+  font-weight: 700;
   font-size: 1.25rem;
   color: black;
   padding: 16px 20px 16px 30px;
@@ -11724,7 +11724,7 @@ section.section_stage_theme .lead {
   transform: rotate(90deg) scale(1.2);
 }
 .accordion-flush .accordion-item .accordion-header .accordion-button.collapsed {
-  color: #495057;
+  color: #6c757d;
 }
 .accordion-flush .accordion-item .accordion-header .accordion-button.collapsed:hover {
   color: black;
@@ -11744,12 +11744,16 @@ section.section_stage_theme .lead {
 }
 .accordion-flush .accordion-item .accordion-body .accordion-list li a {
   font-weight: 500;
+  font-size: 1rem;
 }
 .accordion-flush .accordion-item .accordion-body .accordion-list li a.active {
-  color: #495057;
-  pointer-events: none;
-  user-select: none;
-  font-weight: 400;
+  border-left: solid 4px #4840f3;
+  font-weight: 700;
+  padding-left: 10px;
+  margin-left: -14px;
+}
+.accordion-flush .accordion-item .accordion-body .accordion-list li a.active:hover {
+  border-color: #1a10f0;
 }
 
 /*!
@@ -11763,7 +11767,7 @@ section.section_stage_theme .lead {
 */
 .hljs {
   color: #24292e !important;
-  background: #ffffff !important;
+  background: #f8f9fa !important;
 }
 
 .hljs-doctag,
@@ -11885,11 +11889,15 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Mulish";
-  background-color: #f8f9fa;
+  background-color: white;
 }
 
 main {
   flex: 1 0 auto;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: 700;
 }
 
 p {
