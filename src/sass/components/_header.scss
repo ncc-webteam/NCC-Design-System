@@ -226,10 +226,13 @@ header {
     }
   }
 
+  .offcanvas {
+    max-width: 80%;
+  }
+
   .offcanvas-nav {
     text-align: center;
     list-style: none;
-    
     
     .nav-link {
       color: $dark;
