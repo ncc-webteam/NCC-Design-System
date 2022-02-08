@@ -11979,4 +11979,14 @@ p code {
   font-weight: 600;
 }
 
+.back-to-top {
+  display: inline-block;
+}
+.back-to-top:hover svg path {
+  fill: #1a10f0;
+}
+.back-to-top:focus svg path {
+  fill: #0b0c0c;
+}
+
 /*# sourceMappingURL=style.css.map */
