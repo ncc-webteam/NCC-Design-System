@@ -11239,6 +11239,16 @@ textarea.form-control-lg {
   text-decoration: underline;
 }
 
+.nohover:hover {
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
+}
+.nohover:hover img {
+  transform: none;
+}
+.nohover:hover .card-title {
+  text-decoration: none;
+}
+
 .card-rounded {
   border-radius: 10px;
 }
@@ -11962,6 +11972,11 @@ p code {
   .navbar-nav .nav-item {
     text-align: center;
   }
+}
+
+.features-list li {
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
