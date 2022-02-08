@@ -1,6 +1,6 @@
 {% macro generalcard(title, location, date, flair, extra, text, img, link, options) %}
 
-<div class="card {{options}} h-100" data-component="72">
+<div class="card {{options}} h-100 {% if title|length %}{% else %}nohover{% endif %}" data-component="72">
 
   {% if img|length %}
   <div class="img-wrapper ratio ratio-16x9">

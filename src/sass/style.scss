@@ -106,3 +106,10 @@ p code {
     @include media-breakpoint-down(lg) { text-align: center; }
   }  
 }
+
+.features-list {
+  li {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+}

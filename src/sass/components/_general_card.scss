@@ -101,6 +101,15 @@
   }
 }
 
+.nohover {
+  &:hover {
+    box-shadow: $object-shadow;
+    
+    img { transform: none; }
+    .card-title { text-decoration: none; }
+  }
+}
+
 .card-rounded { border-radius: 10px; }
 
 // General cards are not affected by 'prefers-color-scheme' - this class enables light cards

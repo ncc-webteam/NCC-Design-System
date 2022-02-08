@@ -30,12 +30,39 @@
 
 <div class="components-main-section col-12 col-lg-8 mb-5"> 
   <h1>General card - #73</h1>
-  <p class="lead">This card can be used for a few things but most importantly as a placeholder component for testing pages.</p>
-  <h2>Other info</h2>
-  <p>Generic placeholder text about the general card Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, assumenda! whatever</p>
-  <div class="row">
-    <div class="col-12 col-lg-6">
+  <p class="lead">A <strong>card</strong> is a flexible and extensible content container. It can be used in a variety of contexts and can be as streamlined or detailed as desired.</p>
+  <h2>Examples</h2>
+  <p>Below are three examples of cards - they are the same component, but with different options enabled.</p>
+  <div class="row {{rowDefaults}} gy-4">
+    <div class="col-12 col-md-6">
         {{ generalcard.generalcard('Card Title', 'James Paget Hospital • Gorleston', '29th July 2020 • 8.27pm', 'Course full', '5 sessions • course full', 'Card content / descriptive text goes here', 'lb_16x9.jpg', '#', 'card-rounded') }}
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="row mb-4">
+        <div class="col-12">
+          {{ generalcard.generalcard('', 'Norwich • Norfolk', '', '', '', 'Card content / descriptive text goes here', '', '#', 'card-light card-rounded') }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          {{ generalcard.generalcard('Card Title', '', '', '', '', '', 'lb_16x9.jpg', '#', 'card-light') }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Features</h2>
+  <div class="row {{rowDefaults}}">
+    <div class="col-12 col-md-6">
+      {{ generalcard.generalcard('Card Title', '"Location" text', '"Date" text', '"Flair" / badge', 'Extra text', 'Main card content', 'lb_16x9.jpg', '#', 'card-light') }}
+    </div>
+    <div class="col-12 col-md-6">
+      <ul class="features-list">
+        <li class="mb-4">All visible card features are optional</li>
+        <li class="mb-4">The image is automatically scaled to 16x9 (not stretched or distorted)</li>
+        <li class="mb-4">If the title is not present, the card will not be clickable</li>
+        <li class="mb-4">Corners can be squared off or rounded. The card is square by default.</li>
+        <li class="mb-4">The card is dark by default.</li>
+      </ul>
     </div>
   </div>
 </div>
