@@ -113,3 +113,13 @@ p code {
     font-weight: 600;
   }
 }
+
+.back-to-top {
+  display: inline-block;
+  &:hover {
+    svg path { fill: $link-colour-hover };
+  }
+  &:focus {
+    svg path { fill: $focus-text-colour };
+  }
+}
