@@ -1,0 +1,159 @@
+.promo-card {
+  position: relative;
+  background-image: url("https://assets.codepen.io/t-2237/lb_16x9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  @include ani;
+  
+  .card-body {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    max-width: 250px; // rather than 50% - more responsive
+    justify-content: space-between;
+    flex-direction: column;
+    @include media-breakpoint-down(md) { margin: 10px; }
+    @include media-breakpoint-down(sm) { min-width: calc(100% - 20px); }
+    
+    .card-title {
+      color: $dark;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+    }
+    
+    .card-text {
+      color: $gray-700;
+      margin: 10px 0 10px 0;
+    }
+    
+    .card-link {
+      color: $light;
+      font-weight: 700;
+      font-size: 18px;
+      background-color: $gray-700;
+      padding: 10px 20px;
+      margin: 10px 0 0 0;
+      border-radius: 6px;
+      text-align: center;
+      border: none;
+      @include ani;
+      
+      &:hover {
+        background-color: black;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  &:focus-within {
+    outline: solid 4px $focus-colour;
+    
+    .card-body { background-color: $focus-colour; }
+    
+    .card-text { color: $focus-text-colour; }
+    
+    .card-link {
+      text-decoration: underline;
+      background-color: $focus-colour;
+      color: $focus-text-colour;
+      border: none;
+      outline: solid 4px $focus-text-colour;
+      transition: none;
+      
+      &:hover {
+        background-color: $focus-colour;
+        color: $focus-text-colour;
+      }
+    }
+  }
+  
+  &:hover {
+    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.promo-bottom { align-items: end; }
+
+.promo-right { justify-content: end; }
+
+.promo-scrim {
+  align-items: stretch;
+  .card-body {
+    background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 70%);
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    .card-title {
+      color: $light;
+      font-weight: 700;
+      width: auto;
+    }
+    
+    .card-text { color: $light; }
+    
+    .card-link {
+      background-color: $light;
+      color: $dark;
+      &:hover {
+        background-color: $dark;
+        color: $light;
+      }
+    }
+  }
+  
+  &:focus-within {
+    outline: solid 4px $focus-colour;
+    
+    .card-body { background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 70%); }
+    
+    .card-title {
+      background-color: $focus-colour;
+      color: $focus-text-colour;
+    }
+    .card-text {
+      background-color: $focus-colour;
+      color: $focus-text-colour;
+    }
+    
+    .card-link {
+      text-decoration: underline;
+      background-color: $focus-colour;
+      color: $focus-text-colour;
+      border: none;
+      outline: solid 4px $focus-text-colour;
+      transition: none;
+      
+      &:hover {
+        background-color: $focus-colour;
+        color: $focus-text-colour;
+      }
+    }
+  }
+}
+
+.promo-scrim.promo-right {
+  .card-body {
+    align-items: flex-end;
+  }
+}
+
+.promo-scrim.promo-bottom {
+  .card-body {
+    background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 70%);
+    justify-content: flex-end;
+  }
+}

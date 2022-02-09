@@ -11322,6 +11322,175 @@ textarea.form-control-lg {
   outline: none;
 }
 
+.promo-card {
+  position: relative;
+  background-image: url("https://assets.codepen.io/t-2237/lb_16x9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .promo-card {
+    animation: none;
+    transition: none;
+  }
+}
+.promo-card .card-body {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 6px;
+  display: flex;
+  max-width: 250px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media (max-width: 767.98px) {
+  .promo-card .card-body {
+    margin: 10px;
+  }
+}
+@media (max-width: 575.98px) {
+  .promo-card .card-body {
+    min-width: calc(100% - 20px);
+  }
+}
+.promo-card .card-body .card-title {
+  color: #212529;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.promo-card .card-body .card-text {
+  color: #495057;
+  margin: 10px 0 10px 0;
+}
+.promo-card .card-body .card-link {
+  color: #f8f9fa;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #495057;
+  padding: 10px 20px;
+  margin: 10px 0 0 0;
+  border-radius: 6px;
+  text-align: center;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .promo-card .card-body .card-link {
+    animation: none;
+    transition: none;
+  }
+}
+.promo-card .card-body .card-link:hover {
+  background-color: black;
+  text-decoration: underline;
+}
+.promo-card:focus-within {
+  outline: solid 4px #ffdd00;
+}
+.promo-card:focus-within .card-body {
+  background-color: #ffdd00;
+}
+.promo-card:focus-within .card-text {
+  color: #0b0c0c;
+}
+.promo-card:focus-within .card-link {
+  text-decoration: underline;
+  background-color: #ffdd00;
+  color: #0b0c0c;
+  border: none;
+  outline: solid 4px #0b0c0c;
+  transition: none;
+}
+.promo-card:focus-within .card-link:hover {
+  background-color: #ffdd00;
+  color: #0b0c0c;
+}
+.promo-card:hover {
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.5);
+}
+
+.promo-bottom {
+  align-items: end;
+}
+
+.promo-right {
+  justify-content: end;
+}
+
+.promo-scrim {
+  align-items: stretch;
+}
+.promo-scrim .card-body {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 70%);
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.promo-scrim .card-body .card-title {
+  color: #f8f9fa;
+  font-weight: 700;
+  width: auto;
+}
+.promo-scrim .card-body .card-text {
+  color: #f8f9fa;
+}
+.promo-scrim .card-body .card-link {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+.promo-scrim .card-body .card-link:hover {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+.promo-scrim:focus-within {
+  outline: solid 4px #ffdd00;
+}
+.promo-scrim:focus-within .card-body {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 70%);
+}
+.promo-scrim:focus-within .card-title {
+  background-color: #ffdd00;
+  color: #0b0c0c;
+}
+.promo-scrim:focus-within .card-text {
+  background-color: #ffdd00;
+  color: #0b0c0c;
+}
+.promo-scrim:focus-within .card-link {
+  text-decoration: underline;
+  background-color: #ffdd00;
+  color: #0b0c0c;
+  border: none;
+  outline: solid 4px #0b0c0c;
+  transition: none;
+}
+.promo-scrim:focus-within .card-link:hover {
+  background-color: #ffdd00;
+  color: #0b0c0c;
+}
+
+.promo-scrim.promo-right .card-body {
+  align-items: flex-end;
+}
+
+.promo-scrim.promo-bottom .card-body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 70%);
+  justify-content: flex-end;
+}
+
 header {
   background-color: #350C78;
 }

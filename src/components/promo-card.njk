@@ -1,0 +1,64 @@
+{% extends "documentation.njk" %}
+
+{% import "_pattern_macros/promo_card.njk" as promocard %}
+
+{% set title = "Promo Card" %}
+
+{% block breadcrumb %}
+<section class="breadcrumbs">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb my-2">
+        <li class="breadcrumb-item"><a href="{{ '/' | url }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ '/components/' | url }}">Components</a></li>
+        <li class="breadcrumb-item active">Promo Card</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+{% endblock %}
+
+{% set collapseID = "collapseSeven" %}
+{% set headingID = "headingSevenButton" %}
+{% set linkID = "promo-card-link" %}
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ accordion.accordion('7') }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5"> 
+  <h1>Promo card - #154</h1>
+  <p class="lead">A <strong>card</strong> is a flexible and extensible content container. It can be used in a variety of contexts and can be as streamlined or detailed as desired.</p>
+  <h2>Examples</h2>
+  <p>Below are three examples of cards - they are the same component, but with different options enabled.</p>
+  <div class="row {{rowDefaults}} gy-4">
+    <div class="col-12">
+        {{ promocard.promocard('Card Title', 'Card content / descriptive text goes here', '#', 'Card link', 'lb_16x9.jpg', 'promo-scrim') }}
+    </div>
+    <div class="col-12 col-md-6">
+      {{ promocard.promocard('Card Title', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, sequi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, sequi?', '#', 'Card link', 'lb_16x9.jpg') }}
+    </div>
+    <div class="col-12 col-md-6">
+      {{ promocard.promocard('Card Title', 'Card content / descriptive text goes here', '#', 'Card link', 'lb_16x9.jpg', 'promo-right promo-bottom') }}
+    </div>
+  </div>
+  <h2>Features</h2>
+  <div class="row {{rowDefaults}}">
+    <div class="col-12 col-md-6">
+      {{ promocard.promocard('Card Title', 'Card content / descriptive text goes here', '#', 'Card link', 'lb_16x9.jpg') }}
+    </div>
+    <div class="col-12 col-md-6">
+      <ul class="features-list">
+        <li>All visible card features are optional</li>
+        <li>The image is automatically scaled to 16x9 (not stretched or distorted)</li>
+        <li>If the title is not present, the card will not be clickable</li>
+        <li>Corners can be squared off or rounded. The card is square by default.</li>
+        <li>The card is dark by default.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
