@@ -53,6 +53,10 @@
             &:hover {
               border-color: $link-colour-hover;
             }
+
+            &:focus {
+              border-color: $focus-text-colour;
+            }
           }
         }
       }

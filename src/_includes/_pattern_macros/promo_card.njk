@@ -1,6 +1,6 @@
 {% macro promocard(title, text, link, linktext, img, options) %}
 
-<div class="promo-card {{options}}" data-component="154">
+<div class="promo-card {{options}}" data-component="154" style="background-image: url('/Eleventy-testing/public/img/{{img}}')">
   <div class="card-body">
     <h2 class="h4 card-title">{{title}}</h4>
       <p class="card-text">{{text}}</p>
