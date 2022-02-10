@@ -1,0 +1,167 @@
+{% extends "documentation.njk" %}
+
+{% import "_pattern_macros/timeline.njk" as timeline %}
+
+{% set title = "Timeline Card" %}
+
+{% block breadcrumb %}
+<section class="breadcrumbs">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb my-2">
+        <li class="breadcrumb-item"><a href="{{ '/' | url }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ '/components/' | url }}">Components</a></li>
+        <li class="breadcrumb-item active">Timeline</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+{% endblock %}
+
+{% set collapseID = "collapseSeven" %}
+{% set headingID = "headingSevenButton" %}
+{% set linkID = "timeline-link" %}
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ accordion.accordion('7') }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5"> 
+  <h1>Timeline - #205</h1>
+  <p class="lead">A <strong>timeline</strong> is useful for displaying a series of events in chronological order.</p>
+  <h2>Examples</h2>
+  <p>Below are some examples of the timeline component and its features. I will need to rethink the way I've done this component, such that it works within columns smaller than col-12.</p>
+  <section class="section_light_theme">
+      <div class="timeline-component">
+        <div class="timeline">
+        {% set timelineitems1 =
+          [
+            {
+              "timelineitem_title" : "Timeline",
+              "timelineitem_date" : "1792",
+              "timelineitem_image" : "img/nmc_collections_egg_small.png",
+              "image_link" : "/collection_natural.html",
+              "timelineitem_text" : "Hugh Kerr carves his coconut."
+            },
+            {
+              "timelineitem_title" : "",
+              "timelineitem_date" : "1956",
+              "timelineitem_image" : "img/nmc_collections_egg_small.png",
+              "image_link" : "/collection_natural.html",
+              "timelineitem_text" : "The coconut makes its way to the Norwich Castle collection."
+            },
+            {
+              "timelineitem_title" : "",
+              "timelineitem_date" : "1962",
+              "timelineitem_image" : "",
+              "image_link" : "",
+              "timelineitem_text" : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam soluta reprehenderit debitis et ipsa rem numquam pariatur architecto reiciendis magni?"
+            },
+            {
+              "timelineitem_title" : "",
+              "timelineitem_date" : "1969",
+              "timelineitem_image" : "(intentionally incorrect file path)",
+              "image_link" : "/collection_natural.html",
+              "timelineitem_text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, deserunt?"
+            },
+            {
+              "timelineitem_title" : "",
+              "timelineitem_date" : "2008",
+              "timelineitem_image" : "img/nmc_andelys.png",
+              "image_link" : "",
+              "timelineitem_text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt in placeat enim excepturi eligendi culpa doloribus suscipit ipsam, vero, error aliquam cupiditate, nobis corrupti. Vel impedit voluptatum earum ea corrupti."
+            },
+            {
+              "timelineitem_title" : "",
+              "timelineitem_date" : "2021",
+              "timelineitem_image" : "img/nmc_collections_egg_small.png",
+              "image_link" : "/collection_natural.html",
+              "timelineitem_text" : "A timeline component using the coconut as a sample object is created."
+            }
+          ]
+        %}
+
+        {% for item in timelineitems1 %}
+          {{ 
+            timeline.timeline(
+              item.timelineitem_title,
+              item.timelineitem_date,
+              item.timelineitem_image,
+              item.image_link,
+              item.timelineitem_text
+            ) 
+          }}
+        {% endfor %}
+        </div>
+      </div>
+  </section>
+  <section class="section_dark_theme">
+      <div class="timeline-component">
+        <div class="timeline">
+        {% set timelineitems1 =
+          [
+            {
+              "timelineitem_title" : "Timeline",
+              "timelineitem_date" : "1792",
+              "timelineitem_image" : "img/nmc_collections_egg_small.png",
+              "image_link" : "/collection_natural.html",
+              "timelineitem_text" : "Hugh Kerr carves his coconut."
+            },
+            {
+              "timelineitem_title" : "",
+              "timelineitem_date" : "1956",
+              "timelineitem_image" : "img/nmc_collections_egg_small.png",
+              "image_link" : "/collection_natural.html",
+              "timelineitem_text" : "The coconut makes its way to the Norwich Castle collection."
+            },
+            {
+              "timelineitem_title" : "",
+              "timelineitem_date" : "1962",
+              "timelineitem_image" : "",
+              "image_link" : "",
+              "timelineitem_text" : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam soluta reprehenderit debitis et ipsa rem numquam pariatur architecto reiciendis magni?"
+            },
+            {
+              "timelineitem_title" : "",
+              "timelineitem_date" : "1969",
+              "timelineitem_image" : "(intentionally incorrect file path)",
+              "image_link" : "/collection_natural.html",
+              "timelineitem_text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, deserunt?"
+            },
+            {
+              "timelineitem_title" : "",
+              "timelineitem_date" : "2008",
+              "timelineitem_image" : "img/nmc_andelys.png",
+              "image_link" : "",
+              "timelineitem_text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt in placeat enim excepturi eligendi culpa doloribus suscipit ipsam, vero, error aliquam cupiditate, nobis corrupti. Vel impedit voluptatum earum ea corrupti."
+            },
+            {
+              "timelineitem_title" : "",
+              "timelineitem_date" : "2021",
+              "timelineitem_image" : "img/nmc_collections_egg_small.png",
+              "image_link" : "/collection_natural.html",
+              "timelineitem_text" : "A timeline component using the coconut as a sample object is created."
+            }
+          ]
+        %}
+
+        {% for item in timelineitems1 %}
+          {{ 
+            timeline.timeline(
+              item.timelineitem_title,
+              item.timelineitem_date,
+              item.timelineitem_image,
+              item.image_link,
+              item.timelineitem_text
+            ) 
+          }}
+        {% endfor %}
+        </div>
+      </div>
+  </section>
+  <h2>Features</h2>
+</div>
+
+{% endblock %}

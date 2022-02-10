@@ -1,0 +1,36 @@
+{% macro timeline(title, date, img, link, text) %}
+
+  {% if title|length %}
+    <h2 class="mb-5 timeline-title">{{title}}</h2>
+  {% else %}{% endif %}
+
+  <div class="element">
+    <p class="date">{{date}}</p>
+    
+    {% if image|length %}
+    <div class="row gx-0">
+      <div class="col-12 col-sm-9 text-col">
+        <p class="text">{{text}}</p>
+      </div>
+      <div class="col-sm-3 thumbnail-col">
+        <div class="thumbnail-wrapper">
+          {% if link|length %}
+          <a href="{{link}}" aria-label="Link to image">
+            <img src="/Eleventy-testing/public/img/{{img}}" alt="image relating to {{date}}">
+          </a>
+          {% else %}
+          <img src="/Eleventy-testing/public/img/{{img}}" alt="image relating to {{date}}">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div class="row gx-0">
+      <div class="col-12 text-col">
+        <p class="text">{{text}}</p>
+      </div>
+    </div>
+    {% endif %}
+    
+  </div>
+{% endmacro %}

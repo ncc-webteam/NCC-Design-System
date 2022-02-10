@@ -1,0 +1,283 @@
+.timeline-component {
+  border-top: solid $gray-500 1px;
+  border-bottom: solid $gray-500 1px;
+  display: flex;
+  flex-wrap: wrap;
+  
+  .timeline {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    @include media-breakpoint-down(lg) { padding: 40px; }
+    
+    .timeline-title {
+      margin-top: -70px;
+      
+      @include media-breakpoint-down(lg) {
+        margin-top: -20px;
+        margin-left: -20px;
+      }
+    }
+    
+    .element {
+      min-height: 50px;
+      width: 60%;
+      display: block;
+      position: relative;
+      margin-top: -40px;
+      pointer-events: none;
+      
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        margin-top: 0px;
+      }
+      
+      .date {
+        color: $dark;
+        font-size: 1.375rem;
+        font-weight: 600;
+        position: relative;
+        margin-bottom: 0;
+        pointer-events: auto;
+        
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: $gray-300;
+          width: 15px;
+          height: 15px;
+          border-radius: 15px;
+          border: solid $dark 2px;
+        }
+      }
+      
+      .row {
+        display: flex;
+        flex-wrap: nowrap;
+        
+       @include media-breakpoint-down(lg) {
+          justify-content: start;
+        }      
+      }
+      
+      .text {
+        color: $gray-700;
+        font-size: 1.125rem;
+        margin-bottom: 20px;
+        pointer-events: auto;
+      }
+      
+      .thumbnail-col {
+        display: flex;
+        justify-content: end;
+        max-width: 100px;
+        
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+      
+      .thumbnail-wrapper {
+        overflow: hidden;
+        height: 100px;
+        width: 100px;
+        margin: 0;
+        pointer-events: auto;
+        
+        a {
+          color: $dark;
+          &:hover {
+            color: $dark;
+          }
+        }
+        
+        img {
+          display: block;
+          object-fit: cover;
+          width: 100%;
+          height: 100%; 
+        }
+      }
+    }
+    
+    .element:nth-child(odd) {
+      float: right;
+      text-align: left;
+      padding-left: 200px;
+      
+      .row {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        
+        .thumbnail-col {
+          margin-right: 20px;
+          justify-content: start;
+        }
+      }
+      
+      .date {
+        &:before {
+          top: 10px;
+          left: -30px;
+        }
+      }
+      
+      &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 90px;
+        height: calc(100% - 40px);
+        top: 20px;
+        left: 82px;
+        background: linear-gradient(to top left, rgba(0,0,0,0) calc(50% - 1px), $dark 50%, rgba(0,0,0,0) calc(50% + 1px));
+      }
+      
+      @include media-breakpoint-down(xxl) {
+        &:after {
+          width: 120px;
+          top: 20px;
+          left: 52px;
+        }
+      }
+      @include media-breakpoint-down(xl) {
+        &:after {
+          width: 160px;
+          top: 20px;
+          left: 12px;
+        }
+      }
+      @include media-breakpoint-down(lg) {
+        float: left;
+        padding-left: 0px;
+        &:after {
+          height: 100%;
+          top: 24px;
+          left: -102px;
+          background: linear-gradient(90deg, rgba(0,0,0,0) calc(50% - 1px), $dark 50%, rgba(0,0,0,0) calc(50% + 1px));
+        }
+      }
+    }
+    .element:nth-child(even) {
+      float: left;
+      text-align: right;
+      padding-right: 200px;
+      
+      .row {
+        justify-content: flex-end;
+        .thumbnail-col {
+          margin-left: 20px;
+        }
+        
+        @include media-breakpoint-down(lg) {
+          flex-direction: row-reverse;
+        
+          .thumbnail-col {
+            margin-left: 0;
+            margin-right: 20px;
+            justify-content: start;
+          }
+        }
+      }
+      
+      .date {
+        &:before {
+          top: 10px;
+          right: -30px;
+        }
+      }
+      
+      &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 90px;
+        height: calc(100% - 40px);
+        top: 20px;
+        right: 82px;
+        background: linear-gradient(to top right, rgba(0,0,0,0) calc(50% - 1px), $dark 50%, rgba(0,0,0,0) calc(50% + 1px));
+      }
+      
+      @include media-breakpoint-down(xxl) {
+        &:after {
+          width: 120px;
+          top: 20px;
+          right: 52px;
+        }
+      }
+      @include media-breakpoint-down(xl) {
+        &:after {
+          width: 160px;
+          top: 20px;
+          right: 12px;
+        }
+      }
+      @include media-breakpoint-down(lg) {
+        float: left;
+        padding-right: 0px;
+        text-align: left;
+        &:after {
+          height: 100%;
+          top: 25px;
+          left: -102px;
+          background: linear-gradient(90deg, rgba(0,0,0,0) calc(50% - 1px), $dark 50%, rgba(0,0,0,0) calc(50% + 1px));
+        }
+        .date {
+          &:before {
+            top: 10px;
+            left: -30px;
+          }
+        }
+      }
+    }
+    
+    .element:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.section_dark_theme .timeline-component {
+  border-color: $gray-500; 
+  
+  .timeline {
+    .timeline-title {
+      color: $light;
+    }
+    .element {
+      .date {
+        color: $light;
+        &:before {
+          border-color: $light;
+          background-color: $dark;
+        }
+      }
+      .text {
+        color: $gray-400;
+      }
+    }
+    .element:nth-child(odd) {
+      &:after {
+        background: linear-gradient(to top left, rgba(0,0,0,0) calc(50% - 1px), $light 50%, rgba(0,0,0,0) calc(50% + 1px));
+      }
+      @include media-breakpoint-down(lg) {
+        &:after {
+          background: linear-gradient(90deg, rgba(0,0,0,0) calc(50% - 1px), $light 50%, rgba(0,0,0,0) calc(50% + 1px));
+        }
+      }
+    }
+    .element:nth-child(even) {
+      &:after {
+        background: linear-gradient(to top right, rgba(0,0,0,0) calc(50% - 1px), $light 50%, rgba(0,0,0,0) calc(50% + 1px));
+      }
+
+      @include media-breakpoint-down(lg) { 
+        &:after {
+          background: linear-gradient(90deg, rgba(0,0,0,0) calc(50% - 1px), $light 50%, rgba(0,0,0,0) calc(50% + 1px));
+        }     
+      }  
+    }
+  }
+}
