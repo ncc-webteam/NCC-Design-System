@@ -11324,7 +11324,6 @@ textarea.form-control-lg {
 
 .promo-card {
   position: relative;
-  background-image: url("https://assets.codepen.io/t-2237/lb_16x9.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 300px;
@@ -11936,6 +11935,9 @@ section.section_stage_theme .lead {
 }
 .accordion-flush .accordion-item .accordion-body .accordion-list li a.active:hover {
   border-color: #1a10f0;
+}
+.accordion-flush .accordion-item .accordion-body .accordion-list li a.active:focus {
+  border-color: #0b0c0c;
 }
 
 /*!
