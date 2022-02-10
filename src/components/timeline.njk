@@ -41,15 +41,15 @@
             {
               "timelineitem_title" : "Timeline",
               "timelineitem_date" : "1792",
-              "timelineitem_image" : "img/nmc_collections_egg_small.png",
-              "image_link" : "/collection_natural.html",
+              "timelineitem_image" : "lb_16x9.jpg",
+              "image_link" : "#",
               "timelineitem_text" : "Hugh Kerr carves his coconut."
             },
             {
               "timelineitem_title" : "",
               "timelineitem_date" : "1956",
-              "timelineitem_image" : "img/nmc_collections_egg_small.png",
-              "image_link" : "/collection_natural.html",
+              "timelineitem_image" : "lb_16x9.jpg",
+              "image_link" : "#",
               "timelineitem_text" : "The coconut makes its way to the Norwich Castle collection."
             },
             {
@@ -63,21 +63,21 @@
               "timelineitem_title" : "",
               "timelineitem_date" : "1969",
               "timelineitem_image" : "(intentionally incorrect file path)",
-              "image_link" : "/collection_natural.html",
+              "image_link" : "#",
               "timelineitem_text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, deserunt?"
             },
             {
               "timelineitem_title" : "",
               "timelineitem_date" : "2008",
-              "timelineitem_image" : "img/nmc_andelys.png",
+              "timelineitem_image" : "lb_16x9.jpg",
               "image_link" : "",
               "timelineitem_text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt in placeat enim excepturi eligendi culpa doloribus suscipit ipsam, vero, error aliquam cupiditate, nobis corrupti. Vel impedit voluptatum earum ea corrupti."
             },
             {
               "timelineitem_title" : "",
               "timelineitem_date" : "2021",
-              "timelineitem_image" : "img/nmc_collections_egg_small.png",
-              "image_link" : "/collection_natural.html",
+              "timelineitem_image" : "lb_16x9.jpg",
+              "image_link" : "#",
               "timelineitem_text" : "A timeline component using the coconut as a sample object is created."
             }
           ]
@@ -100,20 +100,20 @@
   <section class="section_dark_theme">
       <div class="timeline-component">
         <div class="timeline">
-        {% set timelineitems1 =
+        {% set timelineitems2 =
           [
             {
-              "timelineitem_title" : "Timeline",
+              "timelineitem_title" : "Timeline (dark background)",
               "timelineitem_date" : "1792",
-              "timelineitem_image" : "img/nmc_collections_egg_small.png",
-              "image_link" : "/collection_natural.html",
+              "timelineitem_image" : "lb_16x9.jpg",
+              "image_link" : "#",
               "timelineitem_text" : "Hugh Kerr carves his coconut."
             },
             {
               "timelineitem_title" : "",
               "timelineitem_date" : "1956",
-              "timelineitem_image" : "img/nmc_collections_egg_small.png",
-              "image_link" : "/collection_natural.html",
+              "timelineitem_image" : "lb_16x9.jpg",
+              "image_link" : "#",
               "timelineitem_text" : "The coconut makes its way to the Norwich Castle collection."
             },
             {
@@ -127,27 +127,27 @@
               "timelineitem_title" : "",
               "timelineitem_date" : "1969",
               "timelineitem_image" : "(intentionally incorrect file path)",
-              "image_link" : "/collection_natural.html",
+              "image_link" : "#",
               "timelineitem_text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, deserunt?"
             },
             {
               "timelineitem_title" : "",
               "timelineitem_date" : "2008",
-              "timelineitem_image" : "img/nmc_andelys.png",
+              "timelineitem_image" : "lb_16x9.jpg",
               "image_link" : "",
               "timelineitem_text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt in placeat enim excepturi eligendi culpa doloribus suscipit ipsam, vero, error aliquam cupiditate, nobis corrupti. Vel impedit voluptatum earum ea corrupti."
             },
             {
               "timelineitem_title" : "",
               "timelineitem_date" : "2021",
-              "timelineitem_image" : "img/nmc_collections_egg_small.png",
-              "image_link" : "/collection_natural.html",
+              "timelineitem_image" : "lb_16x9.jpg",
+              "image_link" : "#",
               "timelineitem_text" : "A timeline component using the coconut as a sample object is created."
             }
           ]
         %}
 
-        {% for item in timelineitems1 %}
+        {% for item in timelineitems2 %}
           {{ 
             timeline.timeline(
               item.timelineitem_title,

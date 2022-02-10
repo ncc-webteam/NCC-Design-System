@@ -257,6 +257,14 @@
       .text {
         color: $gray-400;
       }
+      .thumbnail-wrapper {
+        a {
+          color: $light;
+          &:hover {
+            color: $light;
+          }
+        }
+      }
     }
     .element:nth-child(odd) {
       &:after {

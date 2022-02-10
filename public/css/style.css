@@ -11732,6 +11732,12 @@ textarea.form-control-lg {
 .section_dark_theme .timeline-component .timeline .element .text {
   color: #ced4da;
 }
+.section_dark_theme .timeline-component .timeline .element .thumbnail-wrapper a {
+  color: #f8f9fa;
+}
+.section_dark_theme .timeline-component .timeline .element .thumbnail-wrapper a:hover {
+  color: #f8f9fa;
+}
 .section_dark_theme .timeline-component .timeline .element:nth-child(odd):after {
   background: linear-gradient(to top left, rgba(0, 0, 0, 0) calc(50% - 1px), #f8f9fa 50%, rgba(0, 0, 0, 0) calc(50% + 1px));
 }
