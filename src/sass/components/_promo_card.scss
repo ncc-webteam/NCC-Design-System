@@ -56,7 +56,10 @@
   
   &:focus-within {
     outline: solid 4px $focus-colour;
-    
+    border: none;
+    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.5);
+    transition: none;
+
     .card-body { background-color: $focus-colour; }
     
     .card-text { color: $focus-text-colour; }

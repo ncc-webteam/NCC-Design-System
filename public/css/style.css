@@ -11395,6 +11395,9 @@ textarea.form-control-lg {
 }
 .promo-card:focus-within {
   outline: solid 4px #ffdd00;
+  border: none;
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.5);
+  transition: none;
 }
 .promo-card:focus-within .card-body {
   background-color: #ffdd00;
