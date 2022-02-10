@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <title>Introduction to Components - NCC Design System</title>
+  <title>Figure - NCC Design System</title>
 </head>
 
 
@@ -124,7 +124,8 @@ Search</button>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb my-2">
         <li class="breadcrumb-item"><a href="/Eleventy-testing/public/">Home</a></li>
-        <li class="breadcrumb-item active">Components</li>
+        <li class="breadcrumb-item"><a href="/Eleventy-testing/public/components/">Components</a></li>
+        <li class="breadcrumb-item active">Figure</li>
       </ol>
     </nav>
   </div>
@@ -517,11 +518,32 @@ Search</button>
 </div>
 
 <div class="components-main-section col-12 col-lg-8 mb-5"> 
-  <h1>Introduction to components</h1>
-  <p class="lead">Documentation for all of the components used in NCC sites including examples, options, and use cases.</p>
-
-  <h2>How to use components</h2>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, nobis. Odit, quisquam possimus rerum aperiam, cum nesciunt ipsa impedit voluptatum omnis explicabo aut assumenda eius fuga eveniet nisi vero non corporis totam blanditiis labore ducimus, quod et aliquam quidem? Possimus quidem ipsam reprehenderit delectus cum quam modi voluptatibus voluptates nulla fuga laboriosam, at, doloremque tempore ullam libero sed temporibus? Delectus molestias, hic aspernatur laudantium animi ipsum! Aut quibusdam ex laborum nemo in, eius harum itaque pariatur optio consequatur consectetur aperiam provident ratione, officiis ut odit earum nihil sapiente aspernatur perferendis magnam. Ab soluta quibusdam saepe cumque incidunt placeat ducimus minus quaerat, earum libero accusamus veniam error deleniti aliquam. Veritatis distinctio quo tenetur architecto quod ex, harum deleniti officia. Vel cupiditate suscipit ut ad molestiae, quam, rem dicta error, labore laborum sunt veniam dolore asperiores ullam fugit optio. Voluptate alias doloremque quibusdam pariatur maxime assumenda est aperiam corrupti quae? Quod eum illum dolorum quaerat praesentium accusantium, magnam dicta, tempore natus libero soluta quae voluptas modi! Totam commodi provident harum dicta explicabo sed deserunt unde consectetur rem quo, nobis aperiam iure ipsum nisi distinctio doloribus quae incidunt quasi labore eius libero a! Ipsam nostrum quibusdam provident quisquam, tenetur expedita numquam vel excepturi?</p>
+  <h1>Figure</h1>
+  <p class="lead">A <strong>figure</strong> is a flexible and extensible content container. It can be used in a variety of contexts and can be as streamlined or detailed as desired.</p>
+  <h2>Examples</h2>
+  <p>Below are three examples of figures - they are the same component, but with different options enabled.</p>
+  <div class="row mt-0 mb-5 g-md-4 g-2">
+    <div class="col-12 col-md-6">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illo hic aut facere a quos possimus impedit aliquam in laborum omnis illum sed minus officia cumque, tenetur cum libero saepe? Doloremque neque expedita perferendis atque enim! Perferendis eius, ex eveniet sed excepturi quis qui incidunt eaque ab ullam, modi temporibus quo, aliquam ea. Explicabo, veniam distinctio amet iusto quisquam voluptatibus incidunt eum sequi magni inventore, porro totam cupiditate ullam magnam assumenda! Illo saepe sunt pariatur animi nam, laborum perferendis qui earum perspiciatis doloremque quia libero, enim ducimus. Quos quo porro facilis? Voluptas ducimus placeat aut iusto a non nam magnam!</p>
+    </div>
+    <div class="col-12 col-md-6">
+      <figure>
+        <img src="/Eleventy-testing/public/img/crome-portrait.jpg" class="figure-img img-fluid" alt="Portrait of John Crome">
+        <figcaption class="text-center">The Royal Academy's 1878 Winter Exhibitional importance of the Norwich School.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <h2>Features</h2>
+  <section class="section_dark_theme">
+    <div class="row mt-0 mb-5 g-md-4 g-2 justify-content-center">
+      <div class="col-12 col-md-4">
+        <figure class="dark">
+          <img src="/Eleventy-testing/public/img/crome-portrait.jpg" class="figure-img img-fluid" alt="Portrait of John Crome">
+          <figcaption class="text-center">The Royal Academy's 1878 Winter Exhibitional importance of the Norwich School.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 </div>
 
 
@@ -532,7 +554,7 @@ Search</button>
         }
 
         function currentLink() {
-          let link = document.getElementById("components-link");
+          let link = document.getElementById("figure-link");
           link.classList.add("active");
         }
       </script>

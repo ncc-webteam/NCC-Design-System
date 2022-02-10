@@ -1,0 +1,12 @@
+{% macro imagecard(title, link, img, options) %}
+
+<div class="image-card {{options}}" data-component="81">
+  <div class="img-wrapper">
+    <img src="/Eleventy-testing/public/img/{{img}}" alt="Image for {{title}}"/>
+  </div>
+  <div class="card-img-overlay">
+    <a class="stretched-link card-title" href="{{link}}">{{title}}</a>
+  </div>
+</div>
+
+{% endmacro %}

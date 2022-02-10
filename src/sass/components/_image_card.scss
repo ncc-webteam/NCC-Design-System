@@ -1,0 +1,113 @@
+.image-card {
+  @include ani;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: $object-shadow;
+  overflow: hidden;
+  position: relative;
+  
+  .img-wrapper {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .card-img-overlay {
+    border: solid rgba(255,255,255,0.6) 3px;
+    margin: 20px;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    
+    &:hover {
+      border-color: rgba(255,255,255,1);
+    }
+  }
+  .card-title {
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: $light;
+    margin: 0;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &:hover {
+    box-shadow: $object-shadow-hover;
+  }
+  
+  &:focus-within {
+    transition: none;
+    
+    box-shadow: $object-shadow-hover;
+    
+    .card-img-overlay {
+      border-color: $focus-colour;
+      
+      .card-title {
+        color: $focus-text-colour;
+        background-color: $focus-colour;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.image-card.scrim:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.1) 70%, rgba(0,0,0,0.2) 100%);
+ 
+}
+
+.image-card.scrim:hover {
+  &:before {
+    background: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.1) 70%, rgba(0,0,0,0) 100%);
+  }
+}
+
+.image-card.center-text {
+  .card-img-overlay {
+    border: none;
+    width: auto;
+    height: auto;
+    margin: 0;
+    
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:focus-within {
+      border: solid 3px $focus-colour;
+      border-radius: 6px;
+    }
+  }
+  .card-title {
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    color: $light;
+    margin: 0;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: rgba(0,0,0,0.6);
+    
+    &:hover {
+      text-decoration: underline;
+      background: rgba(0,0,0,0.8);
+    }
+  }
+}

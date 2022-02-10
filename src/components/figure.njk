@@ -1,0 +1,58 @@
+{% extends "documentation.njk" %}
+
+{% set title = "Figure" %}
+
+{% block breadcrumb %}
+<section class="breadcrumbs">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb my-2">
+        <li class="breadcrumb-item"><a href="{{ '/' | url }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ '/components/' | url }}">Components</a></li>
+        <li class="breadcrumb-item active">Figure</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+{% endblock %}
+
+{% set collapseID = "collapseSeven" %}
+{% set headingID = "headingSevenButton" %}
+{% set linkID = "figure-link" %}
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ accordion.accordion('7') }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5"> 
+  <h1>Figure</h1>
+  <p class="lead">A <strong>figure</strong> is a flexible and extensible content container. It can be used in a variety of contexts and can be as streamlined or detailed as desired.</p>
+  <h2>Examples</h2>
+  <p>Below are three examples of figures - they are the same component, but with different options enabled.</p>
+  <div class="row {{rowDefaults}}">
+    <div class="col-12 col-md-6">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illo hic aut facere a quos possimus impedit aliquam in laborum omnis illum sed minus officia cumque, tenetur cum libero saepe? Doloremque neque expedita perferendis atque enim! Perferendis eius, ex eveniet sed excepturi quis qui incidunt eaque ab ullam, modi temporibus quo, aliquam ea. Explicabo, veniam distinctio amet iusto quisquam voluptatibus incidunt eum sequi magni inventore, porro totam cupiditate ullam magnam assumenda! Illo saepe sunt pariatur animi nam, laborum perferendis qui earum perspiciatis doloremque quia libero, enim ducimus. Quos quo porro facilis? Voluptas ducimus placeat aut iusto a non nam magnam!</p>
+    </div>
+    <div class="col-12 col-md-6">
+      <figure>
+        <img src="/Eleventy-testing/public/img/crome-portrait.jpg" class="figure-img img-fluid" alt="Portrait of John Crome">
+        <figcaption class="text-center">The Royal Academy's 1878 Winter Exhibitional importance of the Norwich School.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <h2>Features</h2>
+  <section class="section_dark_theme">
+    <div class="row {{rowDefaults}} justify-content-center">
+      <div class="col-12 col-md-4">
+        <figure class="dark">
+          <img src="/Eleventy-testing/public/img/crome-portrait.jpg" class="figure-img img-fluid" alt="Portrait of John Crome">
+          <figcaption class="text-center">The Royal Academy's 1878 Winter Exhibitional importance of the Norwich School.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% endblock %}

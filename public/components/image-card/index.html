@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <title>Introduction to Components - NCC Design System</title>
+  <title>Image Card - NCC Design System</title>
 </head>
 
 
@@ -124,7 +124,8 @@ Search</button>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb my-2">
         <li class="breadcrumb-item"><a href="/Eleventy-testing/public/">Home</a></li>
-        <li class="breadcrumb-item active">Components</li>
+        <li class="breadcrumb-item"><a href="/Eleventy-testing/public/components/">Components</a></li>
+        <li class="breadcrumb-item active">Image Card</li>
       </ol>
     </nav>
   </div>
@@ -517,11 +518,80 @@ Search</button>
 </div>
 
 <div class="components-main-section col-12 col-lg-8 mb-5"> 
-  <h1>Introduction to components</h1>
-  <p class="lead">Documentation for all of the components used in NCC sites including examples, options, and use cases.</p>
+  <h1>Image card - #81</h1>
+  <p class="lead">A <strong>card</strong> is a flexible and extensible content container. It can be used in a variety of contexts and can be as streamlined or detailed as desired.</p>
+  <h2>Examples</h2>
+  <p>Below are three examples of cards - they are the same component, but with different options enabled.</p>
+  <div class="row mt-0 mb-5 g-md-4 g-2 gy-4">
+    <div class="col-12">
+        
 
-  <h2>How to use components</h2>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, nobis. Odit, quisquam possimus rerum aperiam, cum nesciunt ipsa impedit voluptatum omnis explicabo aut assumenda eius fuga eveniet nisi vero non corporis totam blanditiis labore ducimus, quod et aliquam quidem? Possimus quidem ipsam reprehenderit delectus cum quam modi voluptatibus voluptates nulla fuga laboriosam, at, doloremque tempore ullam libero sed temporibus? Delectus molestias, hic aspernatur laudantium animi ipsum! Aut quibusdam ex laborum nemo in, eius harum itaque pariatur optio consequatur consectetur aperiam provident ratione, officiis ut odit earum nihil sapiente aspernatur perferendis magnam. Ab soluta quibusdam saepe cumque incidunt placeat ducimus minus quaerat, earum libero accusamus veniam error deleniti aliquam. Veritatis distinctio quo tenetur architecto quod ex, harum deleniti officia. Vel cupiditate suscipit ut ad molestiae, quam, rem dicta error, labore laborum sunt veniam dolore asperiores ullam fugit optio. Voluptate alias doloremque quibusdam pariatur maxime assumenda est aperiam corrupti quae? Quod eum illum dolorum quaerat praesentium accusantium, magnam dicta, tempore natus libero soluta quae voluptas modi! Totam commodi provident harum dicta explicabo sed deserunt unde consectetur rem quo, nobis aperiam iure ipsum nisi distinctio doloribus quae incidunt quasi labore eius libero a! Ipsam nostrum quibusdam provident quisquam, tenetur expedita numquam vel excepturi?</p>
+<div class="image-card " data-component="81">
+  <div class="img-wrapper">
+    <img src="/Eleventy-testing/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
+  </div>
+  <div class="card-img-overlay">
+    <a class="stretched-link card-title" href="#">Card Title</a>
+  </div>
+</div>
+
+
+    </div>
+    <div class="col-12 col-md-6">
+      
+
+<div class="image-card " data-component="81">
+  <div class="img-wrapper">
+    <img src="/Eleventy-testing/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
+  </div>
+  <div class="card-img-overlay">
+    <a class="stretched-link card-title" href="#">Card Title</a>
+  </div>
+</div>
+
+
+    </div>
+    <div class="col-12 col-md-6">
+      
+
+<div class="image-card " data-component="81">
+  <div class="img-wrapper">
+    <img src="/Eleventy-testing/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
+  </div>
+  <div class="card-img-overlay">
+    <a class="stretched-link card-title" href="#">Card Title</a>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+  <h2>Features</h2>
+  <div class="row mt-0 mb-5 g-md-4 g-2">
+    <div class="col-12 col-md-6">
+      
+
+<div class="image-card " data-component="81">
+  <div class="img-wrapper">
+    <img src="/Eleventy-testing/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
+  </div>
+  <div class="card-img-overlay">
+    <a class="stretched-link card-title" href="#">Card Title</a>
+  </div>
+</div>
+
+
+    </div>
+    <div class="col-12 col-md-6">
+      <ul class="features-list">
+        <li>All visible card features are optional</li>
+        <li>The image is automatically scaled to 16x9 (not stretched or distorted)</li>
+        <li>If the title is not present, the card will not be clickable</li>
+        <li>Corners can be squared off or rounded. The card is square by default.</li>
+        <li>The card is dark by default.</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 
@@ -532,7 +602,7 @@ Search</button>
         }
 
         function currentLink() {
-          let link = document.getElementById("components-link");
+          let link = document.getElementById("image-card-link");
           link.classList.add("active");
         }
       </script>
