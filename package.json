@@ -22,11 +22,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kai-NCC/Eleventy-testing.git"
+    "url": "git+https://github.com/Kai-NCC/NCC-Design-System.git"
   },
   "bugs": {
-    "url": "https://github.com/Kai-NCC/Eleventy-testing/issues"
+    "url": "https://github.com/Kai-NCC/NCC-Design-System/issues"
   },
-  "homepage": "https://github.com/Kai-NCC/Eleventy-testing#readme",
+  "homepage": "https://github.com/Kai-NCC/NCC-Design-System#readme",
   "description": ""
 }
