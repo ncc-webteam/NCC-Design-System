@@ -1,6 +1,27 @@
 {% macro accordion(currentsection) %}
 
 <div class="accordion accordion-flush" id="docsAccordion">
+    
+    
+    
+   {% set getting_started_items = [
+    { link: "{{ '/getting-started' | url }}", label: "How to get started" }, 
+    { link: "{{ '/getting-started' | url }}", label: "How to get started" }] 
+    %}
+    
+    
+  {{ url }}
+   
+<ul>   
+{% for item in getting_started_items %}
+    <li><a href="{{ item.link }}">{{ item.label }}</a></li>
+{% endfor %}
+</ul>
+    
+    
+    
+    
+    
 
   {% if currentsection == 1 %}
   <div class="accordion-item">
@@ -259,23 +280,18 @@
     <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
       <div class="accordion-body">
         <ul class="accordion-list">
+          
           <li>
-            <a id="getting-started-linkFour" href="{{ '/getting-started' | url }}">How to get started</a>
+            <a href="#">Colour</a>
           </li>
           <li>
-            <a id="developer-environment-setup-linkFour" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
+            <a href="#">Images</a>
           </li>
           <li>
-            <a href="#"></a>
+            <a href="#">Typography</a>
           </li>
           <li>
-            <a href="#">Breadcrumbs</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Troubleshooting</a>
+            <a href="#">Branding</a>
           </li>
         </ul>
       </div>
@@ -298,23 +314,18 @@
     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
       <div class="accordion-body">
         <ul class="accordion-list">
+          
           <li>
-            <a id="getting-started-linkFour" href="{{ '/getting-started' | url }}">How to get started</a>
+            <a href="#">Colour</a>
           </li>
           <li>
-            <a id="developer-environment-setup-linkFour" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
+            <a href="#">Images</a>
           </li>
           <li>
-            <a href="#"></a>
+            <a href="#">Typography</a>
           </li>
           <li>
-            <a href="#">Breadcrumbs</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Troubleshooting</a>
+            <a href="#">Branding</a>
           </li>
         </ul>
       </div>
