@@ -6,19 +6,57 @@
     
    {% set getting_started_items = [
     { link: "{{ '/getting-started' | url }}", label: "How to get started" }, 
-    { link: "{{ '/getting-started' | url }}", label: "How to get started" }] 
+    { link: "{{ '/getting-started/developer-environment-setup' | url }}", label: "Developer environment setup" }, 
+    { link: "{{ '/getting-started' | url }}", label: "Breadcrumbs" }, 
+    { link: "{{ '/getting-started' | url }}", label: "Troubleshooting" }] 
     %}
     
     
-  {{ url }}
+{# https://bryanlrobinson.com/blog/using-nunjucks-if-expressions-to-create-an-active-navigation-state-in-11ty/ 
+    https://www.11ty.dev/docs/pagination/nav/#starter-example
+    
+    #}
    
 <ul>   
+    
+    
+    
+    
+   
+   
+    
+   
+    
+    
 {% for item in getting_started_items %}
-    <li><a href="{{ item.link }}">{{ item.label }}</a></li>
+    
+    
+   
+    {% if item.link == page.url  %}
+    <p>yes</p>
+        {% set item_class = "active" %}
+    {% else %}
+        {% set item_class = "" %}
+    {% endif %}
+    
+    {{ item_class }}
+    
+    <li><a class="{{ item_class }}" href="{{ item.link }}">{{ item.label }}</a></li>
+    
+    
 {% endfor %}
 </ul>
     
+    {% if item.link == page.url  %}
+    <p>{{ page.url }}yes</p>
+        {% set item_class = "active" %}
+    {% else %}
+        {% set item_class = "" %}
+    {% endif %}
     
+    
+    <a href="{{ page.url }}">test</a>
+    <a href="{{ '/getting-started/' | url }}">test</a>
     
     
     
