@@ -14,13 +14,16 @@
       {% endblock %}
 
       <script>
-        window.onload = function () {
+        {# window.onload = function () {
           currentLink();
         }
 
         function currentLink() {
           let link = document.getElementById("{{linkID}}");
           link.classList.add("active");
+        } #}
+        window.onload = function () {
+          console.log('{{page.url}}');
         }
       </script>
     </div>

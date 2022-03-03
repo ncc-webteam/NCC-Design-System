@@ -141,23 +141,15 @@ Search</button>
 
 <div class="accordion accordion-flush" id="docsAccordion">
     
-    
-    
    
+
+
     
     
 
    
 <ul>   
-    
-    
-    
-    
-   
-   
-    
-   
-    
+
     
 
     
@@ -219,7 +211,7 @@ Search</button>
         
     
     
-    
+
     <a href="">test</a>
     <a href="/NCC-Design-System/public/getting-started/">test</a>
     
@@ -244,7 +236,7 @@ Search</button>
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="getting-started-link" href="/NCC-Design-System/public/getting-started">How to get started</a>
+            <a id="getting-started-link" class="" href="/NCC-Design-System/public/getting-started">How to get started</a>
           </li>
           <li>
             <a id="developer-environment-setup-link" href="/NCC-Design-System/public/getting-started/developer-environment-setup">Developer environment setup</a>
@@ -613,13 +605,9 @@ Search</button>
 
 
       <script>
+        
         window.onload = function () {
-          currentLink();
-        }
-
-        function currentLink() {
-          let link = document.getElementById("getting-started-link");
-          link.classList.add("active");
+          console.log('/getting-started/');
         }
       </script>
     </div>

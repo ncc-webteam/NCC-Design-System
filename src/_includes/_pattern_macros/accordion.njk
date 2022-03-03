@@ -2,14 +2,14 @@
 
 <div class="accordion accordion-flush" id="docsAccordion">
     
-    
-    
    {% set getting_started_items = [
     { link: "{{ '/getting-started' | url }}", label: "How to get started" }, 
     { link: "{{ '/getting-started/developer-environment-setup' | url }}", label: "Developer environment setup" }, 
     { link: "{{ '/getting-started' | url }}", label: "Breadcrumbs" }, 
     { link: "{{ '/getting-started' | url }}", label: "Troubleshooting" }] 
     %}
+
+
     
     
 {# https://bryanlrobinson.com/blog/using-nunjucks-if-expressions-to-create-an-active-navigation-state-in-11ty/ 
@@ -18,15 +18,7 @@
     #}
    
 <ul>   
-    
-    
-    
-    
-   
-   
-    
-   
-    
+
     
 {% for item in getting_started_items %}
     
@@ -48,13 +40,13 @@
 </ul>
     
     {% if item.link == page.url  %}
-    <p>{{ page.url }}yes</p>
+    <p>{{ page.url}}yes</p>
         {% set item_class = "active" %}
     {% else %}
         {% set item_class = "" %}
     {% endif %}
     
-    
+
     <a href="{{ page.url }}">test</a>
     <a href="{{ '/getting-started/' | url }}">test</a>
     
@@ -79,7 +71,7 @@
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="getting-started-link" href="{{ '/getting-started' | url }}">How to get started</a>
+            <a id="getting-started-link" class="{% if page.url == '/getting-started/' %}active{% endif %}" href="{{ '/getting-started' | url }}">How to get started</a>
           </li>
           <li>
             <a id="developer-environment-setup-link" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
