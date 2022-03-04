@@ -12220,6 +12220,78 @@ section.section_stage_theme .lead {
   margin: 20px 0 10px 0;
 }
 
+.section-nav-card {
+  border-radius: 0px;
+}
+.section-nav-card .img-wrapper {
+  border-radius: 0px;
+  border-radius: 0px;
+}
+.section-nav-card .card-title {
+  margin: 0;
+}
+.section-nav-card .card-title a {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.section_light_theme .section-nav-card {
+  background-color: white;
+}
+.section_light_theme .section-nav-card:focus-within {
+  background-color: #ffdd00;
+}
+.section_light_theme .section-nav-card .card-title a {
+  color: #212529;
+}
+
+.more-link {
+  width: auto;
+  right: 10px;
+  border-bottom: 2px solid transparent;
+  color: #f8f9fa;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.125rem;
+}
+.more-link:hover {
+  color: #f8f9fa;
+  text-decoration: none;
+  border-bottom: 2px solid #f8f9fa;
+}
+.more-link:focus {
+  border-bottom: 2px solid #0b0c0c;
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  outline: none;
+  text-decoration: none;
+}
+.more-link:focus svg path {
+  fill: #0b0c0c;
+}
+.more-link svg {
+  transform: translate(10%, -5%);
+}
+.more-link svg path {
+  fill: #f8f9fa;
+}
+
+.object-promo .card-title a {
+  font-weight: 500;
+}
+
+/*** to be used on exclusively light backgrounds ***/
+.section_light_theme .more-link {
+  color: #212529;
+}
+.section_light_theme .more-link:hover {
+  color: #212529;
+  border-bottom: 2px solid #212529;
+}
+.section_light_theme .more-link svg path {
+  fill: #212529;
+}
+
 .breadcrumbs {
   background-color: #e9ecef;
   padding: 8px 0px;
