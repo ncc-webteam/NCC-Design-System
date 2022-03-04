@@ -40,7 +40,7 @@
 </ul>
     
     {% if item.link == page.url  %}
-    <p>{{ string(page.url)}}yes</p>
+    <p>{{ toString(page.url) }}yes</p>
         {% set item_class = "active" %}
     {% else %}
         {% set item_class = "" %}

@@ -11,8 +11,6 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);
 
-  let myVariable = page.url;
-
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
