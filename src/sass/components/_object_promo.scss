@@ -1,0 +1,38 @@
+.more-link {
+  width: auto;
+  right: 10px;
+  border-bottom: 2px solid transparent;
+  color: $light;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.125rem;
+  &:hover {
+    color: $light;
+    text-decoration: none;
+    border-bottom: 2px solid $light;
+  }
+  &:focus {
+    border-bottom: 2px solid $focus-text-colour;
+    color: $focus-text-colour;
+    background-color: $focus-colour;
+    outline: none;
+    text-decoration: none;
+    svg path { fill: $focus-text-colour; }
+  }
+  svg { transform: translate(10%, -5%); }
+  svg path { fill: $light; }
+}
+
+.object-promo .card-title a {
+  font-weight: 500;
+}
+
+/*** to be used on exclusively light backgrounds ***/
+.section_light_theme .more-link {
+  color: $dark;
+  &:hover {
+    color: $dark;
+    border-bottom: 2px solid $dark;
+  }
+  svg path { fill: $dark; }
+}

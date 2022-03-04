@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <title>Getting started - NCC Design System</title>
+  <title>Object Promo - NCC Design System</title>
 </head>
 
 
@@ -124,7 +124,8 @@ Search</button>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb my-2">
         <li class="breadcrumb-item"><a href="/NCC-Design-System/public/">Home</a></li>
-        <li class="breadcrumb-item active">Getting started</li>
+        <li class="breadcrumb-item"><a href="/NCC-Design-System/public/components/">Components</a></li>
+        <li class="breadcrumb-item active">Object Promo</li>
       </ol>
     </nav>
   </div>
@@ -223,20 +224,20 @@ Search</button>
     <h2 class="accordion-header" id="headingOne">
       <button
         id="headingOneButton"
-        class="accordion-button"
+        class="accordion-button collapsed"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#collapseOne"
-        aria-expanded="true"
+        aria-expanded="false"
         aria-controls="collapseOne">
         Getting Started
       </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="getting-started-link" class="" href="/NCC-Design-System/public/getting-started">How to get started</a>
+            <a id="getting-started-link" href="/NCC-Design-System/public/getting-started">How to get started</a>
           </li>
           <li>
             <a id="developer-environment-setup-link" href="/NCC-Design-System/public/getting-started/developer-environment-setup">Developer environment setup</a>
@@ -464,16 +465,16 @@ Search</button>
     <h2 class="accordion-header" id="headingSeven">
       <button
         id="headingSevenButton"
-        class="accordion-button collapsed"
+        class="accordion-button"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#collapseSeven"
-        aria-expanded="false"
+        aria-expanded="true"
         aria-controls="collapseSeven">
         Components
       </button>
     </h2>
-    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven">
+    <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
@@ -594,26 +595,86 @@ Search</button>
 
 </div>
 
-<div class="components-main-section col-12 col-lg-8 mb-5">    
-  <h1>How to get started</h1>
-  <p class="lead">There are a few different ways you can use and/or contribute to this design system.</p>
+<div class="components-main-section col-12 col-lg-8 mb-5"> 
+  <h1>Object promo</h1>
+  <p class="lead">A <strong>card</strong> is a flexible and extensible content container. It can be used in a variety of contexts and can be as streamlined or detailed as desired.</p>
+  <h2>Examples</h2>
+  <p>Below are three examples of cards - they are the same component, but with different options enabled.</p>
+  <div class="row mt-0 mb-5 g-md-4 g-2 gy-4">
+    
 
-  <h2>Learn how we do things</h2>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed nam, fugit hic eos quam quo molestiae commodi ipsum, autem quis quisquam molestias excepturi corrupti ea? Nam itaque sequi molestias aut, accusantium velit quidem? Modi, quidem quia! A voluptate atque cumque quam tempora hic! Modi, deserunt excepturi alias numquam cupiditate minima.</p>
+    
 
-  <h2>Install the developer environment</h2>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed nam, fugit hic eos quam quo molestiae commodi ipsum, autem quis quisquam molestias excepturi corrupti ea? Nam itaque sequi molestias aut, accusantium velit quidem? Modi, quidem quia! A voluptate atque cumque quam tempora hic! Modi, deserunt excepturi alias numquam cupiditate minima.</p>
-
-  <h2>Make a suggestion</h2>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed nam, fugit hic eos quam quo molestiae commodi ipsum, autem quis quisquam molestias excepturi corrupti ea? Nam itaque sequi molestias aut, accusantium velit quidem? Modi, quidem quia! A voluptate atque cumque quam tempora hic! Modi, deserunt excepturi alias numquam cupiditate minima.</p>
+<div class="object-promo">
+  <div class="container p-0">
+    <h2 class="mb-4" style="font-weight: bold">Other items in this collection</h2>
+    <div class="row gx-2 gx-md-3 gx-lg-4 gy-2 gy-md-3 gy-lg-4">
+      
+      <div class="col-lg-3 col-6">
+        <div class="card h-100" style="border-radius: 0">
+          <div class="img-wrapper">
+            <img src="/NCC-Design-System/public/img/secnav1.png" class="card-img-top" alt="image for 'Gallas Plough'">  
+          </div>
+          <div class="card-body p-4">
+            <h3 class="card-title h5 mb-3"><a class="stretched-link" href="components/general-card">Gallas Plough</a></h3>
+          </div>        
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-6">
+        <div class="card h-100" style="border-radius: 0">
+          <div class="img-wrapper">
+            <img src="/NCC-Design-System/public/img/secnav2.png" class="card-img-top" alt="image for 'Family Octopoda'">  
+          </div>
+          <div class="card-body p-4">
+            <h3 class="card-title h5 mb-3"><a class="stretched-link" href="components/general-card">Family Octopoda</a></h3>
+          </div>        
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-6">
+        <div class="card h-100" style="border-radius: 0">
+          <div class="img-wrapper">
+            <img src="/NCC-Design-System/public/img/secnav3.png" class="card-img-top" alt="image for 'Ostrich egg'">  
+          </div>
+          <div class="card-body p-4">
+            <h3 class="card-title h5 mb-3"><a class="stretched-link" href="components/general-card">Ostrich egg</a></h3>
+          </div>        
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-6">
+        <div class="card h-100" style="border-radius: 0">
+          <div class="img-wrapper">
+            <img src="/NCC-Design-System/public/img/secnav4.png" class="card-img-top" alt="image for 'Great Bustard'">  
+          </div>
+          <div class="card-body p-4">
+            <h3 class="card-title h5 mb-3"><a class="stretched-link" href="components/general-card">Great Bustard</a></h3>
+          </div>        
+        </div>
+      </div>
+      
+    </div>
+    <div class="mt-4" style="text-align: right">
+      <a class="more-link" href="components/general-card">More items<svg style="width:24px;height:24px" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg></a>
+    </div>
+  </div>
 </div>
+
+
+
+  </div>  
+    
+</div>
+
+
 
 
 
       <script>
         
         window.onload = function () {
-          console.log('/getting-started/');
+          console.log('/components/object-promo/');
         }
       </script>
     </div>

@@ -1,0 +1,26 @@
+{% macro promo(title, linktext, link, list) %}
+
+<div class="object-promo">
+  <div class="container p-0">
+    <h2 class="mb-4" style="font-weight: bold">{{title}}</h2>
+    <div class="row gx-2 gx-md-3 gx-lg-4 gy-2 gy-md-3 gy-lg-4">
+      {% for item in list %}
+      <div class="col-lg-3 col-6">
+        <div class="card h-100" style="border-radius: 0">
+          <div class="img-wrapper">
+            <img src="/NCC-Design-System/public/img/{{item.img}}" class="card-img-top" alt="image for '{{item.title}}'">  
+          </div>
+          <div class="card-body p-4">
+            <h3 class="card-title h5 mb-3"><a class="stretched-link" href="{{item.link}}">{{item.title}}</a></h3>
+          </div>        
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="mt-4" style="text-align: right">
+      <a class="more-link" href="{{link}}">{{linktext}}<svg style="width:24px;height:24px" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path></svg></a>
+    </div>
+  </div>
+</div>
+
+{% endmacro %}
