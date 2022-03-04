@@ -1,0 +1,53 @@
+{% extends "documentation.njk" %}
+
+{% import "_pattern_macros/section_nav.njk" as sectionNav %}
+
+{% set title = "Section Navigation" %}
+
+{% block breadcrumb %}
+<section class="breadcrumbs">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb my-2">
+        <li class="breadcrumb-item"><a href="{{ '/' | url }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ '/components/' | url }}">Components</a></li>
+        <li class="breadcrumb-item active">Section Navigation</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+{% endblock %}
+
+{% set collapseID = "collapseSeven" %}
+{% set headingID = "headingSevenButton" %}
+{% set linkID = "section-nav-link" %}
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ accordion.accordion('7') }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5"> 
+  <h1>Section Navigation</h1>
+  <p class="lead">A <strong>card</strong> is a flexible and extensible content container. It can be used in a variety of contexts and can be as streamlined or detailed as desired.</p>
+  <h2>Examples</h2>
+  <p>Below are three examples of cards - they are the same component, but with different options enabled.</p>
+  <div class="row {{rowDefaults}} gy-4">
+    {% set navcards = [
+      {title:"Crome and copies", img:'secnav1.png', link:'components/general-card'},
+      {title:"Crome's reputation", img:'secnav2.png', link:'components/general-card'},
+      {title:"Works by Crome", img:'secnav3.png', link:'components/general-card'},
+      {title:"Finding Crome's Norwich", img:'secnav4.png', link:'components/general-card'},
+      {title:"Walking Crome's Norwich", img:'secnav5.png', link:'components/general-card'}
+    ] %}
+
+    {{ sectionNav.sectionnav("", navcards) }}
+
+  </div>  
+    
+</div>
+
+
+
+{% endblock %}

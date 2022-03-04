@@ -1,0 +1,21 @@
+.section-nav-card {
+  border-radius: 0px;
+  
+  .img-wrapper {
+    border-radius: 0px;
+    border-radius: 0px;
+  }
+  
+  .card-title {
+    margin: 0;
+    a { font-weight: 600; font-size: 1.125rem; }
+  }
+}
+
+.section_light_theme .section-nav-card {
+  background-color: white; 
+
+  &:focus-within { background-color: $focus-colour; }
+  
+  .card-title a { color: $dark; }
+}

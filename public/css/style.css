@@ -12220,6 +12220,31 @@ section.section_stage_theme .lead {
   margin: 20px 0 10px 0;
 }
 
+.section-nav-card {
+  border-radius: 0px;
+}
+.section-nav-card .img-wrapper {
+  border-radius: 0px;
+  border-radius: 0px;
+}
+.section-nav-card .card-title {
+  margin: 0;
+}
+.section-nav-card .card-title a {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.section_light_theme .section-nav-card {
+  background-color: white;
+}
+.section_light_theme .section-nav-card:focus-within {
+  background-color: #ffdd00;
+}
+.section_light_theme .section-nav-card .card-title a {
+  color: #212529;
+}
+
 .breadcrumbs {
   background-color: #e9ecef;
   padding: 8px 0px;

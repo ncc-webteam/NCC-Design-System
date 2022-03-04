@@ -1,0 +1,20 @@
+{% macro sectionnav(options, list) %}
+
+<div class="container px-2 px-sm-0"> 
+  <div class="row gx-2 gx-md-3 gx-lg-4 gy-2 gy-md-3 gy-lg-4">
+  {% for item in list %}
+    <div class="col-lg-3 col-6">
+      <div class="card section-nav-card h-100">
+        <div class="img-wrapper">
+          <img src="/NCC-Design-System/public/img/{{item.img}}" class="ratio ratio-16x9" alt="image for '{{item.title}}'">  
+        </div>
+        <div class="card-body p-4">
+          <h3 class="card-title h5"><a class="stretched-link" href="/NCC-Design-System/public/{{item.link}}">{{item.title}}</a></h3>
+        </div>        
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+
+{% endmacro %}
