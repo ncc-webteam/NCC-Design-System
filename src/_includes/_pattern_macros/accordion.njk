@@ -1,7 +1,7 @@
 {% macro accordion(currentsection) %}
 
 <div class="accordion accordion-flush" id="docsAccordion">
-    
+    {#
    {% set getting_started_items = [
     { link: "{{ '/getting-started' | url }}", label: "How to get started" }, 
     { link: "{{ '/getting-started/developer-environment-setup' | url }}", label: "Developer environment setup" }, 
@@ -9,18 +9,11 @@
     { link: "{{ '/getting-started' | url }}", label: "Troubleshooting" }] 
     %}
 
-
     
-    
-{# https://bryanlrobinson.com/blog/using-nunjucks-if-expressions-to-create-an-active-navigation-state-in-11ty/ 
+ https://bryanlrobinson.com/blog/using-nunjucks-if-expressions-to-create-an-active-navigation-state-in-11ty/ 
     https://www.11ty.dev/docs/pagination/nav/#starter-example
     
-    #}
-   
-<ul>   
-
-    
-{% for item in getting_started_items %}
+    {% for item in getting_started_items %}
     
     
    
@@ -37,7 +30,6 @@
     
     
 {% endfor %}
-</ul>
     
     {% if item.link == page.url  %}
     <p>{{ toString(page.url) }}yes</p>
@@ -49,6 +41,20 @@
 
     <a href="{{ page.url }}">test</a>
     <a href="{{ '/getting-started/' | url }}">test</a>
+    
+    
+    #}
+   
+<ul>   
+
+    
+
+    
+    
+    
+</ul>
+    
+    
     
     
     
