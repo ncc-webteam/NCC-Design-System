@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <title>Image Card - NCC Design System</title>
+  <title>Structure &amp; columns - NCC Design System</title>
 </head>
 
 
@@ -125,7 +125,7 @@ Search</button>
       <ol class="breadcrumb my-2">
         <li class="breadcrumb-item"><a href="/NCC-Design-System/public/">Home</a></li>
         <li class="breadcrumb-item"><a href="/NCC-Design-System/public/components/">Components</a></li>
-        <li class="breadcrumb-item active">Image Card</li>
+        <li class="breadcrumb-item active">Structure & columns</li>
       </ol>
     </nav>
   </div>
@@ -537,89 +537,138 @@ Search</button>
 </div>
 
 <div class="components-main-section col-12 col-lg-8 mb-5"> 
-  <h1>Image card - #81</h1>
-  <p class="lead">A <strong>card</strong> is a flexible and extensible content container. It can be used in a variety of contexts and can be as streamlined or detailed as desired.</p>
-  <h2>Examples</h2>
-  <p>Below are three examples of cards - they are the same component, but with different options enabled.</p>
-  <div class="row mt-0 mb-5 g-md-4 g-2 gy-4">
-    <div class="col-12">
+  <h1>Structure & columns</h1>
+  <p class="lead">Our system is based on a 12 grid system from <a href="https://getbootstrap.com/docs/5.0/layout/columns/">Bootstrap</a></p>
+  <h2 class="h3">Section full width</h2>
+  <p>These are sections which spread from edge to edge of the screen. We can then place columns in them as we please.</p>
+  <p>There are options for these elements to give them a banding effect allowing the page to be appealing visually as well as breaking the content into digestible chunks.</p>
+  <p>Colour options are:</p>
+  <ul>
+    <li>Normal</li>
+    <li>Light grey</li>
+    <li>Dark grey</li>
+    <li>Custom background image</li>
+  </ul>
+  <h2 class="h3">Columns</h2>
+  <p>The 12 grid system is a way to size and group columns for a custom layout.</p>
+  <h3 class="h5">1 Column (10) - #1</h3>
+  <div class="container example-container p-4">
+    <div class="row justify-content-center example-row">
+      <div class="col-10 example-column">Column 10</div>
+    </div>
+  </div>
+  <p>A wide column stretching 10 columns of the full 12. To be placed inside 'section' components.</p>
+  <h3 class="h5">1 Column (12) - #2</h3>
+  <div class="container example-container p-4">
+    <div class="row justify-content-center example-row">
+      <div class="col-12 example-column">Column 12</div>
+    </div>
+  </div>
+  <p>A single full width column.</p>
+  <h3 class="h5">2 Column (8-4) - #3</h3>
+  <div class="container example-container p-4">
+    <div class="row justify-content-center example-row">
+      <div class="col-4 example-column">Column 4</div>
+      <div class="col-8 example-column">Column 8</div>
+    </div>
+  </div>
+  <p>A two column structure with the left column taking up two-thirds of space and a sidebar taking up one-third of space. Used as default for page templates.</p>
+  <p>Good for:</p>
+  <ul>
+    <li>Page content on the left with a small image on the right</li>
+    <li>Page content on the left with a widget on the right</li>
+  </ul>
+  <h3 class="h5">2 Column (4-8) - #4</h3>
+  <div class="container example-container p-4">
+    <div class="row justify-content-center example-row">
+      <div class="col-8 example-column">Column 8</div>
+      <div class="col-4 example-column">Column 4</div>
+    </div>
+  </div>
+  <p>A two column structure with the left column taking up one-third of space and a larger column taking up two-thirds of space.</p>
+  <p>Good for:</p>
+  <ul>
+    <li>Page content on the right with a small image on the left</li>
+    <li>Page content on the right with a widget on the left</li>
+  </ul>
+  <h3 class="h5">2 Column (6-6) - #5</h3>
+  <div class="container example-container p-4">
+    <div class="row justify-content-center example-row">
+      <div class="col-6 example-column">Column 6</div>
+      <div class="col-6 example-column">Column 6</div>
+    </div>
+  </div>
+  <p>A two column structure with equal width for both columns.</p>
+  <p>Good for:</p>
+  <ul>
+    <li>An image on one side with content on the other</li>
+    <li>A video on one side with content on the other</li>
+    <li>Two prominent general cards</li>
+  </ul>
+  <h3 class="h5">3 Column (4-4-4) - #6</h3>
+  <div class="container example-container p-4">
+    <div class="row justify-content-center example-row">
+      <div class="col-4 example-column">Column 4</div>
+      <div class="col-4 example-column">Column 4</div>
+      <div class="col-4 example-column">Column 4</div>
+    </div>
+  </div>
+  <p>A three column structure with each column taking up one-third of available space.</p>
+  <p>Good for:</p>
+  <ul>
+    <li>Three general cards</li>
+  </ul>
+  <h3 class="h5">4 Column (3-3-3-3) - #7</h3>
+  <div class="container example-container p-4">
+    <div class="row justify-content-center example-row">
+      <div class="col-3 example-column">Column 3</div>
+      <div class="col-3 example-column">Column 3</div>
+      <div class="col-3 example-column">Column 3</div>
+      <div class="col-3 example-column">Column 3</div>
+    </div>
+  </div>
+  <p>A four column structure with each column taking up one-fourth of available space.</p>
+  <p>Good for:</p>
+  <ul>
+    <li>Four general cards</li>
+  </ul>
+    
+    <div class="row mt-0 mb-5 g-md-4 g-2">
+        <div class="col-12">
+            <h2>When to use this component</h2>
+            <p>Below are three examples of cards - they are the same component, but with different options enabled.</p>
+        </div>
         
-
-<div class="image-card " data-component="81">
-  <div class="img-wrapper">
-    <img src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
-  </div>
-  <div class="card-img-overlay">
-    <a class="stretched-link card-title" href="#">Card Title</a>
-  </div>
+        
+        <div class="col-12">
+            <h2>When not to use this component</h2>
+            <p>Below are three examples of cards - they are the same component, but with different options enabled.</p>
+        </div>
+        
+        
+         <div id="components-help-section" class="col-12">
+            <h2>Need help?</h2>
+            <ul>
+                <li>Take part in the 'Breadcrumbs' discussion on GitHub and share your research</li>
+                <li>Propose a change - read more about how to propose changes in GitHub</li>
+              </ul>
+        </div>
+        
+        
+    </div>
+    
+    
 </div>
 
 
-    </div>
-    <div class="col-12 col-md-6">
-      
-
-<div class="image-card " data-component="81">
-  <div class="img-wrapper">
-    <img src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
-  </div>
-  <div class="card-img-overlay">
-    <a class="stretched-link card-title" href="#">Card Title</a>
-  </div>
-</div>
-
-
-    </div>
-    <div class="col-12 col-md-6">
-      
-
-<div class="image-card " data-component="81">
-  <div class="img-wrapper">
-    <img src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
-  </div>
-  <div class="card-img-overlay">
-    <a class="stretched-link card-title" href="#">Card Title</a>
-  </div>
-</div>
-
-
-    </div>
-  </div>
-  <h2>Features</h2>
-  <div class="row mt-0 mb-5 g-md-4 g-2">
-    <div class="col-12 col-md-6">
-      
-
-<div class="image-card " data-component="81">
-  <div class="img-wrapper">
-    <img src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
-  </div>
-  <div class="card-img-overlay">
-    <a class="stretched-link card-title" href="#">Card Title</a>
-  </div>
-</div>
-
-
-    </div>
-    <div class="col-12 col-md-6">
-      <ul class="features-list">
-        <li>All visible card features are optional</li>
-        <li>The image is automatically scaled to 16x9 (not stretched or distorted)</li>
-        <li>If the title is not present, the card will not be clickable</li>
-        <li>Corners can be squared off or rounded. The card is square by default.</li>
-        <li>The card is dark by default.</li>
-      </ul>
-    </div>
-  </div>
-</div>
 
 
 
       <script>
         
         window.onload = function () {
-          console.log('/components/image-card/');
-          console.log(typeof /components/image-card/);
+          console.log('/components/structure-and-columns/');
+          console.log(typeof /components/structure-and-columns/);
         }
       </script>
     </div>
