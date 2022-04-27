@@ -12552,7 +12552,7 @@ p {
   color: #212529;
 }
 
-.lead {
+.lead, .lead * {
   font-weight: 600;
   font-size: 1.375rem;
 }
@@ -12620,6 +12620,24 @@ p code {
 }
 .back-to-top:focus svg path {
   fill: #0b0c0c;
+}
+
+.example-container {
+  background-color: #e9ecef;
+}
+
+.example-row {
+  background-color: #adb5bd;
+}
+
+.example-column {
+  background-color: #ced4da;
+  border: solid 1px #495057;
+  font-weight: 700;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
