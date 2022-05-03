@@ -1,6 +1,7 @@
 {% extends "documentation.njk" %}
 
 {% import "_pattern_macros/general_card.njk" as generalcard %}
+{% import "_pattern_macros/accordion.njk" as accordion %}
 
 {% set title = "Accordion" %}
 
@@ -31,6 +32,11 @@
 <div class="components-main-section col-12 col-lg-8 mb-5"> 
   <h1>Accordion - #10</h1>
   <p class="lead">A title and content which opens and closes with user interaction</p>
+  <div class="row">
+    <div class="col">
+      {{ accordion.accordion("Example Accordion", "", "exampleAccordion1") }}
+    </div>
+  </div>
   <h2 class="h3">When to use</h2>
   <p>When there is lots of information that can be broken up into subheadings.</p>
   <h2 class="h3">Where it appears</h2>
@@ -41,6 +47,8 @@
   <ul>
     <li>When the content is conditional to user requirements</li>
   </ul>
+
+  
     
     <div class="row {{rowDefaults}}">
         <div class="col-12">

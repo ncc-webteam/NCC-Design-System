@@ -1,0 +1,44 @@
+{% macro accordion(title, itemlist, accordionid) %}
+
+<div class="accordion accordion-flush">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="{{accordionid}}">
+      <button
+        id="{{accordionid}}-button"
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#{{accordionid}}-collapse"
+        aria-expanded="true"
+        aria-controls="{{accordionid}}-collapse">
+        {{title}}
+      </button>
+    </h2>
+    <div id="{{accordionid}}-collapse" class="accordion-collapse collapse show" aria-labelledby="{{accordionid}}">
+      <div class="accordion-body">
+        <ul class="accordion-list">
+          <li>
+            <a id="getting-started-link" class="{% if page.url == '/getting-started/' %}active{% endif %}" href="{{ '/getting-started' | url }}">How to get started</a>
+          </li>
+          <li>
+            <a id="developer-environment-setup-link" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Troubleshooting</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endmacro %}
