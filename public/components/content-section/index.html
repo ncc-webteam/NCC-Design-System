@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/NCC-Design-System/public/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Content section - NCC Design System</title>
+</head>
+
+
+<body>
+  
+  <header>
+
+<div class="container py-3">
+    
+    <div class="content-skip">
+      <a href="#main" class="skip-to">Skip to content</a>
+    </div>
+    
+    <div class="top-wrapper">
+
+      <a class="navbar-brand" id="main-logo" href="/NCC-Design-System/public/"><span class="top">Norfolk County Council</span><span class="bottom">Design system</span></a>
+    
+      <button id="navbarToggler" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHeader" aria-controls="offcanvasHeader">
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z" fill="white"/>
+</svg>
+        Menu</button>
+      
+    </div>
+    
+    <form class="form-inline d-flex main-search-area" action="/NCC-Design-System/public/">
+      <input class="form-control" type="search" placeholder="Search documentation" aria-label="Search">
+      <button id="header-search-button" class="btn btn-outline-light d-inline-flex justify-content-between" type="submit"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z" fill="white"/>
+</svg>
+Search</button>
+    </form>
+  </div>
+  
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbar-main">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a href="/NCC-Design-System/public/getting-started/" class="nav-link">Getting started</a>
+          </li>
+          <li class="nav-item">
+            <a href="/NCC-Design-System/public/components/" class="nav-link">Components</a>
+          </li>
+          <li class="nav-item">
+            <a href="/NCC-Design-System/public/" class="nav-link">Content</a>
+          </li>
+          <li class="nav-item">
+            <a href="/NCC-Design-System/public/" class="nav-link">Media creation</a>
+          </li>
+          <li class="nav-item">
+            <a href="/NCC-Design-System/public/" class="nav-link">Styles</a>
+          </li>
+          <li class="nav-item">
+            <a href="/NCC-Design-System/public/" class="nav-link">Patterns</a>
+          </li>
+          <li class="nav-item">
+            <a href="/NCC-Design-System/public/" class="nav-link">Page templates</a>
+          </li>
+          <li class="nav-item">
+            <a href="/NCC-Design-System/public/" class="nav-link">Community</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasHeader">
+    <div class="offcanvas-header justify-content-end">
+      <button type="button" class="offcanvas-close-button btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="offcanvas-nav mx-auto">
+        <li class="nav-item mx-3">
+          <a href="/NCC-Design-System/public/getting-started/" class="nav-link">Getting Started</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/NCC-Design-System/public/components/" class="nav-link">Components</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/NCC-Design-System/public/" class="nav-link">Content</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/NCC-Design-System/public/" class="nav-link">Media creation</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/NCC-Design-System/public/" class="nav-link">Styles</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/NCC-Design-System/public/" class="nav-link">Patterns</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/NCC-Design-System/public/" class="nav-link">Page templates</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a href="/NCC-Design-System/public/" class="nav-link">Community</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</header>
+  <main id="main">
+
+    
+
+    
+
+
+<section class="breadcrumbs">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb my-2">
+        <li class="breadcrumb-item"><a href="/NCC-Design-System/public/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/NCC-Design-System/public/components/">Components</a></li>
+        <li class="breadcrumb-item active">Content section</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+
+<section class="section_light_theme">
+  <div class="container">
+    <div class="row">
+      
+
+<div class="components-list-section col-lg-4 col-12">
+  
+
+<div class="accordion accordion-flush" id="docsAccordion">
+    
+   
+<ul>   
+
+    
+
+    
+    
+    
+</ul>
+    
+    
+    
+    
+    
+
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button
+        id="headingOneButton"
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne"
+        aria-expanded="false"
+        aria-controls="collapseOne">
+        Getting Started
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+      <div class="accordion-body">
+        <ul class="accordion-list">
+          <li>
+            <a id="getting-started-link" href="/NCC-Design-System/public/getting-started">How to get started</a>
+          </li>
+          <li>
+            <a id="developer-environment-setup-link" href="/NCC-Design-System/public/getting-started/developer-environment-setup">Developer environment setup</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Troubleshooting</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button
+        id="headingTwoButton"
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo"
+        aria-expanded="false"
+        aria-controls="collapseTwo">
+        Content
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+      <div class="accordion-body">
+        <ul class="accordion-list">
+          <li>
+            <a id="getting-started-linkTwo" href="/NCC-Design-System/public/getting-started">How to get started</a>
+          </li>
+          <li>
+            <a id="developer-environment-setup-linkTwo" href="/NCC-Design-System/public/getting-started/developer-environment-setup">Developer environment setup</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Troubleshooting</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button
+        id="headingThreeButton"
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseThree"
+        aria-expanded="false"
+        aria-controls="collapseThree">
+        Media Creation
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+      <div class="accordion-body">
+        <ul class="accordion-list">
+          <li>
+            <a id="getting-started-linkThree" href="/NCC-Design-System/public/getting-started">How to get started</a>
+          </li>
+          <li>
+            <a id="developer-environment-setup-linkThree" href="/NCC-Design-System/public/getting-started/developer-environment-setup">Developer environment setup</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Troubleshooting</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button
+        id="headingFourButton"
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseFour"
+        aria-expanded="false"
+        aria-controls="collapseFour">
+        Styles
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+      <div class="accordion-body">
+        <ul class="accordion-list">
+          
+          <li>
+            <a href="#">Colour</a>
+          </li>
+          <li>
+            <a href="#">Images</a>
+          </li>
+          <li>
+            <a href="#">Typography</a>
+          </li>
+          <li>
+            <a href="#">Branding</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFive">
+      <button
+        id="headingFiveButton"
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseFive"
+        aria-expanded="false"
+        aria-controls="collapseFive">
+        Patterns
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+      <div class="accordion-body">
+        <ul class="accordion-list">
+          <li>
+            <a id="getting-started-linkFive" href="/NCC-Design-System/public/getting-started">How to get started</a>
+          </li>
+          <li>
+            <a id="developer-environment-setup-linkFive" href="/NCC-Design-System/public/getting-started/developer-environment-setup">Developer environment setup</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Troubleshooting</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+  
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSix">
+      <button
+        id="headingSixButton"
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseSix"
+        aria-expanded="false"
+        aria-controls="collapseSix">
+        Page templates
+      </button>
+    </h2>
+    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
+      <div class="accordion-body">
+        <ul class="accordion-list">
+          <li>
+            <a id="getting-started-linkSix" href="/NCC-Design-System/public/getting-started">How to get started</a>
+          </li>
+          <li>
+            <a id="developer-environment-setup-linkSix" href="/NCC-Design-System/public/getting-started/developer-environment-setup">Developer environment setup</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Troubleshooting</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSeven">
+      <button
+        id="headingSevenButton"
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseSeven"
+        aria-expanded="true"
+        aria-controls="collapseSeven">
+        Components
+      </button>
+    </h2>
+    <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven">
+      <div class="accordion-body">
+        <ul class="accordion-list">
+          <li>
+            <a id="components-link" href="/NCC-Design-System/public/components">Introduction</a>
+          </li>
+          <li>
+            <a id="structure-and-columns-link" href="/NCC-Design-System/public/components/structure-and-columns">Structure & columns</a>
+          </li>
+          <li>
+            <a id="accordion-link" href="/NCC-Design-System/public/components/accordion">#10 - Accordion</a>
+          </li>
+          <li>
+            <a id="account-menu-link" href="/NCC-Design-System/public/components/account-menu">#13 - Account menu</a>
+          </li>
+          <li>
+            <a id="alert-link" href="/NCC-Design-System/public/components/alert">#16 - Alert</a>
+          </li>
+          <li>
+            <a id="also-in-this-section-link" href="/NCC-Design-System/public/components/also-in-this-section">#18 - Also in this section</a>
+          </li>
+          <li>
+            <a id="anchor-link" href="/NCC-Design-System/public/components/anchor">#20 - Anchor</a>
+          </li>
+          <li>
+            <a id="anchor-page-link" href="/NCC-Design-System/public/components/anchor-page">#21 - Anchor page</a>
+          </li>
+          <li>
+            <a id="banner-link" href="/NCC-Design-System/public/components/banner">#23 - Banner</a>
+          </li>
+          <li>
+            <a id="basic-peeky-swiper-link" href="/NCC-Design-System/public/components/basic-peeky-swiper">#24 - Basic peeky swiper</a>
+          </li>
+          <li>
+            <a id="blog-list-link" href="/NCC-Design-System/public/components/blog-list">#25 - Blog list</a>
+          </li>
+          <li>
+            <a id="booking-live-search-link" href="/NCC-Design-System/public/components/booking-live-search">#27 - Booking live search</a>
+          </li>
+          <li>
+            <a id="booking-live-title-bar-link" href="/NCC-Design-System/public/components/booking-live-title-bar">#28 - Booking live title bar</a>
+          </li>
+          <li>
+            <a id="bookings-course-count-link" href="/NCC-Design-System/public/components/bookings-course-count">#31 - Bookings course count</a>
+          </li>
+          <li>
+            <a id="breadcrumb-link" href="/NCC-Design-System/public/components/breadcrumb">#32 - Breadcrumb</a>
+          </li>
+          <li>
+            <a id="callouts-link" href="/NCC-Design-System/public/components/callouts">#35 - Callouts</a>
+          </li>
+          <li>
+            <a id="card-link-list-link" href="/NCC-Design-System/public/components/callouts">#36 - Card link list</a>
+          </li>
+          <li>
+            <a id="card-link-list-sidebar-link" href="/NCC-Design-System/public/components/card-link-list-sidebar">#37 - Card link list sidebar</a>
+          </li>
+          <li>
+            <a id="card-link-navigation-link" href="/NCC-Design-System/public/components/card-link-navigation">#38 - Card link navigation</a>
+          </li>
+          <li>
+            <a id="carousel-link" href="/NCC-Design-System/public/components/carousel">#39 - Carousel</a>
+          </li>
+          <li>
+            <a id="carousel2-link" href="/NCC-Design-System/public/components/carousel2">#40 - Carousel 2</a>
+          </li>
+          <li>
+            <a id="chapter-link" href="/NCC-Design-System/public/components/chapter">#42 - Chapter</a>
+          </li>
+          <li>
+            <a id="chapter-main-footer-link" href="/NCC-Design-System/public/components/chapter-main-footer">#43 - Chapter main footer</a>
+          </li>
+          <li>
+            <a id="chapter-main-header-link" href="/NCC-Design-System/public/components/chapter-main-header">#44 - Chapter main header</a>
+          </li>
+          <li>
+            <a id="chapter-page-link" href="/NCC-Design-System/public/components/chapter-page">#45 - Chapter page</a>
+          </li>
+          <li>
+            <a id="chapter-page-footer-link" href="/NCC-Design-System/public/components/chapter-page-footer">#46 - Chapter page footer</a>
+          </li>
+          <li>
+            <a id="chapter-page-header-link" href="/NCC-Design-System/public/components/chapter-page-header">#47 - Chapter page header</a>
+          </li>
+          <li>
+            <a id="content-full-width-link" href="/NCC-Design-System/public/components/content-full-width">#48 - Content full width</a>
+          </li>
+          <li>
+            <a id="content-right-sidebar-link" href="/NCC-Design-System/public/components/content-right-sidebar">#49 - Content right sidebar</a>
+          </li>
+          <li>
+            <a id="content-section-link" href="/NCC-Design-System/public/components/content-section">#50 - Content section</a>
+          </li>
+          <li>
+            <a id="content-standard-link" href="/NCC-Design-System/public/components/content-standard">#51 - Content standard</a>
+          </li>
+          <li>
+            <a id="content01-link" href="/NCC-Design-System/public/components/content01">#52 - Content 01</a>
+          </li>
+          <li>
+            <a id="content02-link" href="/NCC-Design-System/public/components/content02">#53 - Content 02</a>
+          </li>
+          <li>
+            <a id="coroners-inquest-link" href="/NCC-Design-System/public/components/coroners-inquest">#54 - Coroner's Inquest</a>
+          </li>
+          <li>
+            <a id="custom-card-navigation-link" href="/NCC-Design-System/public/components/custom-card-navigation">#55 - Custom card navigation</a>
+          </li>
+          <li>
+            <a id="custom-navigation-link" href="/NCC-Design-System/public/components/custom-navigation">#56 - Custom navigation</a>
+          </li>
+          <li>
+            <a id="custom-section-navigation-link" href="/NCC-Design-System/public/components/custom-section-navigation">#57 - Custom section navigation</a>
+          </li>
+          <li>
+            <a id="general-card-link" href="/NCC-Design-System/public/components/general-card">#73 - General card</a>
+          </li>
+          <li>
+            <a id="promo-card-link" href="/NCC-Design-System/public/components/promo-card">#154 - Promo card</a>
+          </li>
+          <li>
+            <a id="image-card-link" href="/NCC-Design-System/public/components/image-card">#81 - Image card</a>
+          </li>
+          <li>
+            <a id="timeline-link" href="/NCC-Design-System/public/components/timeline">#205 - Timeline</a>
+          </li>
+          <li>
+            <a id="figure-link" href="/NCC-Design-System/public/components/figure">#300 - Figure</a>
+          </li>
+          <li>
+            <a id="section-nav-link" href="/NCC-Design-System/public/components/section-nav">Section Navigation</a>
+          </li>
+          <li>
+            <a id="object-promo-link" href="/NCC-Design-System/public/components/object-promo">Object promo</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingEight">
+      <button
+        id="headingEightButton"
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseEight"
+        aria-expanded="false"
+        aria-controls="collapseEight">
+        Community
+      </button>
+    </h2>
+    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight">
+      <div class="accordion-body">
+        <ul class="accordion-list">
+          <li>
+            <a id="getting-started-linkEight" href="/NCC-Design-System/public/getting-started">How to get started</a>
+          </li>
+          <li>
+            <a id="developer-environment-setup-linkEight" href="/NCC-Design-System/public/getting-started/developer-environment-setup">Developer environment setup</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Breadcrumbs</a>
+          </li>
+          <li>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Troubleshooting</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+
+
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5"> 
+  <h1>Content section - #50</h1>
+
+  <div class="row mt-0 mb-5 g-md-4 g-2">
+    <div id="components-help-section" class="col-12">
+      <h2>Need help?</h2>
+      <ul>
+        <li>Take part in the 'Breadcrumbs' discussion on GitHub and share your research</li>
+        <li>Propose a change - read more about how to propose changes in GitHub</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+      <script>
+        
+        window.onload = function () {
+          console.log('/components/content-section/');
+          console.log(typeof /components/content-section/);
+        }
+      </script>
+    </div>
+
+    <a class="mt-5 back-to-top" href="#">
+      <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.99999 16L8.99999 16L8.99999 4L14.5 9.5L15.92 8.08L7.99999 0.16L0.0799862 8.08L1.49999 9.5L6.99999 4L6.99999 16Z" fill="#4840f3"/></svg>
+      Back to top
+    </a>
+  </div>
+</section>
+
+
+  </main>
+  <footer>
+  <div class="container py-5">
+    <hr>
+    <div class="row py-3">
+      <div class="col-12 col-lg-6">
+        <p class="mb-4">The Norfolk County Council Design System is maintained by a team at the <a href="#">Norfolk County Council Digital Team</a>. If you've got a question, idea or suggestion you can contact the team.</p>
+        <a class="cookie-link " href="#">Cookies</a><a class="cookie-link" href="#">Cookies</a><a class="cookie-link" href="#">Cookies</a><a class="cookie-link" href="#">Cookies</a>
+        <p class="bottom-text">Built by the <a href="#">Norfolk County Council Digital Team</a></p>
+      </div>
+      <div class="col-12 col-lg-3">
+        <hr class="my-5 logo-hr">
+        <div class="footer-logo">
+          <a href="https://www.norfolk.gov.uk"><img src="/NCC-Design-System/public/img/NCC-Logo.png" alt="Norfolk County Council Logo"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+
+</body>
+</html>
