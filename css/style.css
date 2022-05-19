@@ -12347,59 +12347,59 @@ section.section_stage_theme .lead {
   font-size: 1.125rem !important;
 }
 
-.accordion-flush .accordion-item {
+.accordion-item {
   background-color: transparent;
   border: none;
 }
-.accordion-flush .accordion-item .accordion-header .accordion-button {
+.accordion-item .accordion-header .accordion-button {
   background-color: white;
   font-weight: 700;
   font-size: 1.25rem;
   color: black;
   padding: 16px 20px 16px 30px;
 }
-.accordion-flush .accordion-item .accordion-header .accordion-button:focus {
+.accordion-item .accordion-header .accordion-button:focus {
   box-shadow: none;
   outline: solid 3px #ffdd00;
 }
-.accordion-flush .accordion-item .accordion-header .accordion-button::after {
+.accordion-item .accordion-header .accordion-button::after {
   position: absolute;
   left: 0;
   transform: rotate(90deg) scale(1.2);
 }
-.accordion-flush .accordion-item .accordion-header .accordion-button.collapsed {
+.accordion-item .accordion-header .accordion-button.collapsed {
   color: #6c757d;
 }
-.accordion-flush .accordion-item .accordion-header .accordion-button.collapsed:hover {
+.accordion-item .accordion-header .accordion-button.collapsed:hover {
   color: black;
 }
-.accordion-flush .accordion-item .accordion-header .accordion-button.collapsed::after {
+.accordion-item .accordion-header .accordion-button.collapsed::after {
   transform: rotate(0deg) scale(1.2);
 }
-.accordion-flush .accordion-item .accordion-body {
+.accordion-item .accordion-body {
   padding: 8px 20px;
 }
-.accordion-flush .accordion-item .accordion-body .accordion-list {
+.accordion-item .accordion-body .accordion-list {
   list-style: none;
   padding: 0 0 0 12px;
 }
-.accordion-flush .accordion-item .accordion-body .accordion-list li {
+.accordion-item .accordion-body .accordion-list li {
   margin-bottom: 8px;
 }
-.accordion-flush .accordion-item .accordion-body .accordion-list li a {
+.accordion-item .accordion-body .accordion-list li a {
   font-weight: 500;
   font-size: 1rem;
 }
-.accordion-flush .accordion-item .accordion-body .accordion-list li a.active {
+.accordion-item .accordion-body .accordion-list li a.active {
   border-left: solid 4px #4840f3;
   font-weight: 700;
   padding-left: 10px;
   margin-left: -14px;
 }
-.accordion-flush .accordion-item .accordion-body .accordion-list li a.active:hover {
+.accordion-item .accordion-body .accordion-list li a.active:hover {
   border-color: #1a10f0;
 }
-.accordion-flush .accordion-item .accordion-body .accordion-list li a.active:focus {
+.accordion-item .accordion-body .accordion-list li a.active:focus {
   border-color: #0b0c0c;
 }
 
