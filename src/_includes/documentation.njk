@@ -1,6 +1,6 @@
 {% extends "template.njk" %}
 
-{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+
 
 {% block main %}
 
@@ -14,17 +14,15 @@
       {% endblock %}
 
       <script>
-        {# window.onload = function () {
-          currentLink();
+        window.onload = function () {
+          //currentLink();
+          //console.log(`page url: ${page.url}`);
+          
         }
 
         function currentLink() {
           let link = document.getElementById("{{linkID}}");
           link.classList.add("active");
-        } #}
-        window.onload = function () {
-          //console.log('{{page.url}}');
-          //console.log(typeof {{page.url}});
         }
       </script>
     </div>

@@ -1,4 +1,5 @@
-{% extends "documentation.njk" %}
+{% extends "documentation.njk" %}{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
 
 {% import "_pattern_macros/general_card.njk" as generalcard %}
 {% import "_pattern_macros/accordion.njk" as accordion %}
@@ -26,7 +27,7 @@
 {% block componentdesc %}
 
 <div class="components-list-section col-lg-4 col-12">
-  {{ docsaccordion.docsaccordion('7') }}
+  {{ docsaccordion.docsaccordion('7', page.url) }}
 </div>
 
 {% set exampleAccordionItems = ['Item 1 (link to alert)', 'Item 2 (link to general cards)', 'Item 3 (link to timeline)'] %}

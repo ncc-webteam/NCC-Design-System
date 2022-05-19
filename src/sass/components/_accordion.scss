@@ -1,66 +1,60 @@
-.accordion-flush {
-  .accordion-item {
-    background-color: transparent;
-    border: none;
-    .accordion-header {
-      .accordion-button {
-        background-color: $body-colour-light;
-        font-weight: 700;
-        font-size: 1.25rem;
-        color: black;
-        padding: 16px 20px 16px 30px;
-
-        &:focus {
-          box-shadow: none;
-          outline: solid 3px $focus-colour;
-        }
-
-        &::after {
-          position: absolute;
-          left: 0;
-          transform: rotate(90deg) scale(1.2);
-        }
+.accordion-item {
+  background-color: transparent;
+  border: none;
+  .accordion-header {
+    .accordion-button {
+      background-color: $body-colour-light;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: black;
+      padding: 16px 20px 16px 30px;
+      &:focus {
+        box-shadow: none;
+        outline: solid 3px $focus-colour;
       }
-      .accordion-button.collapsed {
-        color: $gray-600;
-
-        &:hover {
-          color: black;
-        }
-        &::after {
-          transform: rotate(0deg) scale(1.2);
-        }
+      &::after {
+        position: absolute;
+        left: 0;
+        transform: rotate(90deg) scale(1.2);
       }
     }
-    .accordion-body {
-      padding: 8px 20px;
-      .accordion-list {
-        list-style: none;
-        padding: 0 0 0 12px;
+    .accordion-button.collapsed {
+      color: $gray-600;
+      &:hover {
+        color: black;
+      }
+      &::after {
+        transform: rotate(0deg) scale(1.2);
+      }
+    }
+  }
+  .accordion-body {
+    padding: 8px 20px;
+    .accordion-list {
+      list-style: none;
+      padding: 0 0 0 12px;
 
-        li {
-          margin-bottom: 8px;
-          a {
-            font-weight: 500;
-            font-size: 1rem;
+      li {
+        margin-bottom: 8px;
+        a {
+          font-weight: 500;
+          font-size: 1rem;
+        }
+        a.active {
+          border-left: solid 4px $link-colour;
+          font-weight: 700;
+          padding-left: 10px;
+          margin-left: -14px;
+
+          &:hover {
+            border-color: $link-colour-hover;
           }
-          a.active {
-            border-left: solid 4px $link-colour;
-            font-weight: 700;
-            padding-left: 10px;
-            margin-left: -14px;
 
-            &:hover {
-              border-color: $link-colour-hover;
-            }
-
-            &:focus {
-              border-color: $focus-text-colour;
-            }
+          &:focus {
+            border-color: $focus-text-colour;
           }
         }
       }
     }
   }
 }
-
