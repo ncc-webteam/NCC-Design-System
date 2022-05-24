@@ -17,32 +17,27 @@
   
   <header>
 
-<div class="container py-3">
-    
+  <div class="container py-3">
     <div class="content-skip">
       <a href="#main" class="skip-to">Skip to content</a>
     </div>
-    
-    <div class="top-wrapper">
-
-      <a class="navbar-brand" id="main-logo" href="/NCC-Design-System/public/"><span class="top">Norfolk County Council</span><span class="bottom">Design system</span></a>
-    
-      <button id="navbarToggler" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHeader" aria-controls="offcanvasHeader">
-        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z" fill="white"/>
-</svg>
-        Menu</button>
       
+    <div class="top-wrapper">
+      <a class="navbar-brand" id="main-logo" href="/NCC-Design-System/public/"><span class="top">Norfolk County Council</span><span class="bottom">Design system</span></a>
+      <button id="navbarToggler" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHeader" aria-controls="offcanvasHeader"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z" fill="white"/></svg>Menu</button>
     </div>
-    
-    <form class="form-inline d-flex main-search-area" action="/NCC-Design-System/public/">
-      <input class="form-control" type="search" placeholder="Search documentation" aria-label="Search">
-      <button id="header-search-button" class="btn btn-outline-light d-inline-flex justify-content-between" type="submit"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z" fill="white"/>
-</svg>
-Search</button>
-    </form>
+      
+    <div id="myDropdown2">
+      <form id="searchDropdownForm" class="form-inline d-flex main-search-area" action="/NCC-Design-System/public/">
+        <input id="mySearchInput" class="form-control" type="text" placeholder="Search documentation" aria-label="Search" onkeyup="filterFunction()">
+        <button id="header-search-button" class="btn btn-outline-light d-inline-flex justify-content-between" type="button" onclick="getSearchResults()"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z" fill="white"/></svg>Search</button>
+        <div id="mySearchDropdown" class="dropdown-menu" style="top: 80px" aria-labelledby="dropdownMenuLink">
+        </div>
+      </form>
+    </div>
   </div>
+
+  
   
   <nav class="navbar navbar-expand-md">
     <div class="container">
@@ -141,10 +136,9 @@ Search</button>
   
 
 <div class="accordion accordion-flush" id="docsAccordion">
-
-  
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
+      
       <button
         id="headingOneButton"
         class="accordion-button collapsed"
@@ -155,15 +149,16 @@ Search</button>
         aria-controls="collapseOne">
         Getting Started
       </button>
+      
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+    <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="getting-started-link" class="" href="/NCC-Design-System/public/getting-started">How to get started</a>
+            <a id="getting-started-link" class="docs-accordion-link " href="/NCC-Design-System/public/getting-started">How to get started</a>
           </li>
           <li>
-            <a id="developer-environment-setup-link" class=""  href="/NCC-Design-System/public/getting-started/developer-environment-setup">Developer environment setup</a>
+            <a id="developer-environment-setup-link" class="docs-accordion-link "  href="/NCC-Design-System/public/getting-started/developer-environment-setup">Developer environment setup</a>
           </li>
           <li>
             <a href="#"></a>
@@ -181,11 +176,10 @@ Search</button>
       </div>
     </div>
   </div>
-  
 
-  
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
+      
       <button
         id="headingTwoButton"
         class="accordion-button collapsed"
@@ -196,8 +190,9 @@ Search</button>
         aria-controls="collapseTwo">
         Content
       </button>
+      
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+    <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
@@ -223,10 +218,9 @@ Search</button>
     </div>
   </div>
   
-
-  
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
+      
       <button
         id="headingThreeButton"
         class="accordion-button collapsed"
@@ -237,8 +231,9 @@ Search</button>
         aria-controls="collapseThree">
         Media Creation
       </button>
+      
     </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+    <div id="collapseThree" class="accordion-collapse collapse " aria-labelledby="headingThree">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
@@ -264,10 +259,10 @@ Search</button>
     </div>
   </div>
   
-
   
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingFour">
+      
       <button
         id="headingFourButton"
         class="accordion-button collapsed"
@@ -278,8 +273,9 @@ Search</button>
         aria-controls="collapseFour">
         Styles
       </button>
+      
     </h2>
-    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+    <div id="collapseFour" class="accordion-collapse collapse " aria-labelledby="headingFour">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
@@ -298,11 +294,11 @@ Search</button>
       </div>
     </div>
   </div>
-  
 
-  
+
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingFive">
+      
       <button
         id="headingFiveButton"
         class="accordion-button collapsed"
@@ -313,8 +309,9 @@ Search</button>
         aria-controls="collapseFive">
         Patterns
       </button>
+      
     </h2>
-    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+    <div id="collapseFive" class="accordion-collapse collapse " aria-labelledby="headingFive">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
@@ -340,10 +337,9 @@ Search</button>
     </div>
   </div>
   
-
-  
- <div class="accordion-item">
+  <div class="accordion-item">
     <h2 class="accordion-header" id="headingSix">
+      
       <button
         id="headingSixButton"
         class="accordion-button collapsed"
@@ -354,35 +350,38 @@ Search</button>
         aria-controls="collapseSix">
         Page templates
       </button>
+      
     </h2>
-    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
+    <div id="collapseSix" class="accordion-collapse collapse " aria-labelledby="headingSix">
       <div class="accordion-body">
         <ul class="accordion-list">
-          
           <li>
-            <a href="#">Standard</a>
+            <a id="getting-started-linkSix" href="/NCC-Design-System/public/getting-started">How to get started</a>
           </li>
           <li>
-             <a href="#">Full width</a>
+            <a id="developer-environment-setup-linkSix" href="/NCC-Design-System/public/getting-started/developer-environment-setup">Developer environment setup</a>
           </li>
           <li>
-            <a href="#">Chaptered</a>
+            <a href="#"></a>
           </li>
           <li>
-           <a href="#">Umbrella</a>
+            <a href="#">Breadcrumbs</a>
           </li>
           <li>
-            <a href="#">Navigation</a>
+            <a href="#"></a>
+          </li>
+          <li>
+            <a href="#">Troubleshooting</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  
 
   
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingSeven">
+      
       <button
         id="headingSevenButton"
         class="accordion-button"
@@ -393,193 +392,193 @@ Search</button>
         aria-controls="collapseSeven">
         Components
       </button>
+      
     </h2>
     <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="components-link" class="" href="/NCC-Design-System/public/components">Introduction</a>
+            <a id="components-link" class="docs-accordion-link " href="/NCC-Design-System/public/components">Introduction</a>
           </li>
           <li>
-            <a id="structure-and-columns-link" class="" href="/NCC-Design-System/public/components/structure-and-columns">Structure & columns</a>
+            <a id="structure-and-columns-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/structure-and-columns">Structure & columns</a>
           </li>
           <li>
-            <a id="accordion-link" class="" href="/NCC-Design-System/public/components/accordion">#10 - Accordion</a>
+            <a id="accordion-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/accordion">#10 - Accordion</a>
           </li>
           <li>
-            <a id="account-menu-link" class="active" href="/NCC-Design-System/public/components/account-menu">#13 - Account menu</a>
+            <a id="account-menu-link" class="docs-accordion-link active" href="/NCC-Design-System/public/components/account-menu">#13 - Account menu</a>
           </li>
           <li>
-            <a id="alert-link" class="" href="/NCC-Design-System/public/components/alert">#16 - Alert</a>
+            <a id="alert-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/alert">#16 - Alert</a>
           </li>
           <li>
-            <a id="also-in-this-section-link" class="" href="/NCC-Design-System/public/components/also-in-this-section">#18 - Also in this section</a>
+            <a id="also-in-this-section-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/also-in-this-section">#18 - Also in this section</a>
           </li>
           <li>
-            <a id="anchor-link" class="" href="/NCC-Design-System/public/components/anchor">#20 - Anchor</a>
+            <a id="anchor-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/anchor">#20 - Anchor</a>
           </li>
           <li>
-            <a id="anchor-page-link" class="" href="/NCC-Design-System/public/components/anchor-page">#21 - Anchor page</a>
+            <a id="anchor-page-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/anchor-page">#21 - Anchor page</a>
           </li>
           <li>
-            <a id="banner-link" class="" href="/NCC-Design-System/public/components/banner">#23 - Banner</a>
+            <a id="banner-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/banner">#23 - Banner</a>
           </li>
           <li>
-            <a id="basic-peeky-swiper-link" class="" href="/NCC-Design-System/public/components/basic-peeky-swiper">#24 - Basic peeky swiper</a>
+            <a id="basic-peeky-swiper-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/basic-peeky-swiper">#24 - Basic peeky swiper</a>
           </li>
           <li>
-            <a id="blog-list-link" class="" href="/NCC-Design-System/public/components/blog-list">#25 - Blog list</a>
+            <a id="blog-list-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/blog-list">#25 - Blog list</a>
           </li>
           <li>
-            <a id="booking-live-search-link" class="" href="/NCC-Design-System/public/components/booking-live-search">#27 - Booking live search</a>
+            <a id="booking-live-search-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/booking-live-search">#27 - Booking live search</a>
           </li>
           <li>
-            <a id="booking-live-title-bar-link" class="" href="/NCC-Design-System/public/components/booking-live-title-bar">#28 - Booking live title bar</a>
+            <a id="booking-live-title-bar-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/booking-live-title-bar">#28 - Booking live title bar</a>
           </li>
           <li>
-            <a id="bookings-course-count-link" class="" href="/NCC-Design-System/public/components/bookings-course-count">#31 - Bookings course count</a>
+            <a id="bookings-course-count-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/bookings-course-count">#31 - Bookings course count</a>
           </li>
           <li>
-            <a id="breadcrumb-link" class="" href="/NCC-Design-System/public/components/breadcrumb">#32 - Breadcrumb</a>
+            <a id="breadcrumb-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/breadcrumb">#32 - Breadcrumb</a>
           </li>
           <li>
-            <a id="callouts-link" class="" href="/NCC-Design-System/public/components/callouts">#35 - Callouts</a>
+            <a id="callouts-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/callouts">#35 - Callouts</a>
           </li>
           <li>
-            <a id="card-link-list-link" class="" href="/NCC-Design-System/public/components/card-link-list">#36 - Card link list</a>
+            <a id="card-link-list-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/card-link-list">#36 - Card link list</a>
           </li>
           <li>
-            <a id="card-link-list-sidebar-link" class="" href="/NCC-Design-System/public/components/card-link-list-sidebar">#37 - Card link list sidebar</a>
+            <a id="card-link-list-sidebar-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/card-link-list-sidebar">#37 - Card link list sidebar</a>
           </li>
           <li>
-            <a id="card-link-navigation-link" class="" href="/NCC-Design-System/public/components/card-link-navigation">#38 - Card link navigation</a>
+            <a id="card-link-navigation-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/card-link-navigation">#38 - Card link navigation</a>
           </li>
           <li>
-            <a id="carousel-link" class="" href="/NCC-Design-System/public/components/carousel">#39 - Carousel</a>
+            <a id="carousel-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/carousel">#39 - Carousel</a>
           </li>
           <li>
-            <a id="carousel2-link" class="" href="/NCC-Design-System/public/components/carousel2">#40 - Carousel 2</a>
+            <a id="carousel2-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/carousel2">#40 - Carousel 2</a>
           </li>
           <li>
-            <a id="chapter-link" class="" href="/NCC-Design-System/public/components/chapter">#42 - Chapter</a>
+            <a id="chapter-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/chapter">#42 - Chapter</a>
           </li>
           <li>
-            <a id="chapter-main-footer-link" class="" href="/NCC-Design-System/public/components/chapter-main-footer">#43 - Chapter main footer</a>
+            <a id="chapter-main-footer-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/chapter-main-footer">#43 - Chapter main footer</a>
           </li>
           <li>
-            <a id="chapter-main-header-link" class="" href="/NCC-Design-System/public/components/chapter-main-header">#44 - Chapter main header</a>
+            <a id="chapter-main-header-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/chapter-main-header">#44 - Chapter main header</a>
           </li>
           <li>
-            <a id="chapter-page-link" class="" href="/NCC-Design-System/public/components/chapter-page">#45 - Chapter page</a>
+            <a id="chapter-page-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/chapter-page">#45 - Chapter page</a>
           </li>
           <li>
-            <a id="chapter-page-footer-link" class="" href="/NCC-Design-System/public/components/chapter-page-footer">#46 - Chapter page footer</a>
+            <a id="chapter-page-footer-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/chapter-page-footer">#46 - Chapter page footer</a>
           </li>
           <li>
-            <a id="chapter-page-header-link" class="" href="/NCC-Design-System/public/components/chapter-page-header">#47 - Chapter page header</a>
+            <a id="chapter-page-header-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/chapter-page-header">#47 - Chapter page header</a>
           </li>
           <li>
-            <a id="content-full-width-link" class="" href="/NCC-Design-System/public/components/content-full-width">#48 - Content full width</a>
+            <a id="content-full-width-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/content-full-width">#48 - Content full width</a>
           </li>
           <li>
-            <a id="content-right-sidebar-link" class="" href="/NCC-Design-System/public/components/content-right-sidebar">#49 - Content right sidebar</a>
+            <a id="content-right-sidebar-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/content-right-sidebar">#49 - Content right sidebar</a>
           </li>
           <li>
-            <a id="content-section-link" class="" href="/NCC-Design-System/public/components/content-section">#50 - Content section</a>
+            <a id="content-section-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/content-section">#50 - Content section</a>
           </li>
           <li>
-            <a id="content-standard-link" class="" href="/NCC-Design-System/public/components/content-standard">#51 - Content standard</a>
+            <a id="content-standard-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/content-standard">#51 - Content standard</a>
           </li>
           <li>
-            <a id="content01-link" class="" href="/NCC-Design-System/public/components/content01">#52 - Content 01</a>
+            <a id="content01-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/content01">#52 - Content 01</a>
           </li>
           <li>
-            <a id="content02-link" class="" href="/NCC-Design-System/public/components/content02">#53 - Content 02</a>
+            <a id="content02-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/content02">#53 - Content 02</a>
           </li>
           <li>
-            <a id="coroners-inquest-link" class="" href="/NCC-Design-System/public/components/coroners-inquest">#54 - Coroner's Inquest</a>
+            <a id="coroners-inquest-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/coroners-inquest">#54 - Coroner's Inquest</a>
           </li>
           <li>
-            <a id="custom-card-navigation-link" class="" href="/NCC-Design-System/public/components/custom-card-navigation">#55 - Custom card navigation</a>
+            <a id="custom-card-navigation-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/custom-card-navigation">#55 - Custom card navigation</a>
           </li>
           <li>
-            <a id="custom-navigation-link" class="" href="/NCC-Design-System/public/components/custom-navigation">#56 - Custom navigation</a>
+            <a id="custom-navigation-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/custom-navigation">#56 - Custom navigation</a>
           </li>
           <li>
-            <a id="custom-section-navigation-link" class="" href="/NCC-Design-System/public/components/custom-section-navigation">#57 - Custom section navigation</a>
+            <a id="custom-section-navigation-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/custom-section-navigation">#57 - Custom section navigation</a>
           </li>
           <li>
-            <a id="edit-profile-link" class="" href="/NCC-Design-System/public/components/edit-profile">#59 - Edit profile</a>
+            <a id="edit-profile-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/edit-profile">#59 - Edit profile</a>
           </li>
           <li>
-            <a id="embed-link" class="" href="/NCC-Design-System/public/components/embed">#60 - Embed</a>
+            <a id="embed-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/embed">#60 - Embed</a>
           </li>
           <li>
-            <a id="event-call-to-action-ribbon-link" class="" href="/NCC-Design-System/public/components/event-call-to-action-ribbon">#61 - Event call to action ribbon</a>
+            <a id="event-call-to-action-ribbon-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/event-call-to-action-ribbon">#61 - Event call to action ribbon</a>
           </li>
           <li>
-            <a id="file-update-list-link" class="" href="/NCC-Design-System/public/components/file-update-list">#65 - File update list</a>
+            <a id="file-update-list-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/file-update-list">#65 - File update list</a>
           </li>
           <li>
-            <a id="find-my-nearest-link" class="" href="/NCC-Design-System/public/components/find-my-nearest">#66 - Find my nearest</a>
+            <a id="find-my-nearest-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/find-my-nearest">#66 - Find my nearest</a>
           </li>
           <li>
-            <a id="footer-link" class="" href="/NCC-Design-System/public/components/footer">#67 - Footer (global)</a>
+            <a id="footer-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/footer">#67 - Footer (global)</a>
           </li>
           <li>
-            <a id="footer-extra-link" class="" href="/NCC-Design-System/public/components/footer-extra">#68 - Footer extra (global)</a>
+            <a id="footer-extra-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/footer-extra">#68 - Footer extra (global)</a>
           </li>
           <li>
-            <a id="footer-left-column-link" class="" href="/NCC-Design-System/public/components/footer-left-column">#69 - Footer left column (global)</a>
+            <a id="footer-left-column-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/footer-left-column">#69 - Footer left column (global)</a>
           </li>
           <li>
-            <a id="footer-links-link" class="" href="/NCC-Design-System/public/components/footer-links">#70 - Footer links (global)</a>
+            <a id="footer-links-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/footer-links">#70 - Footer links (global)</a>
           </li>
           <li>
-            <a id="footer-right-column-link" class="" href="/NCC-Design-System/public/components/footer-right-column">#71 - Footer right column (global)</a>
+            <a id="footer-right-column-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/footer-right-column">#71 - Footer right column (global)</a>
           </li>
           <li>
-            <a id="general-card-link" class="" href="/NCC-Design-System/public/components/general-card">#73 - General card</a>
+            <a id="general-card-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/general-card">#73 - General card</a>
           </li>
           <li>
-            <a id="global-menu-link" class="" href="/NCC-Design-System/public/components/global-menu">#74 - Global menu</a>
+            <a id="global-menu-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/global-menu">#74 - Global menu</a>
           </li>
           <li>
-            <a id="global-menu-off-canvas-link" class="" href="/NCC-Design-System/public/components/global-menu-off-canvas">#75 - Global menu off canvas</a>
+            <a id="global-menu-off-canvas-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/global-menu-off-canvas">#75 - Global menu off canvas</a>
           </li>
           <li>
-            <a id="header-link" class="" href="/NCC-Design-System/public/components/header">#76 - Header (global)</a>
+            <a id="header-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/header">#76 - Header (global)</a>
           </li>
           <li>
-            <a id="hero-link" class="" href="/NCC-Design-System/public/components/hero">#77 - Hero</a>
+            <a id="hero-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/hero">#77 - Hero</a>
           </li>
           <li>
-            <a id="image-card-link" class="" href="/NCC-Design-System/public/components/image-card">#81 - Image card</a>
+            <a id="image-card-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/image-card">#81 - Image card</a>
           </li>
           <li>
-            <a id="promo-card-link" class="" href="/NCC-Design-System/public/components/promo-card">#154 - Promo card</a>
+            <a id="promo-card-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/promo-card">#154 - Promo card</a>
           </li>
           <li>
-            <a id="timeline-link" class="" href="/NCC-Design-System/public/components/timeline">#205 - Timeline</a>
+            <a id="timeline-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/timeline">#205 - Timeline</a>
           </li>
           <li>
-            <a id="figure-link" class="" href="/NCC-Design-System/public/components/figure">#300 - Figure</a>
+            <a id="figure-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/figure">#300 - Figure</a>
           </li>
           <li>
-            <a id="section-nav-link" class="" href="/NCC-Design-System/public/components/section-nav">Section Navigation</a>
+            <a id="section-nav-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/section-nav">Section Navigation</a>
           </li>
           <li>
-            <a id="object-promo-link" class="" href="/NCC-Design-System/public/components/object-promo">Object promo</a>
+            <a id="object-promo-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/object-promo">Object promo</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
   
-
-  
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingEight">
+      
       <button
         id="headingEightButton"
         class="accordion-button collapsed"
@@ -590,12 +589,13 @@ Search</button>
         aria-controls="collapseEight">
         Community
       </button>
+      
     </h2>
-    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight">
+    <div id="collapseEight" class="accordion-collapse collapse " aria-labelledby="headingEight">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="getting-started-linkEight" href="/NCC-Design-System/public/getting-started">How to get started</a>
+            <a id="getting-started-linkEight" href="/NCC-Design-System/public/getting-started/">How to get started</a>
           </li>
           <li>
              <a href="#">Twitter</a>
@@ -610,7 +610,6 @@ Search</button>
       </div>
     </div>
   </div>
-  
 
 </div>
 
@@ -635,15 +634,48 @@ Search</button>
 
 
       <script>
-        window.onload = function () {
-          //currentLink();
-          //console.log(`page url: ${page.url}`);
-          
+        const links = document.getElementsByClassName('docs-accordion-link');
+        const resultsDropdown = document.getElementById('mySearchDropdown');
+        const searchDropdownForm = document.getElementById('searchDropdownForm');
+
+        window.onload = function() {
+          getSearchResults();
         }
 
-        function currentLink() {
-          let link = document.getElementById("account-menu-link");
-          link.classList.add("active");
+        searchDropdownForm.addEventListener('focusin', (event) => {
+          resultsDropdown.classList.toggle("show");
+        });
+
+        searchDropdownForm.addEventListener('focusout', (event) => {
+          resultsDropdown.classList.toggle("show");
+        });
+
+        function getSearchResults() {
+          Array.prototype.forEach.call(links, function(e) {
+            // console.log(e.innerHTML);
+
+            let newLink = document.createElement("a");
+            newLink.innerHTML = `<a class="dropdown-item" href="${e.href}">${e.innerHTML}</a>`;
+            newLink.style.display = "none";
+            resultsDropdown.appendChild(newLink);
+          });
+        }
+
+        function filterFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("mySearchInput");
+          filter = input.value.toUpperCase();
+          div = document.getElementById("myDropdown2");
+          a = div.getElementsByTagName("a");
+          
+          for (i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+            } else {
+              a[i].style.display = "none";
+            }
+          }
         }
       </script>
     </div>

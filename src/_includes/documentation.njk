@@ -14,15 +14,48 @@
       {% endblock %}
 
       <script>
-        window.onload = function () {
-          //currentLink();
-          //console.log(`page url: ${page.url}`);
-          
+        const links = document.getElementsByClassName('docs-accordion-link');
+        const resultsDropdown = document.getElementById('mySearchDropdown');
+        const searchDropdownForm = document.getElementById('searchDropdownForm');
+
+        window.onload = function() {
+          getSearchResults();
         }
 
-        function currentLink() {
-          let link = document.getElementById("{{linkID}}");
-          link.classList.add("active");
+        searchDropdownForm.addEventListener('focusin', (event) => {
+          resultsDropdown.classList.toggle("show");
+        });
+
+        searchDropdownForm.addEventListener('focusout', (event) => {
+          resultsDropdown.classList.toggle("show");
+        });
+
+        function getSearchResults() {
+          Array.prototype.forEach.call(links, function(e) {
+            // console.log(e.innerHTML);
+
+            let newLink = document.createElement("a");
+            newLink.innerHTML = `<a class="dropdown-item" href="${e.href}">${e.innerHTML}</a>`;
+            newLink.style.display = "none";
+            resultsDropdown.appendChild(newLink);
+          });
+        }
+
+        function filterFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("mySearchInput");
+          filter = input.value.toUpperCase();
+          div = document.getElementById("myDropdown2");
+          a = div.getElementsByTagName("a");
+          
+          for (i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+            } else {
+              a[i].style.display = "none";
+            }
+          }
         }
       </script>
     </div>

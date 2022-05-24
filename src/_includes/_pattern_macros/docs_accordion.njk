@@ -1,10 +1,9 @@
-{% macro docsaccordion(currentsection, currenturl) %}
+{% macro docsaccordion(currenturl) %}
 
 <div class="accordion accordion-flush" id="docsAccordion">
-
-  {% if currentsection == 1 %}
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
+      {% if '/getting-started/' in currenturl %}
       <button
         id="headingOneButton"
         class="accordion-button"
@@ -15,35 +14,7 @@
         aria-controls="collapseOne">
         Getting Started
       </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
-      <div class="accordion-body">
-        <ul class="accordion-list">
-          <li>
-            <a id="getting-started-link" class="{% if '/getting-started/' == currenturl %}active{% endif %}" href="{{ '/getting-started' | url }}">How to get started</a>
-          </li>
-          <li>
-            <a id="developer-environment-setup-link" class="{% if '/developer-environment-setup/' in currenturl %}active{% endif %}"  href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Breadcrumbs</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Troubleshooting</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  {% else %}
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
+      {% else %}
       <button
         id="headingOneButton"
         class="accordion-button collapsed"
@@ -54,15 +25,16 @@
         aria-controls="collapseOne">
         Getting Started
       </button>
+      {% endif %}
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+    <div id="collapseOne" class="accordion-collapse collapse {% if '/getting-started/' in currenturl %}show{% endif %}" aria-labelledby="headingOne">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="getting-started-link" class="{% if '/getting-started/' in currenturl %}active{% endif %}" href="{{ '/getting-started' | url }}">How to get started</a>
+            <a id="getting-started-link" class="docs-accordion-link {% if '/getting-started/' == currenturl %}active{% endif %}" href="{{ '/getting-started' | url }}">How to get started</a>
           </li>
           <li>
-            <a id="developer-environment-setup-link" class="{% if '/developer-environment-setup/' in currenturl %}active{% endif %}"  href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
+            <a id="developer-environment-setup-link" class="docs-accordion-link {% if '/developer-environment-setup/' in currenturl %}active{% endif %}"  href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
           </li>
           <li>
             <a href="#"></a>
@@ -80,11 +52,10 @@
       </div>
     </div>
   </div>
-  {% endif %}
 
-  {% if currentsection == 2 %}
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
+      {% if '/content/' in currenturl %}
       <button
         id="headingTwoButton"
         class="accordion-button"
@@ -95,8 +66,20 @@
         aria-controls="collapseTwo">
         Content
       </button>
+      {% else %}
+      <button
+        id="headingTwoButton"
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo"
+        aria-expanded="false"
+        aria-controls="collapseTwo">
+        Content
+      </button>
+      {% endif %}
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
+    <div id="collapseTwo" class="accordion-collapse collapse {% if '/content/' in currenturl %}show{% endif %}" aria-labelledby="headingTwo">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
@@ -121,50 +104,10 @@
       </div>
     </div>
   </div>
-  {% else %}
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button
-        id="headingTwoButton"
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseTwo"
-        aria-expanded="false"
-        aria-controls="collapseTwo">
-        Content
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
-      <div class="accordion-body">
-        <ul class="accordion-list">
-          <li>
-            <a id="getting-started-linkTwo" href="{{ '/getting-started' | url }}">How to get started</a>
-          </li>
-          <li>
-            <a id="developer-environment-setup-linkTwo" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Breadcrumbs</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Troubleshooting</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  {% endif %}
-
-  {% if currentsection == 3 %}
+  
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
+      {% if '/media-creation/' in currenturl %}
       <button
         id="headingThreeButton"
         class="accordion-button"
@@ -175,8 +118,20 @@
         aria-controls="collapseThree">
         Media Creation
       </button>
+      {% else %}
+      <button
+        id="headingThreeButton"
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseThree"
+        aria-expanded="false"
+        aria-controls="collapseThree">
+        Media Creation
+      </button>
+      {% endif %}
     </h2>
-    <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
+    <div id="collapseThree" class="accordion-collapse collapse {% if '/media-creation/' in currenturl %}show{% endif %}" aria-labelledby="headingThree">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
@@ -201,50 +156,11 @@
       </div>
     </div>
   </div>
-  {% else %}
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
-      <button
-        id="headingThreeButton"
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseThree"
-        aria-expanded="false"
-        aria-controls="collapseThree">
-        Media Creation
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
-      <div class="accordion-body">
-        <ul class="accordion-list">
-          <li>
-            <a id="getting-started-linkThree" href="{{ '/getting-started' | url }}">How to get started</a>
-          </li>
-          <li>
-            <a id="developer-environment-setup-linkThree" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Breadcrumbs</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Troubleshooting</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  {% endif %}
-
-  {% if currentsection == 4 %}
+  
+  
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingFour">
+      {% if '/styles/' in currenturl %}
       <button
         id="headingFourButton"
         class="accordion-button"
@@ -255,30 +171,7 @@
         aria-controls="collapseFour">
         Styles
       </button>
-    </h2>
-    <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
-      <div class="accordion-body">
-        <ul class="accordion-list">
-          
-          <li>
-            <a href="#">Colour</a>
-          </li>
-          <li>
-            <a href="#">Images</a>
-          </li>
-          <li>
-            <a href="#">Typography</a>
-          </li>
-          <li>
-            <a href="#">Branding</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  {% else %}
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingFour">
+      {% else %}
       <button
         id="headingFourButton"
         class="accordion-button collapsed"
@@ -289,8 +182,9 @@
         aria-controls="collapseFour">
         Styles
       </button>
+      {% endif %}
     </h2>
-    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+    <div id="collapseFour" class="accordion-collapse collapse {% if '/styles/' in currenturl %}show{% endif %}" aria-labelledby="headingFour">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
@@ -309,11 +203,11 @@
       </div>
     </div>
   </div>
-  {% endif %}
 
-  {% if currentsection == 5 %}
+
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingFive">
+      {% if '/patterns/' in currenturl %}
       <button
         id="headingFiveButton"
         class="accordion-button"
@@ -324,8 +218,20 @@
         aria-controls="collapseFive">
         Patterns
       </button>
+      {% else %}
+      <button
+        id="headingFiveButton"
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseFive"
+        aria-expanded="false"
+        aria-controls="collapseFive">
+        Patterns
+      </button>
+      {% endif %}
     </h2>
-    <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive">
+    <div id="collapseFive" class="accordion-collapse collapse {% if '/patterns/' in currenturl %}show{% endif %}" aria-labelledby="headingFive">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
@@ -350,50 +256,10 @@
       </div>
     </div>
   </div>
-  {% else %}
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingFive">
-      <button
-        id="headingFiveButton"
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseFive"
-        aria-expanded="false"
-        aria-controls="collapseFive">
-        Patterns
-      </button>
-    </h2>
-    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
-      <div class="accordion-body">
-        <ul class="accordion-list">
-          <li>
-            <a id="getting-started-linkFive" href="{{ '/getting-started' | url }}">How to get started</a>
-          </li>
-          <li>
-            <a id="developer-environment-setup-linkFive" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Breadcrumbs</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Troubleshooting</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  {% endif %}
-
-  {% if currentsection == 6 %}
+  
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingSix">
+      {% if '/page-templates/' in currenturl %}
       <button
         id="headingSixButton"
         class="accordion-button"
@@ -404,8 +270,20 @@
         aria-controls="collapseSix">
         Page templates
       </button>
+      {% else %}
+      <button
+        id="headingSixButton"
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseSix"
+        aria-expanded="false"
+        aria-controls="collapseSix">
+        Page templates
+      </button>
+      {% endif %}
     </h2>
-    <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix">
+    <div id="collapseSix" class="accordion-collapse collapse {% if '/page-templates/' in currenturl %}show{% endif %}" aria-labelledby="headingSix">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
@@ -430,48 +308,11 @@
       </div>
     </div>
   </div>
-  {% else %}
- <div class="accordion-item">
-    <h2 class="accordion-header" id="headingSix">
-      <button
-        id="headingSixButton"
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseSix"
-        aria-expanded="false"
-        aria-controls="collapseSix">
-        Page templates
-      </button>
-    </h2>
-    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix">
-      <div class="accordion-body">
-        <ul class="accordion-list">
-          
-          <li>
-            <a href="#">Standard</a>
-          </li>
-          <li>
-             <a href="#">Full width</a>
-          </li>
-          <li>
-            <a href="#">Chaptered</a>
-          </li>
-          <li>
-           <a href="#">Umbrella</a>
-          </li>
-          <li>
-            <a href="#">Navigation</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  {% endif %}
 
-  {% if currentsection == 7 %}
+  
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingSeven">
+      {% if '/components/' in currenturl %}
       <button
         id="headingSevenButton"
         class="accordion-button"
@@ -482,191 +323,7 @@
         aria-controls="collapseSeven">
         Components
       </button>
-    </h2>
-    <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven">
-      <div class="accordion-body">
-        <ul class="accordion-list">
-          <li>
-            <a id="components-link" class="{% if '/components/' == currenturl %}active{% endif %}" href="{{ '/components' | url }}">Introduction</a>
-          </li>
-          <li>
-            <a id="structure-and-columns-link" class="{% if '/structure-and-columns/' in currenturl %}active{% endif %}" href="{{ '/components/structure-and-columns' | url }}">Structure & columns</a>
-          </li>
-          <li>
-            <a id="accordion-link" class="{% if '/accordion/' in currenturl %}active{% endif %}" href="{{ '/components/accordion' | url }}">#10 - Accordion</a>
-          </li>
-          <li>
-            <a id="account-menu-link" class="{% if '/account-menu/' in currenturl %}active{% endif %}" href="{{ '/components/account-menu' | url }}">#13 - Account menu</a>
-          </li>
-          <li>
-            <a id="alert-link" class="{% if '/alert/' in currenturl %}active{% endif %}" href="{{ '/components/alert' | url }}">#16 - Alert</a>
-          </li>
-          <li>
-            <a id="also-in-this-section-link" class="{% if '/also-in-this-section/' in currenturl %}active{% endif %}" href="{{ '/components/also-in-this-section' | url }}">#18 - Also in this section</a>
-          </li>
-          <li>
-            <a id="anchor-link" class="{% if '/anchor/' in currenturl %}active{% endif %}" href="{{ '/components/anchor' | url }}">#20 - Anchor</a>
-          </li>
-          <li>
-            <a id="anchor-page-link" class="{% if '/anchor-page/' in currenturl %}active{% endif %}" href="{{ '/components/anchor-page' | url }}">#21 - Anchor page</a>
-          </li>
-          <li>
-            <a id="banner-link" class="{% if '/banner/' in currenturl %}active{% endif %}" href="{{ '/components/banner' | url }}">#23 - Banner</a>
-          </li>
-          <li>
-            <a id="basic-peeky-swiper-link" class="{% if '/basic-peeky-swiper/' in currenturl %}active{% endif %}" href="{{ '/components/basic-peeky-swiper' | url }}">#24 - Basic peeky swiper</a>
-          </li>
-          <li>
-            <a id="blog-list-link" class="{% if '/blog-list/' in currenturl %}active{% endif %}" href="{{ '/components/blog-list' | url }}">#25 - Blog list</a>
-          </li>
-          <li>
-            <a id="booking-live-search-link" class="{% if '/booking-live-search/' in currenturl %}active{% endif %}" href="{{ '/components/booking-live-search' | url }}">#27 - Booking live search</a>
-          </li>
-          <li>
-            <a id="booking-live-title-bar-link" class="{% if '/booking-live-title-bar/' in currenturl %}active{% endif %}" href="{{ '/components/booking-live-title-bar' | url }}">#28 - Booking live title bar</a>
-          </li>
-          <li>
-            <a id="bookings-course-count-link" class="{% if '/bookings-course-count/' in currenturl %}active{% endif %}" href="{{ '/components/bookings-course-count' | url }}">#31 - Bookings course count</a>
-          </li>
-          <li>
-            <a id="breadcrumb-link" class="{% if '/breadcrumb/' in currenturl %}active{% endif %}" href="{{ '/components/breadcrumb' | url }}">#32 - Breadcrumb</a>
-          </li>
-          <li>
-            <a id="callouts-link" class="{% if '/callouts/' in currenturl %}active{% endif %}" href="{{ '/components/callouts' | url }}">#35 - Callouts</a>
-          </li>
-          <li>
-            <a id="card-link-list-link" class="{% if '/card-link-list/' in currenturl %}active{% endif %}" href="{{ '/components/card-link-list' | url }}">#36 - Card link list</a>
-          </li>
-          <li>
-            <a id="card-link-list-sidebar-link" class="{% if '/card-link-list-sidebar/' in currenturl %}active{% endif %}" href="{{ '/components/card-link-list-sidebar' | url }}">#37 - Card link list sidebar</a>
-          </li>
-          <li>
-            <a id="card-link-navigation-link" class="{% if '/card-link-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/card-link-navigation' | url }}">#38 - Card link navigation</a>
-          </li>
-          <li>
-            <a id="carousel-link" class="{% if '/carousel/' in currenturl %}active{% endif %}" href="{{ '/components/carousel' | url }}">#39 - Carousel</a>
-          </li>
-          <li>
-            <a id="carousel2-link" class="{% if '/carousel2/' in currenturl %}active{% endif %}" href="{{ '/components/carousel2' | url }}">#40 - Carousel 2</a>
-          </li>
-          <li>
-            <a id="chapter-link" class="{% if '/chapter/' in currenturl %}active{% endif %}" href="{{ '/components/chapter' | url }}">#42 - Chapter</a>
-          </li>
-          <li>
-            <a id="chapter-main-footer-link" class="{% if '/chapter-main-footer/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-main-footer' | url }}">#43 - Chapter main footer</a>
-          </li>
-          <li>
-            <a id="chapter-main-header-link" class="{% if '/chapter-main-header/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-main-header' | url }}">#44 - Chapter main header</a>
-          </li>
-          <li>
-            <a id="chapter-page-link" class="{% if '/chapter-page/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-page' | url }}">#45 - Chapter page</a>
-          </li>
-          <li>
-            <a id="chapter-page-footer-link" class="{% if '/chapter-page-footer/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-page-footer' | url }}">#46 - Chapter page footer</a>
-          </li>
-          <li>
-            <a id="chapter-page-header-link" class="{% if '/chapter-page-header/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-page-header' | url }}">#47 - Chapter page header</a>
-          </li>
-          <li>
-            <a id="content-full-width-link" class="{% if '/content-full-width/' in currenturl %}active{% endif %}" href="{{ '/components/content-full-width' | url }}">#48 - Content full width</a>
-          </li>
-          <li>
-            <a id="content-right-sidebar-link" class="{% if '/content-right-sidebar/' in currenturl %}active{% endif %}" href="{{ '/components/content-right-sidebar' | url }}">#49 - Content right sidebar</a>
-          </li>
-          <li>
-            <a id="content-section-link" class="{% if '/content-section/' in currenturl %}active{% endif %}" href="{{ '/components/content-section' | url }}">#50 - Content section</a>
-          </li>
-          <li>
-            <a id="content-standard-link" class="{% if '/content-standard/' in currenturl %}active{% endif %}" href="{{ '/components/content-standard' | url }}">#51 - Content standard</a>
-          </li>
-          <li>
-            <a id="content01-link" class="{% if '/content01/' in currenturl %}active{% endif %}" href="{{ '/components/content01' | url }}">#52 - Content 01</a>
-          </li>
-          <li>
-            <a id="content02-link" class="{% if '/content02/' in currenturl %}active{% endif %}" href="{{ '/components/content02' | url }}">#53 - Content 02</a>
-          </li>
-          <li>
-            <a id="coroners-inquest-link" class="{% if '/coroners-inquest/' in currenturl %}active{% endif %}" href="{{ '/components/coroners-inquest' | url }}">#54 - Coroner's Inquest</a>
-          </li>
-          <li>
-            <a id="custom-card-navigation-link" class="{% if '/custom-card-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/custom-card-navigation' | url }}">#55 - Custom card navigation</a>
-          </li>
-          <li>
-            <a id="custom-navigation-link" class="{% if '/custom-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/custom-navigation' | url }}">#56 - Custom navigation</a>
-          </li>
-          <li>
-            <a id="custom-section-navigation-link" class="{% if '/custom-section-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/custom-section-navigation' | url }}">#57 - Custom section navigation</a>
-          </li>
-          <li>
-            <a id="edit-profile-link" class="{% if '/edit-profile/' in currenturl %}active{% endif %}" href="{{ '/components/edit-profile' | url }}">#59 - Edit profile</a>
-          </li>
-          <li>
-            <a id="embed-link" class="{% if '/embed/' in currenturl %}active{% endif %}" href="{{ '/components/embed' | url }}">#60 - Embed</a>
-          </li>
-          <li>
-            <a id="event-call-to-action-ribbon-link" class="{% if '/event-call-to-action-ribbon/' in currenturl %}active{% endif %}" href="{{ '/components/event-call-to-action-ribbon' | url }}">#61 - Event call to action ribbon</a>
-          </li>
-          <li>
-            <a id="file-update-list-link" class="{% if '/file-update-list/' in currenturl %}active{% endif %}" href="{{ '/components/file-update-list' | url }}">#65 - File update list</a>
-          </li>
-          <li>
-            <a id="find-my-nearest-link" class="{% if '/find-my-nearest/' in currenturl %}active{% endif %}" href="{{ '/components/find-my-nearest' | url }}">#66 - Find my nearest</a>
-          </li>
-          <li>
-            <a id="footer-link" class="{% if '/footer/' in currenturl %}active{% endif %}" href="{{ '/components/footer' | url }}">#67 - Footer (global)</a>
-          </li>
-          <li>
-            <a id="footer-extra-link" class="{% if '/footer-extra/' in currenturl %}active{% endif %}" href="{{ '/components/footer-extra' | url }}">#68 - Footer extra (global)</a>
-          </li>
-          <li>
-            <a id="footer-left-column-link" class="{% if '/footer-left-column/' in currenturl %}active{% endif %}" href="{{ '/components/footer-left-column' | url }}">#69 - Footer left column (global)</a>
-          </li>
-          <li>
-            <a id="footer-links-link" class="{% if '/footer-links/' in currenturl %}active{% endif %}" href="{{ '/components/footer-links' | url }}">#70 - Footer links (global)</a>
-          </li>
-          <li>
-            <a id="footer-right-column-link" class="{% if '/footer-right-column/' in currenturl %}active{% endif %}" href="{{ '/components/footer-right-column' | url }}">#71 - Footer right column (global)</a>
-          </li>
-          <li>
-            <a id="general-card-link" class="{% if '/general-card/' in currenturl %}active{% endif %}" href="{{ '/components/general-card' | url }}">#73 - General card</a>
-          </li>
-          <li>
-            <a id="global-menu-link" class="{% if '/global-menu/' in currenturl %}active{% endif %}" href="{{ '/components/global-menu' | url }}">#74 - Global menu</a>
-          </li>
-          <li>
-            <a id="global-menu-off-canvas-link" class="{% if '/global-menu-off-canvas/' in currenturl %}active{% endif %}" href="{{ '/components/global-menu-off-canvas' | url }}">#75 - Global menu off canvas</a>
-          </li>
-          <li>
-            <a id="header-link" class="{% if '/header/' in currenturl %}active{% endif %}" href="{{ '/components/header' | url }}">#76 - Header (global)</a>
-          </li>
-          <li>
-            <a id="hero-link" class="{% if '/hero/' in currenturl %}active{% endif %}" href="{{ '/components/hero' | url }}">#77 - Hero</a>
-          </li>
-          <li>
-            <a id="image-card-link" class="{% if '/image-card/' in currenturl %}active{% endif %}" href="{{ '/components/image-card' | url }}">#81 - Image card</a>
-          </li>
-          <li>
-            <a id="promo-card-link" class="{% if '/promo-card/' in currenturl %}active{% endif %}" href="{{ '/components/promo-card' | url }}">#154 - Promo card</a>
-          </li>
-          <li>
-            <a id="timeline-link" class="{% if '/timeline/' in currenturl %}active{% endif %}" href="{{ '/components/timeline' | url }}">#205 - Timeline</a>
-          </li>
-          <li>
-            <a id="figure-link" class="{% if '/figure/' in currenturl %}active{% endif %}" href="{{ '/components/figure' | url }}">#300 - Figure</a>
-          </li>
-          <li>
-            <a id="section-nav-link" class="{% if '/section-nav/' in currenturl %}active{% endif %}" href="{{ '/components/section-nav' | url }}">Section Navigation</a>
-          </li>
-          <li>
-            <a id="object-promo-link" class="{% if '/object-promo/' in currenturl %}active{% endif %}" href="{{ '/components/object-promo' | url }}">Object promo</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  {% else %}
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingSeven">
+      {% else %}
       <button
         id="headingSevenButton"
         class="accordion-button collapsed"
@@ -677,193 +334,193 @@
         aria-controls="collapseSeven">
         Components
       </button>
+      {% endif %}
     </h2>
-    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven">
+    <div id="collapseSeven" class="accordion-collapse collapse {% if '/components/' in currenturl %}show{% endif %}" aria-labelledby="headingSeven">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="components-link" class="{% if '/components/' == currenturl %}active{% endif %}" href="{{ '/components' | url }}">Introduction</a>
+            <a id="components-link" class="docs-accordion-link {% if '/components/' == currenturl %}active{% endif %}" href="{{ '/components' | url }}">Introduction</a>
           </li>
           <li>
-            <a id="structure-and-columns-link" class="{% if '/structure-and-columns/' in currenturl %}active{% endif %}" href="{{ '/components/structure-and-columns' | url }}">Structure & columns</a>
+            <a id="structure-and-columns-link" class="docs-accordion-link {% if '/structure-and-columns/' in currenturl %}active{% endif %}" href="{{ '/components/structure-and-columns' | url }}">Structure & columns</a>
           </li>
           <li>
-            <a id="accordion-link" class="{% if '/accordion/' in currenturl %}active{% endif %}" href="{{ '/components/accordion' | url }}">#10 - Accordion</a>
+            <a id="accordion-link" class="docs-accordion-link {% if '/accordion/' in currenturl %}active{% endif %}" href="{{ '/components/accordion' | url }}">#10 - Accordion</a>
           </li>
           <li>
-            <a id="account-menu-link" class="{% if '/account-menu/' in currenturl %}active{% endif %}" href="{{ '/components/account-menu' | url }}">#13 - Account menu</a>
+            <a id="account-menu-link" class="docs-accordion-link {% if '/account-menu/' in currenturl %}active{% endif %}" href="{{ '/components/account-menu' | url }}">#13 - Account menu</a>
           </li>
           <li>
-            <a id="alert-link" class="{% if '/alert/' in currenturl %}active{% endif %}" href="{{ '/components/alert' | url }}">#16 - Alert</a>
+            <a id="alert-link" class="docs-accordion-link {% if '/alert/' in currenturl %}active{% endif %}" href="{{ '/components/alert' | url }}">#16 - Alert</a>
           </li>
           <li>
-            <a id="also-in-this-section-link" class="{% if '/also-in-this-section/' in currenturl %}active{% endif %}" href="{{ '/components/also-in-this-section' | url }}">#18 - Also in this section</a>
+            <a id="also-in-this-section-link" class="docs-accordion-link {% if '/also-in-this-section/' in currenturl %}active{% endif %}" href="{{ '/components/also-in-this-section' | url }}">#18 - Also in this section</a>
           </li>
           <li>
-            <a id="anchor-link" class="{% if '/anchor/' in currenturl %}active{% endif %}" href="{{ '/components/anchor' | url }}">#20 - Anchor</a>
+            <a id="anchor-link" class="docs-accordion-link {% if '/anchor/' in currenturl %}active{% endif %}" href="{{ '/components/anchor' | url }}">#20 - Anchor</a>
           </li>
           <li>
-            <a id="anchor-page-link" class="{% if '/anchor-page/' in currenturl %}active{% endif %}" href="{{ '/components/anchor-page' | url }}">#21 - Anchor page</a>
+            <a id="anchor-page-link" class="docs-accordion-link {% if '/anchor-page/' in currenturl %}active{% endif %}" href="{{ '/components/anchor-page' | url }}">#21 - Anchor page</a>
           </li>
           <li>
-            <a id="banner-link" class="{% if '/banner/' in currenturl %}active{% endif %}" href="{{ '/components/banner' | url }}">#23 - Banner</a>
+            <a id="banner-link" class="docs-accordion-link {% if '/banner/' in currenturl %}active{% endif %}" href="{{ '/components/banner' | url }}">#23 - Banner</a>
           </li>
           <li>
-            <a id="basic-peeky-swiper-link" class="{% if '/basic-peeky-swiper/' in currenturl %}active{% endif %}" href="{{ '/components/basic-peeky-swiper' | url }}">#24 - Basic peeky swiper</a>
+            <a id="basic-peeky-swiper-link" class="docs-accordion-link {% if '/basic-peeky-swiper/' in currenturl %}active{% endif %}" href="{{ '/components/basic-peeky-swiper' | url }}">#24 - Basic peeky swiper</a>
           </li>
           <li>
-            <a id="blog-list-link" class="{% if '/blog-list/' in currenturl %}active{% endif %}" href="{{ '/components/blog-list' | url }}">#25 - Blog list</a>
+            <a id="blog-list-link" class="docs-accordion-link {% if '/blog-list/' in currenturl %}active{% endif %}" href="{{ '/components/blog-list' | url }}">#25 - Blog list</a>
           </li>
           <li>
-            <a id="booking-live-search-link" class="{% if '/booking-live-search/' in currenturl %}active{% endif %}" href="{{ '/components/booking-live-search' | url }}">#27 - Booking live search</a>
+            <a id="booking-live-search-link" class="docs-accordion-link {% if '/booking-live-search/' in currenturl %}active{% endif %}" href="{{ '/components/booking-live-search' | url }}">#27 - Booking live search</a>
           </li>
           <li>
-            <a id="booking-live-title-bar-link" class="{% if '/booking-live-title-bar/' in currenturl %}active{% endif %}" href="{{ '/components/booking-live-title-bar' | url }}">#28 - Booking live title bar</a>
+            <a id="booking-live-title-bar-link" class="docs-accordion-link {% if '/booking-live-title-bar/' in currenturl %}active{% endif %}" href="{{ '/components/booking-live-title-bar' | url }}">#28 - Booking live title bar</a>
           </li>
           <li>
-            <a id="bookings-course-count-link" class="{% if '/bookings-course-count/' in currenturl %}active{% endif %}" href="{{ '/components/bookings-course-count' | url }}">#31 - Bookings course count</a>
+            <a id="bookings-course-count-link" class="docs-accordion-link {% if '/bookings-course-count/' in currenturl %}active{% endif %}" href="{{ '/components/bookings-course-count' | url }}">#31 - Bookings course count</a>
           </li>
           <li>
-            <a id="breadcrumb-link" class="{% if '/breadcrumb/' in currenturl %}active{% endif %}" href="{{ '/components/breadcrumb' | url }}">#32 - Breadcrumb</a>
+            <a id="breadcrumb-link" class="docs-accordion-link {% if '/breadcrumb/' in currenturl %}active{% endif %}" href="{{ '/components/breadcrumb' | url }}">#32 - Breadcrumb</a>
           </li>
           <li>
-            <a id="callouts-link" class="{% if '/callouts/' in currenturl %}active{% endif %}" href="{{ '/components/callouts' | url }}">#35 - Callouts</a>
+            <a id="callouts-link" class="docs-accordion-link {% if '/callouts/' in currenturl %}active{% endif %}" href="{{ '/components/callouts' | url }}">#35 - Callouts</a>
           </li>
           <li>
-            <a id="card-link-list-link" class="{% if '/card-link-list/' in currenturl %}active{% endif %}" href="{{ '/components/card-link-list' | url }}">#36 - Card link list</a>
+            <a id="card-link-list-link" class="docs-accordion-link {% if '/card-link-list/' in currenturl %}active{% endif %}" href="{{ '/components/card-link-list' | url }}">#36 - Card link list</a>
           </li>
           <li>
-            <a id="card-link-list-sidebar-link" class="{% if '/card-link-list-sidebar/' in currenturl %}active{% endif %}" href="{{ '/components/card-link-list-sidebar' | url }}">#37 - Card link list sidebar</a>
+            <a id="card-link-list-sidebar-link" class="docs-accordion-link {% if '/card-link-list-sidebar/' in currenturl %}active{% endif %}" href="{{ '/components/card-link-list-sidebar' | url }}">#37 - Card link list sidebar</a>
           </li>
           <li>
-            <a id="card-link-navigation-link" class="{% if '/card-link-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/card-link-navigation' | url }}">#38 - Card link navigation</a>
+            <a id="card-link-navigation-link" class="docs-accordion-link {% if '/card-link-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/card-link-navigation' | url }}">#38 - Card link navigation</a>
           </li>
           <li>
-            <a id="carousel-link" class="{% if '/carousel/' in currenturl %}active{% endif %}" href="{{ '/components/carousel' | url }}">#39 - Carousel</a>
+            <a id="carousel-link" class="docs-accordion-link {% if '/carousel/' in currenturl %}active{% endif %}" href="{{ '/components/carousel' | url }}">#39 - Carousel</a>
           </li>
           <li>
-            <a id="carousel2-link" class="{% if '/carousel2/' in currenturl %}active{% endif %}" href="{{ '/components/carousel2' | url }}">#40 - Carousel 2</a>
+            <a id="carousel2-link" class="docs-accordion-link {% if '/carousel2/' in currenturl %}active{% endif %}" href="{{ '/components/carousel2' | url }}">#40 - Carousel 2</a>
           </li>
           <li>
-            <a id="chapter-link" class="{% if '/chapter/' in currenturl %}active{% endif %}" href="{{ '/components/chapter' | url }}">#42 - Chapter</a>
+            <a id="chapter-link" class="docs-accordion-link {% if '/chapter/' in currenturl %}active{% endif %}" href="{{ '/components/chapter' | url }}">#42 - Chapter</a>
           </li>
           <li>
-            <a id="chapter-main-footer-link" class="{% if '/chapter-main-footer/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-main-footer' | url }}">#43 - Chapter main footer</a>
+            <a id="chapter-main-footer-link" class="docs-accordion-link {% if '/chapter-main-footer/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-main-footer' | url }}">#43 - Chapter main footer</a>
           </li>
           <li>
-            <a id="chapter-main-header-link" class="{% if '/chapter-main-header/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-main-header' | url }}">#44 - Chapter main header</a>
+            <a id="chapter-main-header-link" class="docs-accordion-link {% if '/chapter-main-header/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-main-header' | url }}">#44 - Chapter main header</a>
           </li>
           <li>
-            <a id="chapter-page-link" class="{% if '/chapter-page/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-page' | url }}">#45 - Chapter page</a>
+            <a id="chapter-page-link" class="docs-accordion-link {% if '/chapter-page/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-page' | url }}">#45 - Chapter page</a>
           </li>
           <li>
-            <a id="chapter-page-footer-link" class="{% if '/chapter-page-footer/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-page-footer' | url }}">#46 - Chapter page footer</a>
+            <a id="chapter-page-footer-link" class="docs-accordion-link {% if '/chapter-page-footer/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-page-footer' | url }}">#46 - Chapter page footer</a>
           </li>
           <li>
-            <a id="chapter-page-header-link" class="{% if '/chapter-page-header/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-page-header' | url }}">#47 - Chapter page header</a>
+            <a id="chapter-page-header-link" class="docs-accordion-link {% if '/chapter-page-header/' in currenturl %}active{% endif %}" href="{{ '/components/chapter-page-header' | url }}">#47 - Chapter page header</a>
           </li>
           <li>
-            <a id="content-full-width-link" class="{% if '/content-full-width/' in currenturl %}active{% endif %}" href="{{ '/components/content-full-width' | url }}">#48 - Content full width</a>
+            <a id="content-full-width-link" class="docs-accordion-link {% if '/content-full-width/' in currenturl %}active{% endif %}" href="{{ '/components/content-full-width' | url }}">#48 - Content full width</a>
           </li>
           <li>
-            <a id="content-right-sidebar-link" class="{% if '/content-right-sidebar/' in currenturl %}active{% endif %}" href="{{ '/components/content-right-sidebar' | url }}">#49 - Content right sidebar</a>
+            <a id="content-right-sidebar-link" class="docs-accordion-link {% if '/content-right-sidebar/' in currenturl %}active{% endif %}" href="{{ '/components/content-right-sidebar' | url }}">#49 - Content right sidebar</a>
           </li>
           <li>
-            <a id="content-section-link" class="{% if '/content-section/' in currenturl %}active{% endif %}" href="{{ '/components/content-section' | url }}">#50 - Content section</a>
+            <a id="content-section-link" class="docs-accordion-link {% if '/content-section/' in currenturl %}active{% endif %}" href="{{ '/components/content-section' | url }}">#50 - Content section</a>
           </li>
           <li>
-            <a id="content-standard-link" class="{% if '/content-standard/' in currenturl %}active{% endif %}" href="{{ '/components/content-standard' | url }}">#51 - Content standard</a>
+            <a id="content-standard-link" class="docs-accordion-link {% if '/content-standard/' in currenturl %}active{% endif %}" href="{{ '/components/content-standard' | url }}">#51 - Content standard</a>
           </li>
           <li>
-            <a id="content01-link" class="{% if '/content01/' in currenturl %}active{% endif %}" href="{{ '/components/content01' | url }}">#52 - Content 01</a>
+            <a id="content01-link" class="docs-accordion-link {% if '/content01/' in currenturl %}active{% endif %}" href="{{ '/components/content01' | url }}">#52 - Content 01</a>
           </li>
           <li>
-            <a id="content02-link" class="{% if '/content02/' in currenturl %}active{% endif %}" href="{{ '/components/content02' | url }}">#53 - Content 02</a>
+            <a id="content02-link" class="docs-accordion-link {% if '/content02/' in currenturl %}active{% endif %}" href="{{ '/components/content02' | url }}">#53 - Content 02</a>
           </li>
           <li>
-            <a id="coroners-inquest-link" class="{% if '/coroners-inquest/' in currenturl %}active{% endif %}" href="{{ '/components/coroners-inquest' | url }}">#54 - Coroner's Inquest</a>
+            <a id="coroners-inquest-link" class="docs-accordion-link {% if '/coroners-inquest/' in currenturl %}active{% endif %}" href="{{ '/components/coroners-inquest' | url }}">#54 - Coroner's Inquest</a>
           </li>
           <li>
-            <a id="custom-card-navigation-link" class="{% if '/custom-card-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/custom-card-navigation' | url }}">#55 - Custom card navigation</a>
+            <a id="custom-card-navigation-link" class="docs-accordion-link {% if '/custom-card-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/custom-card-navigation' | url }}">#55 - Custom card navigation</a>
           </li>
           <li>
-            <a id="custom-navigation-link" class="{% if '/custom-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/custom-navigation' | url }}">#56 - Custom navigation</a>
+            <a id="custom-navigation-link" class="docs-accordion-link {% if '/custom-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/custom-navigation' | url }}">#56 - Custom navigation</a>
           </li>
           <li>
-            <a id="custom-section-navigation-link" class="{% if '/custom-section-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/custom-section-navigation' | url }}">#57 - Custom section navigation</a>
+            <a id="custom-section-navigation-link" class="docs-accordion-link {% if '/custom-section-navigation/' in currenturl %}active{% endif %}" href="{{ '/components/custom-section-navigation' | url }}">#57 - Custom section navigation</a>
           </li>
           <li>
-            <a id="edit-profile-link" class="{% if '/edit-profile/' in currenturl %}active{% endif %}" href="{{ '/components/edit-profile' | url }}">#59 - Edit profile</a>
+            <a id="edit-profile-link" class="docs-accordion-link {% if '/edit-profile/' in currenturl %}active{% endif %}" href="{{ '/components/edit-profile' | url }}">#59 - Edit profile</a>
           </li>
           <li>
-            <a id="embed-link" class="{% if '/embed/' in currenturl %}active{% endif %}" href="{{ '/components/embed' | url }}">#60 - Embed</a>
+            <a id="embed-link" class="docs-accordion-link {% if '/embed/' in currenturl %}active{% endif %}" href="{{ '/components/embed' | url }}">#60 - Embed</a>
           </li>
           <li>
-            <a id="event-call-to-action-ribbon-link" class="{% if '/event-call-to-action-ribbon/' in currenturl %}active{% endif %}" href="{{ '/components/event-call-to-action-ribbon' | url }}">#61 - Event call to action ribbon</a>
+            <a id="event-call-to-action-ribbon-link" class="docs-accordion-link {% if '/event-call-to-action-ribbon/' in currenturl %}active{% endif %}" href="{{ '/components/event-call-to-action-ribbon' | url }}">#61 - Event call to action ribbon</a>
           </li>
           <li>
-            <a id="file-update-list-link" class="{% if '/file-update-list/' in currenturl %}active{% endif %}" href="{{ '/components/file-update-list' | url }}">#65 - File update list</a>
+            <a id="file-update-list-link" class="docs-accordion-link {% if '/file-update-list/' in currenturl %}active{% endif %}" href="{{ '/components/file-update-list' | url }}">#65 - File update list</a>
           </li>
           <li>
-            <a id="find-my-nearest-link" class="{% if '/find-my-nearest/' in currenturl %}active{% endif %}" href="{{ '/components/find-my-nearest' | url }}">#66 - Find my nearest</a>
+            <a id="find-my-nearest-link" class="docs-accordion-link {% if '/find-my-nearest/' in currenturl %}active{% endif %}" href="{{ '/components/find-my-nearest' | url }}">#66 - Find my nearest</a>
           </li>
           <li>
-            <a id="footer-link" class="{% if '/footer/' in currenturl %}active{% endif %}" href="{{ '/components/footer' | url }}">#67 - Footer (global)</a>
+            <a id="footer-link" class="docs-accordion-link {% if '/footer/' in currenturl %}active{% endif %}" href="{{ '/components/footer' | url }}">#67 - Footer (global)</a>
           </li>
           <li>
-            <a id="footer-extra-link" class="{% if '/footer-extra/' in currenturl %}active{% endif %}" href="{{ '/components/footer-extra' | url }}">#68 - Footer extra (global)</a>
+            <a id="footer-extra-link" class="docs-accordion-link {% if '/footer-extra/' in currenturl %}active{% endif %}" href="{{ '/components/footer-extra' | url }}">#68 - Footer extra (global)</a>
           </li>
           <li>
-            <a id="footer-left-column-link" class="{% if '/footer-left-column/' in currenturl %}active{% endif %}" href="{{ '/components/footer-left-column' | url }}">#69 - Footer left column (global)</a>
+            <a id="footer-left-column-link" class="docs-accordion-link {% if '/footer-left-column/' in currenturl %}active{% endif %}" href="{{ '/components/footer-left-column' | url }}">#69 - Footer left column (global)</a>
           </li>
           <li>
-            <a id="footer-links-link" class="{% if '/footer-links/' in currenturl %}active{% endif %}" href="{{ '/components/footer-links' | url }}">#70 - Footer links (global)</a>
+            <a id="footer-links-link" class="docs-accordion-link {% if '/footer-links/' in currenturl %}active{% endif %}" href="{{ '/components/footer-links' | url }}">#70 - Footer links (global)</a>
           </li>
           <li>
-            <a id="footer-right-column-link" class="{% if '/footer-right-column/' in currenturl %}active{% endif %}" href="{{ '/components/footer-right-column' | url }}">#71 - Footer right column (global)</a>
+            <a id="footer-right-column-link" class="docs-accordion-link {% if '/footer-right-column/' in currenturl %}active{% endif %}" href="{{ '/components/footer-right-column' | url }}">#71 - Footer right column (global)</a>
           </li>
           <li>
-            <a id="general-card-link" class="{% if '/general-card/' in currenturl %}active{% endif %}" href="{{ '/components/general-card' | url }}">#73 - General card</a>
+            <a id="general-card-link" class="docs-accordion-link {% if '/general-card/' in currenturl %}active{% endif %}" href="{{ '/components/general-card' | url }}">#73 - General card</a>
           </li>
           <li>
-            <a id="global-menu-link" class="{% if '/global-menu/' in currenturl %}active{% endif %}" href="{{ '/components/global-menu' | url }}">#74 - Global menu</a>
+            <a id="global-menu-link" class="docs-accordion-link {% if '/global-menu/' in currenturl %}active{% endif %}" href="{{ '/components/global-menu' | url }}">#74 - Global menu</a>
           </li>
           <li>
-            <a id="global-menu-off-canvas-link" class="{% if '/global-menu-off-canvas/' in currenturl %}active{% endif %}" href="{{ '/components/global-menu-off-canvas' | url }}">#75 - Global menu off canvas</a>
+            <a id="global-menu-off-canvas-link" class="docs-accordion-link {% if '/global-menu-off-canvas/' in currenturl %}active{% endif %}" href="{{ '/components/global-menu-off-canvas' | url }}">#75 - Global menu off canvas</a>
           </li>
           <li>
-            <a id="header-link" class="{% if '/header/' in currenturl %}active{% endif %}" href="{{ '/components/header' | url }}">#76 - Header (global)</a>
+            <a id="header-link" class="docs-accordion-link {% if '/header/' in currenturl %}active{% endif %}" href="{{ '/components/header' | url }}">#76 - Header (global)</a>
           </li>
           <li>
-            <a id="hero-link" class="{% if '/hero/' in currenturl %}active{% endif %}" href="{{ '/components/hero' | url }}">#77 - Hero</a>
+            <a id="hero-link" class="docs-accordion-link {% if '/hero/' in currenturl %}active{% endif %}" href="{{ '/components/hero' | url }}">#77 - Hero</a>
           </li>
           <li>
-            <a id="image-card-link" class="{% if '/image-card/' in currenturl %}active{% endif %}" href="{{ '/components/image-card' | url }}">#81 - Image card</a>
+            <a id="image-card-link" class="docs-accordion-link {% if '/image-card/' in currenturl %}active{% endif %}" href="{{ '/components/image-card' | url }}">#81 - Image card</a>
           </li>
           <li>
-            <a id="promo-card-link" class="{% if '/promo-card/' in currenturl %}active{% endif %}" href="{{ '/components/promo-card' | url }}">#154 - Promo card</a>
+            <a id="promo-card-link" class="docs-accordion-link {% if '/promo-card/' in currenturl %}active{% endif %}" href="{{ '/components/promo-card' | url }}">#154 - Promo card</a>
           </li>
           <li>
-            <a id="timeline-link" class="{% if '/timeline/' in currenturl %}active{% endif %}" href="{{ '/components/timeline' | url }}">#205 - Timeline</a>
+            <a id="timeline-link" class="docs-accordion-link {% if '/timeline/' in currenturl %}active{% endif %}" href="{{ '/components/timeline' | url }}">#205 - Timeline</a>
           </li>
           <li>
-            <a id="figure-link" class="{% if '/figure/' in currenturl %}active{% endif %}" href="{{ '/components/figure' | url }}">#300 - Figure</a>
+            <a id="figure-link" class="docs-accordion-link {% if '/figure/' in currenturl %}active{% endif %}" href="{{ '/components/figure' | url }}">#300 - Figure</a>
           </li>
           <li>
-            <a id="section-nav-link" class="{% if '/section-nav/' in currenturl %}active{% endif %}" href="{{ '/components/section-nav' | url }}">Section Navigation</a>
+            <a id="section-nav-link" class="docs-accordion-link {% if '/section-nav/' in currenturl %}active{% endif %}" href="{{ '/components/section-nav' | url }}">Section Navigation</a>
           </li>
           <li>
-            <a id="object-promo-link" class="{% if '/object-promo/' in currenturl %}active{% endif %}" href="{{ '/components/object-promo' | url }}">Object promo</a>
+            <a id="object-promo-link" class="docs-accordion-link {% if '/object-promo/' in currenturl %}active{% endif %}" href="{{ '/components/object-promo' | url }}">Object promo</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  {% endif %}
-
-  {% if currentsection == 8 %}
+  
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingEight">
+      {% if '/community/' in currenturl %}
       <button
         id="headingEightButton"
         class="accordion-button"
@@ -874,35 +531,7 @@
         aria-controls="collapseEight">
         Community
       </button>
-    </h2>
-    <div id="collapseEight" class="accordion-collapse collapse show" aria-labelledby="headingEight">
-      <div class="accordion-body">
-        <ul class="accordion-list">
-          <li>
-            <a id="getting-started-linkEight" href="{{ '/getting-started' | url }}">How to get started</a>
-          </li>
-          <li>
-            <a id="developer-environment-setup-linkEight" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Breadcrumbs</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Troubleshooting</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  {% else %}
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingEight">
+      {% else %}
       <button
         id="headingEightButton"
         class="accordion-button collapsed"
@@ -913,12 +542,13 @@
         aria-controls="collapseEight">
         Community
       </button>
+      {% endif %}
     </h2>
-    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight">
+    <div id="collapseEight" class="accordion-collapse collapse {% if '/community/' in currenturl %}show{% endif %}" aria-labelledby="headingEight">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="getting-started-linkEight" href="{{ '/getting-started' | url }}">How to get started</a>
+            <a id="getting-started-linkEight" href="{{ '/getting-started/' | url }}">How to get started</a>
           </li>
           <li>
              <a href="#">Twitter</a>
@@ -933,7 +563,6 @@
       </div>
     </div>
   </div>
-  {% endif %}
 
 </div>
 
