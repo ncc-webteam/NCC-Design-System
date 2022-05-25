@@ -12055,7 +12055,7 @@ header .main-search-area {
 }
 header .main-search-area input {
   border: none;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 5px;
 }
 header .main-search-area input:focus {
   transition: none;
@@ -12121,6 +12121,20 @@ header .offcanvas-nav .nav-link:focus {
   outline: none;
   border: none;
   transition: none;
+}
+header #mySearchDropdown {
+  top: 80px;
+}
+@media (max-width: 767.98px) {
+  header #mySearchDropdown {
+    top: 150px;
+    left: calc(50% - 150px);
+  }
+}
+@media (max-width: 575.98px) {
+  header #mySearchDropdown {
+    top: 135px;
+  }
 }
 
 footer {
