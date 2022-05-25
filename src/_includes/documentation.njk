@@ -17,17 +17,42 @@
         const links = document.getElementsByClassName('docs-accordion-link');
         const resultsDropdown = document.getElementById('mySearchDropdown');
         const searchDropdownForm = document.getElementById('searchDropdownForm');
+        const searchInputField = document.getElementById('mySearchInput');
+
+        let displayedElements = 0;
 
         window.onload = function() {
           getSearchResults();
         }
 
         searchDropdownForm.addEventListener('focusin', (event) => {
-          resultsDropdown.classList.toggle("show");
+          resultsDropdown.classList.add("show");
         });
 
-        searchDropdownForm.addEventListener('focusout', (event) => {
-          resultsDropdown.classList.toggle("show");
+        {# searchDropdownForm.addEventListener('focusout', (event) => {
+          const activeArea = document.activeElement;
+          console.log(`active area id = ${activeArea.id}, active area class = ${activeArea.className}`);
+          console.log(`event target id = ${event.target.className}`);
+          if (event.target.className == "dropdown-item" || event.target.className == "form-control") {
+            console.log(`correct focus detected`);
+            
+          } else {
+            console.log(`wrong focus detected`);
+            resultsDropdown.classList.remove("show");
+          }
+        }); #}
+
+        document.addEventListener("click", (event)=> {
+          let target = event.target; // clicked element  
+          console.log(`target id = ${target.id}.`);
+          if(target == resultsDropdown || target == searchInputField || target == searchDropdownForm) {
+            // This is a click inside, does nothing, just return.
+            console.log("click inside detected.");
+            return;
+          }
+          // This is a click outside.      
+          console.log("click outside detected.");
+          resultsDropdown.classList.remove("show");
         });
 
         function getSearchResults() {
@@ -35,10 +60,14 @@
             // console.log(e.innerHTML);
 
             let newLink = document.createElement("a");
-            newLink.innerHTML = `<a class="dropdown-item" href="${e.href}">${e.innerHTML}</a>`;
-            newLink.style.display = "none";
+            newLink.href = e.href;
+            newLink.className = "dropdown-item";
+            newLink.innerHTML = e.innerHTML;
+            //newLink.style.display = "none";
             resultsDropdown.appendChild(newLink);
+            //displayedElements++;
           });
+          console.log(`displayed elements = ${displayedElements}`);
         }
 
         function filterFunction() {
@@ -51,11 +80,28 @@
           for (i = 0; i < a.length; i++) {
             txtValue = a[i].textContent || a[i].innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              a[i].style.display = "";
+
+              if (a[i].style.display == "block") {
+                // already showing, do nothing
+              } else {
+                console.log(`${a[i].innerHTML} = not shown before, show it now and increase count`);
+                a[i].style.display = "block";
+                displayedElements++;
+              }
+
             } else {
-              a[i].style.display = "none";
+
+              if (a[i].style.display == "none") {
+                // already hidden, do nothing
+              } else {
+                console.log(`${a[i].innerHTML} = shown before, hide it now and decrease count`);
+                a[i].style.display = "none";
+                displayedElements--;
+              }
+
             }
           }
+          console.log(`displayed elements = ${displayedElements}`);
         }
       </script>
     </div>

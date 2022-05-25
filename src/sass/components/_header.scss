@@ -180,7 +180,8 @@ header {
     
     input { 
       border: none;
-      border-radius: 5px 0px 0px 5px;
+      //border-radius: 5px 0px 0px 5px;
+      border-radius: 5px;
       &:focus {
         transition: none;
         border-color: $focus-colour;
@@ -252,4 +253,16 @@ header {
       }
     }
   }
+
+  #mySearchDropdown {
+    top: 80px;
+    @include media-breakpoint-down(md) {
+      top: 150px;
+      left: calc(50% - 150px);
+    }
+    @include media-breakpoint-down(sm) {
+      top: 135px;
+    }
+  }
+
 }
