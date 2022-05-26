@@ -12654,4 +12654,22 @@ p code {
   align-items: center;
 }
 
+.search-result-item {
+  display: block;
+  background-color: white;
+  border: solid #ced4da 2px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: black;
+}
+.search-result-item:hover {
+  color: black;
+}
+.search-result-item:focus {
+  border-color: #0b0c0c;
+  outline-color: #0b0c0c;
+}
+
 /*# sourceMappingURL=style.css.map */

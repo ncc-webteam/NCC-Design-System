@@ -15,19 +15,24 @@
 
       <script>
         const links = document.getElementsByClassName('docs-accordion-link');
+
+        // OLD
         const resultsDropdown = document.getElementById('mySearchDropdown');
         const searchDropdownForm = document.getElementById('searchDropdownForm');
         const searchInputField = document.getElementById('mySearchInput');
+
+        // NEW
+        const resultsList = document.getElementById('searchResultsList');
 
         let displayedElements = 0;
 
         window.onload = function() {
           getSearchResults();
         }
-
+{# 
         searchDropdownForm.addEventListener('focusin', (event) => {
           resultsDropdown.classList.add("show");
-        });
+        }); #}
 
         {# searchDropdownForm.addEventListener('focusout', (event) => {
           const activeArea = document.activeElement;
@@ -42,7 +47,7 @@
           }
         }); #}
 
-        document.addEventListener("click", (event)=> {
+        {# document.addEventListener("click", (event)=> {
           let target = event.target; // clicked element  
           console.log(`target id = ${target.id}.`);
           if(target == resultsDropdown || target == searchInputField || target == searchDropdownForm) {
@@ -53,7 +58,7 @@
           // This is a click outside.      
           console.log("click outside detected.");
           resultsDropdown.classList.remove("show");
-        });
+        }); #}
 
         function getSearchResults() {
           Array.prototype.forEach.call(links, function(e) {
@@ -61,10 +66,10 @@
 
             let newLink = document.createElement("a");
             newLink.href = e.href;
-            newLink.className = "dropdown-item";
+            newLink.className = "search-result-item";
             newLink.innerHTML = e.innerHTML;
             //newLink.style.display = "none";
-            resultsDropdown.appendChild(newLink);
+            resultsList.appendChild(newLink);
             //displayedElements++;
           });
           console.log(`displayed elements = ${displayedElements}`);
@@ -74,7 +79,7 @@
           var input, filter, ul, li, a, i;
           input = document.getElementById("mySearchInput");
           filter = input.value.toUpperCase();
-          div = document.getElementById("myDropdown2");
+          div = document.getElementById("searchResultsList");
           a = div.getElementsByTagName("a");
           
           for (i = 0; i < a.length; i++) {
