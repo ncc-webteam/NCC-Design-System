@@ -144,6 +144,39 @@ p code {
   align-items: center;
 }
 
+.search-btn-header, .btn-check {
+  &:focus, &:active, &:focus-visible, &:checked {
+    transition: none;
+    box-shadow: none;
+    outline: solid 3px $focus-text-colour;
+    border-color: transparent;
+    background-color: $focus-colour;
+    color: $focus-text-colour;
+    svg path {
+      fill: $focus-text-colour;
+    }
+  }
+}
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.modal-header {
+  .form-control {
+    &:focus {
+      box-shadow: none;
+      outline: solid 3px $focus-colour;
+      border-color: white;
+    }
+  }
+  .btn-close {
+    &:focus {
+      box-shadow: none;
+      background-color: $focus-colour;
+    }
+  }
+}
+
 .search-result-item {
   display: block;
   background-color: white;
