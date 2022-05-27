@@ -27,7 +27,8 @@
       <button id="navbarToggler" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHeader" aria-controls="offcanvasHeader"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H24V2.66667H0V0ZM0 6.66667H24V9.33333H0V6.66667ZM0 13.3333H24V16H0V13.3333Z" fill="white"/></svg>Menu</button>
     </div>
     
-    <div id="myDropdown2">
+    <!-- OLD SEARCH FEATURE
+     <div id="myDropdown2">
       <form id="searchDropdownForm" class="form-inline d-flex main-search-area" action="/NCC-Design-System/public/">
         <input id="mySearchInput" class="form-control" type="text" placeholder="Search documentation" aria-label="Search" onkeyup="filterFunction()">
         
@@ -35,6 +36,28 @@
         </div>
       </form>
     </div>
+    -->
+
+    <button type="button" class="btn btn-primary search-btn-header" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Search<svg class="ms-3" width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z" fill="white"/></svg>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-search">
+        <div class="modal-content">
+          <div class="modal-header">
+            <input id="mySearchInput" class="form-control" type="text" placeholder="Search documentation" aria-label="Search" onkeyup="filterFunction()">
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body search-results-wrapper">
+            <div id="searchResultsList">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   
@@ -821,9 +844,14 @@
 
       <script>
         const links = document.getElementsByClassName('docs-accordion-link');
+
+        // OLD
         const resultsDropdown = document.getElementById('mySearchDropdown');
         const searchDropdownForm = document.getElementById('searchDropdownForm');
         const searchInputField = document.getElementById('mySearchInput');
+
+        // NEW
+        const resultsList = document.getElementById('searchResultsList');
 
         let displayedElements = 0;
 
@@ -831,24 +859,10 @@
           getSearchResults();
         }
 
-        searchDropdownForm.addEventListener('focusin', (event) => {
-          resultsDropdown.classList.add("show");
-        });
 
         
 
-        document.addEventListener("click", (event)=> {
-          let target = event.target; // clicked element  
-          console.log(`target id = ${target.id}.`);
-          if(target == resultsDropdown || target == searchInputField || target == searchDropdownForm) {
-            // This is a click inside, does nothing, just return.
-            console.log("click inside detected.");
-            return;
-          }
-          // This is a click outside.      
-          console.log("click outside detected.");
-          resultsDropdown.classList.remove("show");
-        });
+        
 
         function getSearchResults() {
           Array.prototype.forEach.call(links, function(e) {
@@ -856,10 +870,10 @@
 
             let newLink = document.createElement("a");
             newLink.href = e.href;
-            newLink.className = "dropdown-item";
+            newLink.className = "search-result-item";
             newLink.innerHTML = e.innerHTML;
             //newLink.style.display = "none";
-            resultsDropdown.appendChild(newLink);
+            resultsList.appendChild(newLink);
             //displayedElements++;
           });
           console.log(`displayed elements = ${displayedElements}`);
@@ -869,7 +883,7 @@
           var input, filter, ul, li, a, i;
           input = document.getElementById("mySearchInput");
           filter = input.value.toUpperCase();
-          div = document.getElementById("myDropdown2");
+          div = document.getElementById("searchResultsList");
           a = div.getElementsByTagName("a");
           
           for (i = 0; i < a.length; i++) {

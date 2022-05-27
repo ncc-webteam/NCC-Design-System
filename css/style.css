@@ -12654,4 +12654,48 @@ p code {
   align-items: center;
 }
 
+.search-btn-header:focus, .search-btn-header:active, .search-btn-header:focus-visible, .search-btn-header:checked, .btn-check:focus, .btn-check:active, .btn-check:focus-visible, .btn-check:checked {
+  transition: none;
+  box-shadow: none;
+  outline: solid 3px #0b0c0c;
+  border-color: transparent;
+  background-color: #ffdd00;
+  color: #0b0c0c;
+}
+.search-btn-header:focus svg path, .search-btn-header:active svg path, .search-btn-header:focus-visible svg path, .search-btn-header:checked svg path, .btn-check:focus svg path, .btn-check:active svg path, .btn-check:focus-visible svg path, .btn-check:checked svg path {
+  fill: #0b0c0c;
+}
+
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.modal-header .form-control:focus {
+  box-shadow: none;
+  outline: solid 3px #ffdd00;
+  border-color: white;
+}
+.modal-header .btn-close:focus {
+  box-shadow: none;
+  background-color: #ffdd00;
+}
+
+.search-result-item {
+  display: block;
+  background-color: white;
+  border: solid #ced4da 2px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: black;
+}
+.search-result-item:hover {
+  color: black;
+}
+.search-result-item:focus {
+  border-color: #0b0c0c;
+  outline-color: #0b0c0c;
+}
+
 /*# sourceMappingURL=style.css.map */
