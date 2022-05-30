@@ -29,36 +29,6 @@
         window.onload = function() {
           getSearchResults();
         }
-{# 
-        searchDropdownForm.addEventListener('focusin', (event) => {
-          resultsDropdown.classList.add("show");
-        }); #}
-
-        {# searchDropdownForm.addEventListener('focusout', (event) => {
-          const activeArea = document.activeElement;
-          console.log(`active area id = ${activeArea.id}, active area class = ${activeArea.className}`);
-          console.log(`event target id = ${event.target.className}`);
-          if (event.target.className == "dropdown-item" || event.target.className == "form-control") {
-            console.log(`correct focus detected`);
-            
-          } else {
-            console.log(`wrong focus detected`);
-            resultsDropdown.classList.remove("show");
-          }
-        }); #}
-
-        {# document.addEventListener("click", (event)=> {
-          let target = event.target; // clicked element  
-          console.log(`target id = ${target.id}.`);
-          if(target == resultsDropdown || target == searchInputField || target == searchDropdownForm) {
-            // This is a click inside, does nothing, just return.
-            console.log("click inside detected.");
-            return;
-          }
-          // This is a click outside.      
-          console.log("click outside detected.");
-          resultsDropdown.classList.remove("show");
-        }); #}
 
         function getSearchResults() {
           Array.prototype.forEach.call(links, function(e) {

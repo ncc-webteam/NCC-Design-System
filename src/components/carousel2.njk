@@ -1,26 +1,15 @@
-{% extends "documentation.njk" %}{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+{% extends "documentation.njk" %}
 
+{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+{% import "_pattern_macros/breadcrumb.njk" as breadcrumbmacro %}
 {% import "_pattern_macros/general_card.njk" as generalcard %}
 
 {% set title = "Carousel 2" %}
-
 {% block breadcrumb %}
-<section class="breadcrumbs">
-  <div class="container">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb my-2">
-        <li class="breadcrumb-item"><a href="{{ '/' | url }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ '/components/' | url }}">Components</a></li>
-        <li class="breadcrumb-item active">{{ title }}</li>
-      </ol>
-    </nav>
-  </div>
-</section>
+  {{ breadcrumbmacro.breadcrumb(page.url, title) }}
 {% endblock %}
 
-{% set collapseID = "collapseSeven" %}
-{% set headingID = "headingSevenButton" %}
-{% set linkID = "carousel2-link" %}
+
 
 {% block componentdesc %}
 
