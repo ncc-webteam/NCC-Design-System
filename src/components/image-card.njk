@@ -51,6 +51,62 @@
       </ul>
     </div>
   </div>
+
+  <div class="row rowDefaults">
+    <div class="tabsection" id="imagecard-tabsection">
+
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <button class="nav-link tabbutton active" id="imagecard-tabbutton-1" onclick="makeActiveTab('imagecard-tabbutton-1')">HTML</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link tabbutton" id="imagecard-tabbutton-2" onclick="makeActiveTab('imagecard-tabbutton-2')">Nunjucks</button>
+        </li>
+      </ul>
+
+      <div class="tabitem active" id="imagecard-tabitem-1">
+    <pre><code class="language-html">{% filter string %}<div class="image-card " data-component="81">
+  <div class="img-wrapper">
+    <img src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
+  </div>
+  <div class="card-img-overlay">
+    <a class="stretched-link card-title" href="#">Card Title</a>
+  </div>
+</div>{% endfilter  %}
+</code></pre>
+      </div>
+
+      <div class="tabitem" id="imagecard-tabitem-2">
+    <pre><code class="language-js">{% raw %} {{ imagecard.imagecard('Card Title', '#', 'lb_16x9.jpg', '') }}{% endraw  %}
+</code></pre>
+      </div>
+
+    </div>
+  </div>
+
 </div>
+
+
+<script>
+  function makeActiveTab(buttonID) {
+    // first clear all active indicators
+    const allTabItems = document.getElementsByClassName('tabitem');
+    const allTabButtons = document.getElementsByClassName('tabbutton');
+    Array.prototype.forEach.call(allTabItems, function(e) {
+      e.classList.remove("active");
+    });
+    Array.prototype.forEach.call(allTabButtons, function(e) {
+      e.classList.remove("active");
+    });
+
+    // add active indicators to relevant items
+    const idString = buttonID.split("-");
+    let button = document.getElementById(buttonID);
+    let newTabItem = document.getElementById(`${idString[0]}-tabitem-${idString[2]}`);
+    button.classList.add("active");
+    newTabItem.classList.add("active"); // show new tab
+  }
+
+</script>
 
 {% endblock %}

@@ -12417,6 +12417,21 @@ section.section_stage_theme .lead {
   border-color: #0b0c0c;
 }
 
+.tabsection .tabbutton:focus {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  text-decoration: underline;
+}
+.tabsection .tabitem {
+  padding: 12px;
+  border: solid #dee2e6 1px;
+  border-top: 0;
+  display: none;
+}
+.tabsection .tabitem.active {
+  display: block;
+}
+
 /*!
   Theme: GitHub
   Description: Light theme as seen on github.com
