@@ -777,8 +777,6 @@
     newTabItem.classList.add("active"); // show new tab
   }
 
-  
-
   function copyText(buttonID) {
     const idString = buttonID.split("-");
     let button = document.getElementById(buttonID);
@@ -786,6 +784,9 @@
 
     /* Copy the text inside the text field */
     navigator.clipboard.writeText(button.value);
+
+    /* currently using button value. there should be a way to only have to enter code once,
+    without worrying about "code style" formatting. */ 
 
     button.innerHTML = "Copied!";
     setInterval(function () {button.innerHTML = "Copy"}, 3000);

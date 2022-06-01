@@ -1,0 +1,45 @@
+{% macro tabsection(name, sections) %}
+
+{# WORK IN PROGRESS #}
+
+<div class="tabsection" id="imagecard-tabsection">
+
+  <ul class="nav nav-tabs">
+
+    {% for section in sections %}
+    <li class="nav-item">
+      <button class="nav-link tabbutton active" id="{{name}}-tabbutton-{{loop.index}}" onclick="makeActiveTab('{{name}}-tabbutton-{{loop.index}}')">HTML</button>
+    </li>
+    {% endfor %}
+
+  </ul>
+
+  <div class="tabitem active" id="imagecard-tabitem-1">
+    <button id="imagecard-copybuton-1" type="button" class="btn btn-outline-success tabcopybtn" onclick="copyText('imagecard-copybuton-1')" value='<div class="image-card" data-component="81">
+  <div class="img-wrapper">
+    <img src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
+  </div>
+  <div class="card-img-overlay">
+    <a class="stretched-link card-title" href="#">Card Title</a>
+  </div>
+</div>'>Copy HTML</button>
+    <pre><code id="imagecard-tabcontents-1" class="language-html">{% filter string %}<div class="image-card" data-component="81">
+  <div class="img-wrapper">
+    <img src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
+  </div>
+  <div class="card-img-overlay">
+    <a class="stretched-link card-title" href="#">Card Title</a>
+  </div>
+</div>{% endfilter  %}
+</code></pre>
+  </div>
+
+  <div class="tabitem" id="imagecard-tabitem-2">
+    <button id="imagecard-copybuton-2" type="button" class="btn btn-outline-success tabcopybtn" onclick="copyText('imagecard-copybuton-2')" value="{% raw %} {{ imagecard.imagecard('Card Title', '#', 'lb_16x9.jpg', '') }}{% endraw  %}">Copy Nunjucks</button>
+    <pre><code id="imagecard-tabcontents-2" class="language-js">{% raw %} {{ imagecard.imagecard('Card Title', '#', 'lb_16x9.jpg', '') }}{% endraw  %}
+</code></pre>
+  </div>
+
+</div>
+
+{% endmacro %}
