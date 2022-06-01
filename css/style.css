@@ -12427,6 +12427,18 @@ section.section_stage_theme .lead {
   border: solid #dee2e6 1px;
   border-top: 0;
   display: none;
+  position: relative;
+}
+.tabsection .tabitem pre {
+  margin: 0;
+}
+.tabsection .tabitem pre code {
+  padding-top: 50px;
+}
+.tabsection .tabitem .tabcopybtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 .tabsection .tabitem.active {
   display: block;
