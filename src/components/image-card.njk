@@ -65,7 +65,8 @@
       </ul>
 
       <div class="tabitem active" id="imagecard-tabitem-1">
-    <pre><code class="language-html">{% filter string %}<div class="image-card " data-component="81">
+        <button id="imagecard-copybuton-1" type="button" class="btn btn-outline-success tabcopybtn" onclick="copyText('imagecard-copybuton-1')">Copy HTML</button>
+    <pre><code id="imagecard-tabcontents-1" class="language-html">{% filter string %}<div class="image-card " data-component="81">
   <div class="img-wrapper">
     <img src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Image for Card Title"/>
   </div>
@@ -77,7 +78,8 @@
       </div>
 
       <div class="tabitem" id="imagecard-tabitem-2">
-    <pre><code class="language-js">{% raw %} {{ imagecard.imagecard('Card Title', '#', 'lb_16x9.jpg', '') }}{% endraw  %}
+        <button id="imagecard-copybuton-2" type="button" class="btn btn-outline-success tabcopybtn" onclick="copyText('imagecard-copybuton-2')">Copy Nunjucks</button>
+    <pre><code id="imagecard-tabcontents-2" class="language-js">{% raw %} {{ imagecard.imagecard('Card Title', '#', 'lb_16x9.jpg', '') }}{% endraw  %}
 </code></pre>
       </div>
 
@@ -105,6 +107,20 @@
     let newTabItem = document.getElementById(`${idString[0]}-tabitem-${idString[2]}`);
     button.classList.add("active");
     newTabItem.classList.add("active"); // show new tab
+  }
+
+  
+
+  function copyText(buttonID) {
+    const idString = buttonID.split("-");
+    let button = document.getElementById(buttonID);
+    let tabContents = document.getElementById(`${idString[0]}-tabcontents-${idString[2]}`);
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(tabContents.innerHTML);
+
+    button.innerHTML = "Copied!";
+    setInterval(function () {button.innerHTML = "Copy"}, 3000);
   }
 
 </script>
