@@ -52,6 +52,8 @@
           div = document.getElementById("searchResultsList");
           a = div.getElementsByTagName("a");
           
+          
+
           for (i = 0; i < a.length; i++) {
             txtValue = a[i].textContent || a[i].innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -59,7 +61,6 @@
               if (a[i].style.display == "block") {
                 // already showing, do nothing
               } else {
-                console.log(`${a[i].innerHTML} = not shown before, show it now and increase count`);
                 a[i].style.display = "block";
                 displayedElements++;
               }
@@ -69,7 +70,6 @@
               if (a[i].style.display == "none") {
                 // already hidden, do nothing
               } else {
-                console.log(`${a[i].innerHTML} = shown before, hide it now and decrease count`);
                 a[i].style.display = "none";
                 displayedElements--;
               }
@@ -77,6 +77,14 @@
             }
           }
           console.log(`displayed elements = ${displayedElements}`);
+
+          if (filter == "") {
+            console.log("nothing detected");
+            for (i = 0; i < a.length; i++) {
+              a[i].style.display = "none";
+              console.log(`hiding ${a[i].innerHTML}, ${a[i].style.display} `); 
+            }
+          }
         }
       </script>
     </div>

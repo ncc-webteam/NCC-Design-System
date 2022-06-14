@@ -12136,6 +12136,28 @@ header #mySearchDropdown {
     top: 135px;
   }
 }
+header #searchModal .modal-content {
+  border-radius: 15px;
+}
+header .search-btn-header {
+  background-color: transparent;
+  border: solid white 3px;
+  padding-right: 70px;
+}
+header .search-btn-header:hover {
+  border: solid white 3px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+header .search-btn-header:focus, header .search-btn-header:focus:hover {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  text-decoration: underline;
+  border-color: #0b0c0c;
+  transition: none;
+}
+header .search-btn-header:focus, header .search-btn-header:active, header .search-btn-header:focus-visible, header .search-btn-header:checked, header .btn-check:focus, header .btn-check:active, header .btn-check:focus-visible, header .btn-check:checked {
+  outline: none;
+}
 
 footer {
   flex-shrink: 0;
@@ -12697,6 +12719,10 @@ p code {
   box-shadow: none;
 }
 
+.modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
 .modal-header .form-control:focus {
   box-shadow: none;
   outline: solid 3px #ffdd00;
@@ -12708,21 +12734,15 @@ p code {
 }
 
 .search-result-item {
-  display: block;
+  display: none;
   background-color: white;
-  border: solid #ced4da 2px;
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   padding: 10px;
   color: black;
 }
-.search-result-item:hover {
-  color: black;
-}
-.search-result-item:focus {
-  border-color: #0b0c0c;
-  outline-color: #0b0c0c;
+.search-result-item:not(:last-child) {
+  border-bottom: solid #ced4da 1px;
 }
 
 /*# sourceMappingURL=style.css.map */

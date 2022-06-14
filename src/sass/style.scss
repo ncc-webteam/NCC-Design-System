@@ -163,6 +163,8 @@ p code {
 }
 
 .modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
   .form-control {
     &:focus {
       box-shadow: none;
@@ -179,21 +181,14 @@ p code {
 }
 
 .search-result-item {
-  display: block;
+  display: none;
   background-color: white;
-  border: solid $gray-400 2px;
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   padding: 10px;
   color: black;
-  
-  &:hover {
-    color: black;
-  }
 
-  &:focus {
-    border-color: $focus-text-colour;
-    outline-color: $focus-text-colour;
+  &:not(:last-child) {
+    border-bottom: solid $gray-400 1px;
   }
 }

@@ -265,4 +265,34 @@ header {
     }
   }
 
+  #searchModal {
+    .modal-content {
+      border-radius: 15px;
+    }
+  }
+
+  .search-btn-header {
+    background-color: transparent;
+    border: solid white 3px;
+
+    padding-right: 70px;
+
+    &:hover {
+      border: solid white 3px;
+      background-color: rgba(255,255,255,0.15);
+    }
+    &:focus, &:focus:hover {
+      color: $focus-text-colour;
+      background-color: $focus-colour;
+      text-decoration: underline;
+      border-color: $focus-text-colour;
+      transition: none;
+    }
+
+  }
+
+  .search-btn-header:focus, .search-btn-header:active, .search-btn-header:focus-visible, .search-btn-header:checked, .btn-check:focus, .btn-check:active, .btn-check:focus-visible, .btn-check:checked {
+    outline: none;
+  }
+
 }
