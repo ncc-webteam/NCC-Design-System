@@ -5,7 +5,6 @@
 {% import "_pattern_macros/general_card.njk" as generalcard %}
 {% import "_pattern_macros/image_card.njk" as imagecard %}
 
-{% set title = "Image Card" %}
 {% block breadcrumb %}
   {{ breadcrumbmacro.breadcrumb(page.url, title) }}
 {% endblock %}
@@ -25,6 +24,7 @@
   <p class="lead">A <strong>card</strong> is a flexible and extensible content container. It can be used in a variety of contexts and can be as streamlined or detailed as desired.</p>
   <h2>Examples</h2>
   <p>Below are three examples of cards - they are the same component, but with different options enabled.</p>
+
   <div class="row {{rowDefaults}} gy-4">
     <div class="col-12">
         {{ imagecard.imagecard('Card Title', '#', 'lb_16x9.jpg', '') }}
@@ -36,6 +36,7 @@
       {{ imagecard.imagecard('Card Title', '#', 'lb_16x9.jpg', '') }}
     </div>
   </div>
+
   <h2>Features</h2>
   <div class="row {{rowDefaults}}">
     <div class="col-12 col-md-6">
@@ -54,7 +55,6 @@
 
   <div class="row rowDefaults">
     <div class="tabsection" id="imagecard-tabsection">
-
       <ul class="nav nav-tabs">
         <li class="nav-item">
           <button class="nav-link tabbutton active" id="imagecard-tabbutton-1" onclick="makeActiveTab('imagecard-tabbutton-1')">HTML</button>
@@ -63,7 +63,6 @@
           <button class="nav-link tabbutton" id="imagecard-tabbutton-2" onclick="makeActiveTab('imagecard-tabbutton-2')">Nunjucks</button>
         </li>
       </ul>
-
       <div class="tabitem active" id="imagecard-tabitem-1">
         <button id="imagecard-copybuton-1" type="button" class="btn btn-outline-success tabcopybtn" onclick="copyText('imagecard-copybuton-1')" value='<div class="image-card" data-component="81">
   <div class="img-wrapper">
@@ -83,15 +82,15 @@
 </div>{% endfilter  %}
 </code></pre>
       </div>
-
       <div class="tabitem" id="imagecard-tabitem-2">
         <button id="imagecard-copybuton-2" type="button" class="btn btn-outline-success tabcopybtn" onclick="copyText('imagecard-copybuton-2')" value="{% raw %} {{ imagecard.imagecard('Card Title', '#', 'lb_16x9.jpg', '') }}{% endraw  %}">Copy Nunjucks</button>
     <pre><code id="imagecard-tabcontents-2" class="language-js">{% raw %} {{ imagecard.imagecard('Card Title', '#', 'lb_16x9.jpg', '') }}{% endraw  %}
 </code></pre>
       </div>
-
     </div>
   </div>
+
+  {{ content | safe }}
 
 </div>
 

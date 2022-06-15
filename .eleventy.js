@@ -12,6 +12,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);
 
   return {
+    templateFormats: ['md', 'njk', 'html'],
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
