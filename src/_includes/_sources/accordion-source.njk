@@ -1,0 +1,47 @@
+{% extends "documentation.njk" %}
+
+{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+{% import "_pattern_macros/breadcrumb.njk" as breadcrumbmacro %}
+{% import "_pattern_macros/general_card.njk" as generalcard %}
+{% import "_pattern_macros/accordion.njk" as accordion %}
+
+{% set title = "Accordion" %}
+{% block breadcrumb %}
+  {{ breadcrumbmacro.breadcrumb(page.url, title) }}
+{% endblock %}
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ docsaccordion.docsaccordion(page.url) }}
+</div>
+
+{% set exampleAccordionItems = ['Item 1 (link to alert)', 'Item 2 (link to general cards)', 'Item 3 (link to timeline)'] %}
+{% set exampleLinks = ['components/alert', 'components/general-card', 'components/timeline'] %}
+
+<div class="components-main-section col-12 col-lg-8 mb-5"> 
+  <h1>Accordion - #10</h1>
+  <p class="lead">A title and content which opens and closes with user interaction</p>
+  <div class="row">
+    <div class="col">
+      {{ accordion.accordion("Example Accordion", exampleAccordionItems, exampleLinks, "exampleAccordion1") }}
+    </div>
+  </div>
+
+  {{ content | safe }}
+
+  <hr class="nccds-hr">
+
+  <h3>Need help?</h3>
+  <p>To help make sure that this page is useful, relevant and up to date, you can:</p>
+  <ul>
+    <li><a href="{{ page.url | url }}">take part in the '{{title}}' discussion on GitHub and share your research</a></li>
+    <li><a href="{{ page.url | url }}">propose a change</a> - read more about how to propose changes in GitHub</li>
+  </ul>
+  <a href="{{ page.url | url }}" class="btn btn-outline-dark github-link">Discuss on GitHub</a>
+    
+</div>
+
+
+
+{% endblock %}

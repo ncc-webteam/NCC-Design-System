@@ -92,6 +92,16 @@
 
   {{ content | safe }}
 
+  <hr class="nccds-hr">
+
+  <h3>Need help?</h3>
+  <p>To help make sure that this page is useful, relevant and up to date, you can:</p>
+  <ul>
+    <li><a href="{{ page.url | url }}">take part in the '{{title}}' discussion on GitHub and share your research</a></li>
+    <li><a href="{{ page.url | url }}">propose a change</a> - read more about how to propose changes in GitHub</li>
+  </ul>
+  <a href="{{ page.url | url }}" class="btn btn-outline-dark github-link">Discuss on GitHub</a>
+
 </div>
 
 

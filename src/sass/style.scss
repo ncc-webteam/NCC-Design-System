@@ -145,7 +145,7 @@ p code {
   align-items: center;
 }
 
-.search-btn-header, .btn-check {
+.search-btn-header, .btn-check, .github-link {
   &:focus, &:active, &:focus-visible, &:checked {
     transition: none;
     box-shadow: none;
@@ -159,6 +159,10 @@ p code {
   }
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-check:checked + .btn-outline-dark:focus, .btn-check:active + .btn-outline-dark:focus, .btn-outline-dark:active:focus, .btn-outline-dark.active:focus, .btn-outline-dark.dropdown-toggle.show:focus {
   box-shadow: none;
 }
 
@@ -191,4 +195,10 @@ p code {
   &:not(:last-child) {
     border-bottom: solid $gray-400 1px;
   }
+}
+
+.nccds-hr {
+  color: #350C78;
+  opacity: 1;
+  height: 2px !important;
 }

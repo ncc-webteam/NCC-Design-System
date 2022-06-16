@@ -1,6 +1,6 @@
 ---
 layout: _sources/image-card-source.njk
-title: md test
+title: Image Card
 ---
 
 ## Markdown content

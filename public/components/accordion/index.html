@@ -690,43 +690,52 @@
 
     </div>
   </div>
-  <h2 class="h3">When to use</h2>
-  <p>When there is lots of information that can be broken up into subheadings.</p>
-  <h2 class="h3">Where it appears</h2>
-  <p>Main page content - should be placed inside Column 8</p>
-  <h2 class="h3">How to set up</h2>
-  <p>Set up in content editor in the Shared Folder under Accordions and find the relevan area of the site i.e Children and families / Adoption. Each accordion item must be set up separately.</p>
-  <p>Good for:</p>
-  <ul>
-    <li>When the content is conditional to user requirements</li>
-  </ul>
 
-  
-    
-    <div class="row mt-0 mb-5 g-md-4 g-2">
-        <div class="col-12">
-            <h2>When to use this component</h2>
-            <p>Below are three examples of cards - they are the same component, but with different options enabled.</p>
-        </div>
-        
-        
-        <div class="col-12">
-            <h2>When not to use this component</h2>
-            <p>Below are three examples of cards - they are the same component, but with different options enabled.</p>
-        </div>
-        
-        
-         <div id="components-help-section" class="col-12">
-            <h2>Need help?</h2>
-            <ul>
-                <li>Take part in the 'Breadcrumbs' discussion on GitHub and share your research</li>
-                <li>Propose a change - read more about how to propose changes in GitHub</li>
-              </ul>
-        </div>
-        
-        
-    </div>
-    
+  <h2>When to use this component</h2>
+<p>Only use an accordion if there’s evidence it’s helpful for the user to:</p>
+<p>see an overview of multiple, related sections of content
+choose to show and hide sections that are relevant to them
+look across information that might otherwise be on different pages
+For example, an accordion can work well if the user needs to reveal and compare information that’s relevant to them.</p>
+<p>Accordions can also work well for people who use a service regularly. For example, users of caseworking systems who need to do familiar tasks quickly.</p>
+<p>Test with users to decide if using an accordion outweighs the potential problems with hiding content.</p>
+<h2>When not to use this component</h2>
+<p>Accordions hide content from the user. Not all users will notice them or understand how they work. For this reason, you should only use them in specific situations and if user research supports it.</p>
+<p>Do not use an accordion for content that all users need to see.</p>
+<p>Test your content without an accordion first. Well-written and structured content, as shown in the Content design: writing for GOV.UK guidance, can remove the need to use an accordion.</p>
+<p>It’s usually better to:</p>
+<p>simplify and reduce the amount of content
+split the content across multiple pages
+keep the content on a single page, separated by headings
+use a list of links at the start of the page (known as ‘anchor links’) to take the user to particular sections of a page
+Accordions work best for simple content and links. Do not use accordions to split up a series of questions. Use separate pages instead.</p>
+<p>Do not put accordions within accordions, as it will make content difficult to find.</p>
+<p>Do not use the accordion component if the amount of content inside will make the page slow to load.</p>
+<h2>How it works</h2>
+<p>There are 2 ways to use the accordion component. You can use HTML or, if you’re using Nunjucks or the GOV.UK Prototype Kit, you can use the Nunjucks macro.</p>
+<p>The accordion component uses JavaScript. When JavaScript is not available, users will see all the content displayed with the section labels as headings.</p>
+<h3>Section heading buttons</h3>
+<p>An accordion will usually start with all sections hidden. To show a section, the user can interact anywhere in the heading button.</p>
+<p>The heading button includes all of these areas:</p>
+<p>heading text
+summary line (if you decide to add one)
+call-to-action text to ‘show’ or ‘hide’
+For users of screen readers, all the text in the button will be read as a single statement (separated by commas to allow for slight pauses). There’s also some visually hidden content in the heading text to help announce the call-to-action as ‘show this section’ or ‘hide this section’.</p>
+<h3>Research on this component</h3>
+<p>We updated this component in December 2021 to solve an accessibility issue where the buttons and section labels might be mistaken for links.</p>
+<p>Read about the research and development that went into improving the accordion component.</p>
+<p>The team made sure the component is accessible, for example that users can interact with it using just the keyboard.</p>
+
+
+  <hr class="nccds-hr">
+
+  <h3>Need help?</h3>
+  <p>To help make sure that this page is useful, relevant and up to date, you can:</p>
+  <ul>
+    <li><a href="/NCC-Design-System/public/components/accordion/">take part in the 'Accordion' discussion on GitHub and share your research</a></li>
+    <li><a href="/NCC-Design-System/public/components/accordion/">propose a change</a> - read more about how to propose changes in GitHub</li>
+  </ul>
+  <a href="/NCC-Design-System/public/components/accordion/" class="btn btn-outline-dark github-link">Discuss on GitHub</a>
     
 </div>
 
