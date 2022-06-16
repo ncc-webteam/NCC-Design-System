@@ -12703,7 +12703,7 @@ p code {
   align-items: center;
 }
 
-.search-btn-header:focus, .search-btn-header:active, .search-btn-header:focus-visible, .search-btn-header:checked, .btn-check:focus, .btn-check:active, .btn-check:focus-visible, .btn-check:checked {
+.search-btn-header:focus, .search-btn-header:active, .search-btn-header:focus-visible, .search-btn-header:checked, .btn-check:focus, .btn-check:active, .btn-check:focus-visible, .btn-check:checked, .github-link:focus, .github-link:active, .github-link:focus-visible, .github-link:checked {
   transition: none;
   box-shadow: none;
   outline: solid 3px #0b0c0c;
@@ -12711,11 +12711,15 @@ p code {
   background-color: #ffdd00;
   color: #0b0c0c;
 }
-.search-btn-header:focus svg path, .search-btn-header:active svg path, .search-btn-header:focus-visible svg path, .search-btn-header:checked svg path, .btn-check:focus svg path, .btn-check:active svg path, .btn-check:focus-visible svg path, .btn-check:checked svg path {
+.search-btn-header:focus svg path, .search-btn-header:active svg path, .search-btn-header:focus-visible svg path, .search-btn-header:checked svg path, .btn-check:focus svg path, .btn-check:active svg path, .btn-check:focus-visible svg path, .btn-check:checked svg path, .github-link:focus svg path, .github-link:active svg path, .github-link:focus-visible svg path, .github-link:checked svg path {
   fill: #0b0c0c;
 }
 
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-check:checked + .btn-outline-dark:focus, .btn-check:active + .btn-outline-dark:focus, .btn-outline-dark:active:focus, .btn-outline-dark.active:focus, .btn-outline-dark.dropdown-toggle.show:focus {
   box-shadow: none;
 }
 
@@ -12743,6 +12747,12 @@ p code {
 }
 .search-result-item:not(:last-child) {
   border-bottom: solid #ced4da 1px;
+}
+
+.nccds-hr {
+  color: #350C78;
+  opacity: 1;
+  height: 2px !important;
 }
 
 /*# sourceMappingURL=style.css.map */
