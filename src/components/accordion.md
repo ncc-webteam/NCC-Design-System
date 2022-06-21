@@ -3,6 +3,8 @@ layout: _sources/accordion-source.njk
 title: Accordion
 ---
 
+{% import "_pattern_macros/image_card.njk" as imagecard %}
+
 ## When to use this component
 
 Only use an accordion if there’s evidence it’s helpful for the user to:
@@ -11,6 +13,8 @@ see an overview of multiple, related sections of content
 choose to show and hide sections that are relevant to them
 look across information that might otherwise be on different pages
 For example, an accordion can work well if the user needs to reveal and compare information that’s relevant to them.
+
+{{ imagecard.imagecard('Card Title', '#', 'lb_16x9.jpg', '') }}
 
 Accordions can also work well for people who use a service regularly. For example, users of caseworking systems who need to do familiar tasks quickly.
 
