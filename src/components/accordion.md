@@ -7,7 +7,7 @@ title: Accordion
 
 Only use an accordion if there’s evidence it’s helpful for the user to:
 
-see an overview of multiple, related sections of content
+See an overview of multiple, related sections of content
 choose to show and hide sections that are relevant to them
 look across information that might otherwise be on different pages
 For example, an accordion can work well if the user needs to reveal and compare information that’s relevant to them.
