@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <title>Introduction to Components - NCC Design System</title>
+  <title>Card slider - NCC Design System</title>
 </head>
 
 
@@ -139,7 +139,7 @@
 
         
         
-        <li class="breadcrumb-item active">Introduction to Components</li>
+        <li class="breadcrumb-item active">Card slider</li>
       </ol>
     </nav>
   </div>
@@ -419,7 +419,7 @@
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="components-link" class="docs-accordion-link active" href="/NCC-Design-System/public/components">Introduction</a>
+            <a id="components-link" class="docs-accordion-link " href="/NCC-Design-System/public/components">Introduction</a>
           </li>
           <li>
             <a id="structure-and-columns-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/structure-and-columns">Structure & columns</a>
@@ -593,7 +593,7 @@
             <a id="object-promo-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/object-promo">Object promo</a>
           </li>
           <li>
-            <a id="card-slider-link" class="card-slider-link " href="/NCC-Design-System/public/components/card-slider">Card slider</a>
+            <a id="card-slider-link" class="card-slider-link active" href="/NCC-Design-System/public/components/card-slider">Card slider</a>
           </li>
         </ul>
       </div>
@@ -641,12 +641,172 @@
 </div>
 
 <div class="components-main-section col-12 col-lg-8 mb-5"> 
-  <h1>Introduction to components</h1>
-  <p class="lead">Documentation for all of the components used in NCC sites including examples, options, and use cases.</p>
+  <h1>Card slider</h1>
+  
+  <div class="row mt-0 mb-5 g-md-4 g-2 gy-4">
+    <div class="col-12 col-sm-4">
+      <div class="card card-slider h-100">
+        <div class="img-wrapper ratio ratio-1x1">
+          <img src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Test image">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title h3"><a class="stretched-link" href="/NCC-Design-System/public/#">Card Title</a></h3>
+          <p class="card-text-1">Extra text field</p>
+          <p class="card-text-2">Date field</p>
+          <p class="card-text-3"><strong>Price</strong> field</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-4">
+      <div class="card card-slider h-100">
+        <button id="btn-next-1" class="slider-btn next-img-btn">next</button>
+        <button id="btn-prev-1" class="slider-btn prev-img-btn">prev</button>
+        <div id="img-slider-1" class="img-wrapper ratio ratio-1x1">
+          <img id="img-1-1" class="card-slider-image" src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Test image 1">
+          <img id="img-1-2" class="card-slider-image" src="/NCC-Design-System/public/img/secnav3.png" alt="Test image 2">
+          <img id="img-1-3" class="card-slider-image" src="/NCC-Design-System/public/img/secnav4.png" alt="Test image 3">
+        </div>
+        <div class="card-body">
+          <div class="top-text">
+            <h3 class="card-title h3"><a class="stretched-link" href="/NCC-Design-System/public/#">Chichester, UK</a></h3>
+            <span class="card-flair">4.89 <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: inline-block; height: 12px; width: 12px; fill: $dark;"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg></span>
+          </div>
+          <p class="card-text-1">Individual Host</p>
+          <p class="card-text-2">8-13 Jul</p>
+          <p class="card-text-3"><strong>£864</strong> total</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-4">
+      <div class="card card-slider h-100">
+        <div class="img-wrapper ratio ratio-1x1">
+          <img src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Test image">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title h3"><a class="stretched-link" href="/NCC-Design-System/public/#">Card Title</a></h3>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <h2>How to use components</h2>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, nobis. Odit, quisquam possimus rerum aperiam, cum nesciunt ipsa impedit voluptatum omnis explicabo aut assumenda eius fuga eveniet nisi vero non corporis totam blanditiis labore ducimus, quod et aliquam quidem? Possimus quidem ipsam reprehenderit delectus cum quam modi voluptatibus voluptates nulla fuga laboriosam, at, doloremque tempore ullam libero sed temporibus? Delectus molestias, hic aspernatur laudantium animi ipsum! Aut quibusdam ex laborum nemo in, eius harum itaque pariatur optio consequatur consectetur aperiam provident ratione, officiis ut odit earum nihil sapiente aspernatur perferendis magnam. Ab soluta quibusdam saepe cumque incidunt placeat ducimus minus quaerat, earum libero accusamus veniam error deleniti aliquam. Veritatis distinctio quo tenetur architecto quod ex, harum deleniti officia. Vel cupiditate suscipit ut ad molestiae, quam, rem dicta error, labore laborum sunt veniam dolore asperiores ullam fugit optio. Voluptate alias doloremque quibusdam pariatur maxime assumenda est aperiam corrupti quae? Quod eum illum dolorum quaerat praesentium accusantium, magnam dicta, tempore natus libero soluta quae voluptas modi! Totam commodi provident harum dicta explicabo sed deserunt unde consectetur rem quo, nobis aperiam iure ipsum nisi distinctio doloribus quae incidunt quasi labore eius libero a! Ipsam nostrum quibusdam provident quisquam, tenetur expedita numquam vel excepturi?</p>
+  
+
+  <hr class="nccds-hr">
+
+  <h3>Need help?</h3>
+  <p>To help make sure that this page is useful, relevant and up to date, you can:</p>
+  <ul>
+    <li><a href="/NCC-Design-System/public/components/card-slider/">take part in the 'Card slider' discussion on GitHub and share your research</a></li>
+    <li><a href="/NCC-Design-System/public/components/card-slider/">propose a change</a> - read more about how to propose changes in GitHub</li>
+  </ul>
+  <a href="/NCC-Design-System/public/components/card-slider/" class="btn btn-outline-dark github-link">Discuss on GitHub</a>
+
 </div>
+
+
+<script>
+  function makeActiveTab(buttonID) {
+    // first clear all active indicators
+    const allTabItems = document.getElementsByClassName('tabitem');
+    const allTabButtons = document.getElementsByClassName('tabbutton');
+    Array.prototype.forEach.call(allTabItems, function(e) {
+      e.classList.remove("active");
+    });
+    Array.prototype.forEach.call(allTabButtons, function(e) {
+      e.classList.remove("active");
+    });
+
+    // add active indicators to relevant items
+    const idString = buttonID.split("-");
+    let button = document.getElementById(buttonID);
+    let newTabItem = document.getElementById(`${idString[0]}-tabitem-${idString[2]}`);
+    button.classList.add("active");
+    newTabItem.classList.add("active"); // show new tab
+  }
+
+  function copyText(buttonID) {
+    const idString = buttonID.split("-");
+    let button = document.getElementById(buttonID);
+    let tabContents = document.getElementById(`${idString[0]}-tabcontents-${idString[2]}`);
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(button.value);
+
+    /* currently using button value. there should be a way to only have to enter code once,
+    without worrying about "code style" formatting. */ 
+
+    button.innerHTML = "Copied!";
+    setInterval(function () {button.innerHTML = "Copy"}, 3000);
+  }
+
+
+  // CARD SLIDER STUFF --------------------------------------------------------
+
+  // for all cards
+  const allImages = document.getElementsByClassName("card-slider-image");
+
+  // stuff for an individual card
+  const slider1 = document.getElementById("img-slider-1");
+  const btnNext1 = document.getElementById("btn-next-1");
+  const btnPrev1 = document.getElementById("btn-prev-1");
+  const images1 = [];
+
+  for (const img of allImages) {
+    const idString = img.id.split("-");
+    if (idString[1] === '1') {
+      images1.push(img);
+      img.style.display = 'none';
+      console.log(`added image ${img.id} to list`);
+    }
+  }
+
+  images1[0].style.display = 'block'; // display first image in list
+  let currentImg = 0; // pagination index
+
+  function nextImg(imgSliderID, btnNext, btnPrev) {
+    if (currentImg < images1.length - 2) {
+      images1[currentImg].style.display = 'none';
+      currentImg++;
+      images1[currentImg].style.display = 'block';
+      btnPrev.style.display = 'block';
+      btnNext.style.display = 'block';
+      console.log(`cuurentImg is now ${currentImg}`);
+    } else {
+      images1[currentImg].style.display = 'none';
+      currentImg++;
+      images1[currentImg].style.display = 'block';
+      btnNext.style.display = 'none';
+      console.log(`cuurentImg is now ${currentImg}`);
+    }
+  }
+  function prevImg(imgSliderID, btnPrev, btnNext) {
+    if (currentImg > 1) {
+      images1[currentImg].style.display = 'none';
+      currentImg--;
+      images1[currentImg].style.display = 'block';
+      btnPrev.style.display = 'block';
+      btnNext.style.display = 'block';
+      console.log(`cuurentImg is now ${currentImg}`);
+    } else {
+      images1[currentImg].style.display = 'none';
+      currentImg--;
+      images1[currentImg].style.display = 'block';
+      btnPrev.style.display = 'none';
+      console.log(`cuurentImg is now ${currentImg}`);
+    }
+  }
+
+  btnNext1.addEventListener('click', function () {
+    nextImg(slider1, btnNext1, btnPrev1);
+  });
+  btnPrev1.addEventListener('click', function () {
+    prevImg(slider1, btnPrev1, btnNext1);
+  });
+
+  console.log(`currentImg is currently ${currentImg}`);
+
+  // END CARD SLIDER ----------------------------------------------------------
+</script>
 
 
 

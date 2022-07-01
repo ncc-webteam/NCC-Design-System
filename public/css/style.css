@@ -11594,6 +11594,106 @@ textarea.form-control-lg {
   background: rgba(0, 0, 0, 0.8);
 }
 
+.card-slider {
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 0px;
+  position: relative;
+  box-shadow: none;
+}
+.card-slider:hover .slider-btn {
+  opacity: 1;
+}
+.card-slider .slider-btn {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: absolute;
+  top: 30%;
+  color: black;
+  z-index: 100;
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-slider .slider-btn {
+    animation: none;
+    transition: none;
+  }
+}
+.card-slider .slider-btn:hover {
+  background-color: aqua;
+}
+.card-slider .next-img-btn {
+  right: 0px;
+}
+.card-slider .prev-img-btn {
+  display: none;
+  left: 0px;
+}
+.card-slider .card-body {
+  padding: 0px 5px 5px 5px;
+}
+.card-slider .card-body .top-text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: baseline;
+}
+.card-slider .card-body .card-title {
+  margin: 0px;
+}
+.card-slider .card-body .card-title a {
+  color: #212529;
+  font-size: 1rem;
+  margin: 0px;
+}
+.card-slider .card-body .card-flair {
+  display: flex;
+  align-items: center;
+  float: right;
+  font-size: 1rem;
+  margin: 0px;
+}
+.card-slider .card-body .card-flair svg {
+  margin-left: 5px;
+}
+.card-slider .card-body .card-text-1, .card-slider .card-body .card-text-2 {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin: 0px;
+}
+.card-slider .card-body .card-text-3 {
+  margin: 5px 0px 0px 0px;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+.card-slider .img-wrapper {
+  border-radius: 15px;
+}
+.card-slider:hover {
+  box-shadow: none;
+}
+.card-slider:hover img {
+  transform: none;
+}
+.card-slider:hover .card-title {
+  text-decoration: none;
+}
+.card-slider:focus-within {
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
+}
+.card-slider:focus-within img {
+  transform: none;
+}
+.card-slider:focus-within .card-title a {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
 .timeline-component {
   border-top: solid #adb5bd 1px;
   border-bottom: solid #adb5bd 1px;

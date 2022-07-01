@@ -1,0 +1,93 @@
+.card-slider {
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 0px;
+  position: relative;
+
+  &:hover {
+    .slider-btn {
+      opacity: 1;
+    }
+  }
+
+  .slider-btn {
+    @include ani;
+    position: absolute;
+    top: 30%;
+    color: black;
+    z-index: 100;
+    opacity: 0;
+    &:hover {
+      background-color: aqua;
+    }
+  }
+  .next-img-btn {
+    right: 0px;
+  }
+  .prev-img-btn {
+    display: none;
+    left: 0px;
+  }
+  .card-body {
+    padding: 0px 5px 5px 5px;
+    .top-text {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: baseline;
+    }
+    .card-title {
+      margin: 0px;
+      a {
+        color: $dark;
+        font-size: 1rem;
+        margin: 0px;
+      }
+    }
+    .card-flair {
+      display: flex;
+      align-items: center;
+      float: right;
+      font-size: 1rem;
+      margin: 0px;
+
+      svg {
+        margin-left: 5px;
+      }
+    }
+    .card-text-1, .card-text-2 {
+      color: $gray-600;
+      font-size: 0.875rem;
+      margin: 0px;
+    }
+    .card-text-3 {
+      margin: 5px 0px 0px 0px;
+      font-size: 0.875rem;
+      text-decoration: underline
+    }
+  }
+  box-shadow: none;
+  .img-wrapper {
+    border-radius: 15px;
+  }
+  &:hover {
+    box-shadow: none;
+    
+    img { transform: none; }
+    .card-title { text-decoration: none; }
+  }
+  &:focus-within {
+    box-shadow: none;
+    background-color: transparent;
+    outline: none;
+    img { transform: none; }
+    .card-title a {
+      color: $focus-text-colour;
+      background-color: $focus-colour;
+      font-weight: 700;
+      border: none;
+      outline: none;
+      text-decoration: none;
+    }
+  }
+}
