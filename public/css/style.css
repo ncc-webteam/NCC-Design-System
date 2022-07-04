@@ -11601,8 +11601,11 @@ textarea.form-control-lg {
   position: relative;
   box-shadow: none;
 }
-.card-slider:hover .slider-btn {
+.card-slider:focus-within .slider-btn {
   opacity: 1;
+}
+.card-slider:hover .slider-btn {
+  opacity: 0.8;
 }
 .card-slider .slider-btn {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -11611,6 +11614,14 @@ textarea.form-control-lg {
   color: black;
   z-index: 100;
   opacity: 0;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 32px;
+  width: 32px;
+  height: 32px;
+  margin: 0px 10px;
+  text-align: center;
 }
 @media (prefers-reduced-motion: reduce) {
   .card-slider .slider-btn {
@@ -11619,7 +11630,17 @@ textarea.form-control-lg {
   }
 }
 .card-slider .slider-btn:hover {
-  background-color: aqua;
+  background-color: #f8f9fa;
+  opacity: 1;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+}
+.card-slider .slider-btn:focus {
+  background-color: #ffdd00;
+  opacity: 1;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+}
+.card-slider .slider-btn.prev-img-btn {
+  transform: rotate(180deg);
 }
 .card-slider .next-img-btn {
   right: 0px;
@@ -11644,6 +11665,14 @@ textarea.form-control-lg {
   color: #212529;
   font-size: 1rem;
   margin: 0px;
+}
+.card-slider .card-body .card-title a:focus {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  text-decoration: none;
 }
 .card-slider .card-body .card-flair {
   display: flex;
@@ -11684,14 +11713,6 @@ textarea.form-control-lg {
 }
 .card-slider:focus-within img {
   transform: none;
-}
-.card-slider:focus-within .card-title a {
-  color: #0b0c0c;
-  background-color: #ffdd00;
-  font-weight: 700;
-  border: none;
-  outline: none;
-  text-decoration: none;
 }
 
 .timeline-component {

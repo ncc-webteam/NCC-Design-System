@@ -4,9 +4,15 @@
   padding: 0px;
   position: relative;
 
-  &:hover {
+  &:focus-within {
     .slider-btn {
       opacity: 1;
+    }
+  }
+
+  &:hover {
+    .slider-btn {
+      opacity: 0.8;
     }
   }
 
@@ -17,10 +23,29 @@
     color: black;
     z-index: 100;
     opacity: 0;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 32px;
+    width: 32px;
+    height: 32px;
+    margin: 0px 10px;
+    text-align: center;
     &:hover {
-      background-color: aqua;
+      background-color: $gray-100;
+      opacity: 1;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+    }
+    &:focus {
+      background-color: $focus-colour;
+      opacity: 1;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
     }
   }
+  .slider-btn.prev-img-btn {
+    transform: rotate(180deg);
+  }
+
   .next-img-btn {
     right: 0px;
   }
@@ -42,6 +67,14 @@
         color: $dark;
         font-size: 1rem;
         margin: 0px;
+        &:focus {
+          color: $focus-text-colour;
+          background-color: $focus-colour;
+          font-weight: 700;
+          border: none;
+          outline: none;
+          text-decoration: none;
+        }
       }
     }
     .card-flair {
@@ -81,13 +114,5 @@
     background-color: transparent;
     outline: none;
     img { transform: none; }
-    .card-title a {
-      color: $focus-text-colour;
-      background-color: $focus-colour;
-      font-weight: 700;
-      border: none;
-      outline: none;
-      text-decoration: none;
-    }
   }
 }
