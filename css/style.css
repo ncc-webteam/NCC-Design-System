@@ -11696,6 +11696,48 @@ textarea.form-control-lg {
 }
 .card-slider .img-wrapper {
   border-radius: 15px;
+  display: flex;
+}
+.card-slider .img-wrapper .card-slider-image {
+  display: block;
+}
+.card-slider .img-wrapper .card-slider-image.left {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateX(-100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-slider .img-wrapper .card-slider-image.left {
+    animation: none;
+    transition: none;
+  }
+}
+.card-slider .img-wrapper .card-slider-image.right {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateX(100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-slider .img-wrapper .card-slider-image.right {
+    animation: none;
+    transition: none;
+  }
+}
+.card-slider .img-wrapper .indicator-wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: calc(100% - 10px);
+}
+.card-slider .img-wrapper .indicator-wrapper .dot-indicator {
+  margin: 0px 5px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #adb5bd;
+}
+.card-slider .img-wrapper .indicator-wrapper .dot-indicator.current {
+  background-color: white;
 }
 .card-slider:hover {
   box-shadow: none;

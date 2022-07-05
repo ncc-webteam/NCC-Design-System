@@ -665,6 +665,9 @@
           <img id="img-1-1" class="card-slider-image" src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Test image 1">
           <img id="img-1-2" class="card-slider-image" src="/NCC-Design-System/public/img/secnav3.png" alt="Test image 2">
           <img id="img-1-3" class="card-slider-image" src="/NCC-Design-System/public/img/secnav4.png" alt="Test image 3">
+          <div id="img-indicator-1" class="indicator-wrapper">
+
+          </div>
         </div>
         <div class="card-body">
           <div class="top-text">
@@ -749,48 +752,73 @@
   const slider1 = document.getElementById("img-slider-1");
   const btnNext1 = document.getElementById("btn-next-1");
   const btnPrev1 = document.getElementById("btn-prev-1");
+  const indicator1 = document.getElementById("img-indicator-1");
+  const indicators = [];
   const images1 = [];
 
+  let counter = 0;
   for (const img of allImages) {
     const idString = img.id.split("-");
     if (idString[1] === '1') {
+      counter++;
       images1.push(img);
-      img.style.display = 'none';
+      img.classList.add('right');
       console.log(`added image ${img.id} to list`);
+      let newDot = document.createElement('div');
+      newDot.classList.add("dot-indicator");
+      newDot.id = `dot-1-${counter}`;
+      indicator1.appendChild(newDot);
+      indicators.push(newDot);
     }
   }
 
   images1[0].style.display = 'block'; // display first image in list
+  images1[0].classList.remove('right'); // display first image in list
+  indicators[0].classList.add('current');
+
   let currentImg = 0; // pagination index
+
+  function shiftLeft(currentImg) {
+    images1[currentImg].classList.add('left');
+    images1[currentImg + 1].classList.remove('right');
+  }
+  function shiftRight(currentImg) {
+    images1[currentImg].classList.add('right');
+    images1[currentImg - 1].classList.remove('left');
+  }
 
   function nextImg(imgSliderID, btnNext, btnPrev) {
     if (currentImg < images1.length - 2) {
-      images1[currentImg].style.display = 'none';
+      shiftLeft(currentImg);
+      indicators[currentImg].classList.remove('current');
       currentImg++;
-      images1[currentImg].style.display = 'block';
+      indicators[currentImg].classList.add('current');
       btnPrev.style.display = 'block';
       btnNext.style.display = 'block';
-      console.log(`cuurentImg is now ${currentImg}`);
+      console.log(`curentImg is now ${currentImg}`);
     } else {
-      images1[currentImg].style.display = 'none';
+      shiftLeft(currentImg);
+      indicators[currentImg].classList.remove('current');
       currentImg++;
-      images1[currentImg].style.display = 'block';
+      indicators[currentImg].classList.add('current');
       btnNext.style.display = 'none';
       console.log(`cuurentImg is now ${currentImg}`);
     }
   }
   function prevImg(imgSliderID, btnPrev, btnNext) {
     if (currentImg > 1) {
-      images1[currentImg].style.display = 'none';
+      shiftRight(currentImg);
+      indicators[currentImg].classList.remove('current');
       currentImg--;
-      images1[currentImg].style.display = 'block';
+      indicators[currentImg].classList.add('current');
       btnPrev.style.display = 'block';
       btnNext.style.display = 'block';
       console.log(`cuurentImg is now ${currentImg}`);
     } else {
-      images1[currentImg].style.display = 'none';
+      shiftRight(currentImg);
+      indicators[currentImg].classList.remove('current');
       currentImg--;
-      images1[currentImg].style.display = 'block';
+      indicators[currentImg].classList.add('current');
       btnPrev.style.display = 'none';
       console.log(`cuurentImg is now ${currentImg}`);
     }
