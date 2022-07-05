@@ -11757,6 +11757,120 @@ textarea.form-control-lg {
   transform: none;
 }
 
+.immersion-card {
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 0px;
+  position: relative;
+  box-shadow: none;
+}
+.immersion-card .slider-btn {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: absolute;
+  top: 30%;
+  color: black;
+  z-index: 100;
+  opacity: 0;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 32px;
+  width: 32px;
+  height: 32px;
+  margin: 0px 10px;
+  text-align: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .immersion-card .slider-btn {
+    animation: none;
+    transition: none;
+  }
+}
+.immersion-card .slider-btn:hover {
+  background-color: #f8f9fa;
+  opacity: 1;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+}
+.immersion-card .slider-btn:focus {
+  background-color: #ffdd00;
+  opacity: 1;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+}
+.immersion-card .card-body {
+  padding: 0px 5px 5px 5px;
+}
+.immersion-card .card-body .top-text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: baseline;
+}
+.immersion-card .card-body .card-title {
+  margin: -8px 0px 0px 0px;
+  display: block;
+}
+.immersion-card .card-body .card-title a {
+  color: #212529;
+  font-size: 1rem;
+  margin: 0px;
+}
+.immersion-card .card-body .card-title a:focus {
+  color: #0b0c0c;
+  background-color: #ffdd00;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.immersion-card .card-body .card-flair {
+  display: flex;
+  align-items: center;
+  float: right;
+  font-size: 0.875rem;
+  margin: 10px 0px 0px 0px;
+}
+.immersion-card .card-body .card-flair em {
+  font-style: normal;
+  color: #6c757d;
+  padding-left: 5px;
+}
+.immersion-card .card-body .card-flair svg {
+  margin-right: 5px;
+}
+.immersion-card .card-body .card-flair svg path {
+  fill: #ff385c;
+}
+.immersion-card .card-body .card-text-1 {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin: 0px;
+}
+.immersion-card .img-wrapper {
+  border-radius: 15px;
+  display: flex;
+  max-height: 350px;
+}
+.immersion-card .img-wrapper .immersion-image {
+  display: block;
+}
+.immersion-card:hover {
+  box-shadow: none;
+}
+.immersion-card:hover img {
+  transform: none;
+}
+.immersion-card:hover .card-title {
+  text-decoration: none;
+}
+.immersion-card:focus-within {
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
+}
+.immersion-card:focus-within img {
+  transform: none;
+}
+
 .timeline-component {
   border-top: solid #adb5bd 1px;
   border-bottom: solid #adb5bd 1px;

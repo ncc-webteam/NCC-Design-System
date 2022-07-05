@@ -1,0 +1,108 @@
+{% extends "documentation.njk" %}
+
+{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+{% import "_pattern_macros/breadcrumb.njk" as breadcrumbmacro %}
+{% import "_pattern_macros/general_card.njk" as generalcard %}
+{% import "_pattern_macros/image_card.njk" as imagecard %}
+
+{% block breadcrumb %}
+  {{ breadcrumbmacro.breadcrumb(page.url, title) }}
+{% endblock %}
+
+{% set collapseID = "collapseSeven" %}
+{% set headingID = "headingSevenButton" %}
+{% set linkID = "immersion-card-link" %}
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ docsaccordion.docsaccordion(page.url) }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5"> 
+  <h1>Immersion card</h1>
+  
+  <div class="row {{rowDefaults}} gy-4">
+    <div class="col-12 col-sm-6">
+      <div class="card immersion-card h-100">
+        <div id="immersion-slider-2" class="img-wrapper">
+          <img id="img-2-1" class="immersion-image" src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Test image 1">
+          <img id="img-2-2" class="immersion-image" src="/NCC-Design-System/public/img/secnav3.png" alt="Test image 2">
+          <img id="img-2-3" class="immersion-image" src="/NCC-Design-System/public/img/secnav4.png" alt="Test image 3">
+        </div>
+        <div class="card-body">
+          <span class="card-flair"><svg viewBox="0 0 32 38" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: inline-block; height: 12px; width: 12px; fill: $dark;"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg>"Rating" field</span>
+          <h3 class="card-title h3"><a class="stretched-link" href="/NCC-Design-System/public/#">Card title</a></h3>
+          <p class="card-text-1">"Host" field</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="card immersion-card h-100">
+        <div id="immersion-slider-1" class="img-wrapper">
+          <img id="img-1-1" class="immersion-image" src="/NCC-Design-System/public/img/lb_16x9.jpg" alt="Test image 1">
+          <img id="img-1-2" class="immersion-image" src="/NCC-Design-System/public/img/secnav3.png" alt="Test image 2">
+          <img id="img-1-3" class="immersion-image" src="/NCC-Design-System/public/img/secnav4.png" alt="Test image 3">
+        </div>
+        <div class="card-body">
+          <span class="card-flair"><svg viewBox="0 0 32 38" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: inline-block; height: 12px; width: 12px; fill: $dark;"><path d="M15.094 1.579l-4.124 8.885-9.86 1.27a1 1 0 0 0-.542 1.736l7.293 6.565-1.965 9.852a1 1 0 0 0 1.483 1.061L16 25.951l8.625 4.997a1 1 0 0 0 1.482-1.06l-1.965-9.853 7.293-6.565a1 1 0 0 0-.541-1.735l-9.86-1.271-4.127-8.885a1 1 0 0 0-1.814 0z" fill-rule="evenodd"></path></svg>4.96 <em> (319)</em></span>
+          <h3 class="card-title h3"><a class="stretched-link" href="/NCC-Design-System/public/#">Afternoon tea with the Alpacas</a></h3>
+          <p class="card-text-1">Hosted by Linda</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  {{ content | safe }}
+
+  <hr class="nccds-hr">
+
+  <h3>Need help?</h3>
+  <p>To help make sure that this page is useful, relevant and up to date, you can:</p>
+  <ul>
+    <li><a href="{{ page.url | url }}">take part in the '{{title}}' discussion on GitHub and share your research</a></li>
+    <li><a href="{{ page.url | url }}">propose a change</a> - read more about how to propose changes in GitHub</li>
+  </ul>
+  <a href="{{ page.url | url }}" class="btn btn-outline-dark github-link">Discuss on GitHub</a>
+
+</div>
+
+
+<script>
+  // IMMERSION CARD STUFF --------------------------------------------------------
+
+  // for all cards
+  const allImages = document.getElementsByClassName("immersion-image");
+
+  // stuff for an individual card
+  const slider1 = document.getElementById("immersion-slider-1");
+  const images1 = [];
+
+  for (const img of allImages) {
+    const idString = img.id.split("-");
+    if (idString[1] === '1') {
+      images1.push(img);
+      img.display = 'block';
+      console.log(`added image ${img.id} to list`);
+    }
+  }
+
+  images1[0].style.display = 'block'; // display first image in list
+  let currentImg = 0; // pagination index
+
+  console.log(`currentImg is currently ${currentImg}`);
+
+  window.onload = function() {
+
+    setTimeout(function () {
+      images1[0].style.display = 'none';
+      images1[1].style.display = 'block';
+    }, 1000);
+
+  };
+
+  // END IMMERSION CARD ----------------------------------------------------------
+</script>
+
+{% endblock %}

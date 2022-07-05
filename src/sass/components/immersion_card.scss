@@ -1,0 +1,106 @@
+.immersion-card {
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 0px;
+  position: relative;
+
+  .slider-btn {
+    @include ani;
+    position: absolute;
+    top: 30%;
+    color: black;
+    z-index: 100;
+    opacity: 0;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 32px;
+    width: 32px;
+    height: 32px;
+    margin: 0px 10px;
+    text-align: center;
+    &:hover {
+      background-color: $gray-100;
+      opacity: 1;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+    }
+    &:focus {
+      background-color: $focus-colour;
+      opacity: 1;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .card-body {
+    padding: 0px 5px 5px 5px;
+    .top-text {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: baseline;
+    }
+    .card-title {
+      margin: -8px 0px 0px 0px;
+      display: block;
+      a {
+        color: $dark;
+        font-size: 1rem;
+        margin: 0px;
+        &:focus {
+          color: $focus-text-colour;
+          background-color: $focus-colour;
+          font-weight: 700;
+          border: none;
+          outline: none;
+          text-decoration: none;
+        }
+      }
+    }
+    .card-flair {
+      display: flex;
+      align-items: center;
+      float: right;
+      font-size: 0.875rem;
+      margin: 10px 0px 0px 0px;
+      em {
+        font-style: normal;
+        color: $gray-600;
+        padding-left: 5px;
+      }
+
+      svg {
+        margin-right: 5px;
+        path {
+          fill: #ff385c;
+        }
+      }
+    }
+    .card-text-1 {
+      color: $gray-600;
+      font-size: 0.875rem;
+      margin: 0px;
+    }
+  }
+  box-shadow: none;
+  .img-wrapper {
+    border-radius: 15px;
+    display: flex;
+    max-height: 350px;
+
+    .immersion-image {
+      display: block;
+    }
+  }
+  &:hover {
+    box-shadow: none;
+    
+    img { transform: none; }
+    .card-title { text-decoration: none; }
+  }
+  &:focus-within {
+    box-shadow: none;
+    background-color: transparent;
+    outline: none;
+    img { transform: none; }
+  }
+}
