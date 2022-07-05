@@ -11696,6 +11696,30 @@ textarea.form-control-lg {
 }
 .card-slider .img-wrapper {
   border-radius: 15px;
+  display: flex;
+}
+.card-slider .img-wrapper .card-slider-image {
+  display: block;
+}
+.card-slider .img-wrapper .card-slider-image.left {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateX(-100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-slider .img-wrapper .card-slider-image.left {
+    animation: none;
+    transition: none;
+  }
+}
+.card-slider .img-wrapper .card-slider-image.right {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateX(100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-slider .img-wrapper .card-slider-image.right {
+    animation: none;
+    transition: none;
+  }
 }
 .card-slider:hover {
   box-shadow: none;

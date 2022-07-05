@@ -102,6 +102,18 @@
   box-shadow: none;
   .img-wrapper {
     border-radius: 15px;
+    display: flex;
+    .card-slider-image {
+      display: block;
+    }
+    .card-slider-image.left {
+      @include ani;
+      transform: translateX(-100%);
+    }
+    .card-slider-image.right {
+      @include ani;
+      transform: translateX(100%);
+    }
   }
   &:hover {
     box-shadow: none;

@@ -134,42 +134,48 @@
     const idString = img.id.split("-");
     if (idString[1] === '1') {
       images1.push(img);
-      img.style.display = 'none';
+      img.classList.add('right');
       console.log(`added image ${img.id} to list`);
     }
   }
 
   images1[0].style.display = 'block'; // display first image in list
+  images1[0].classList.remove('right'); // display first image in list
   let currentImg = 0; // pagination index
+
+  function shiftLeft(currentImg) {
+    images1[currentImg].classList.add('left');
+    images1[currentImg + 1].classList.remove('right');
+  }
+  function shiftRight(currentImg) {
+    images1[currentImg].classList.add('right');
+    images1[currentImg - 1].classList.remove('left');
+  }
 
   function nextImg(imgSliderID, btnNext, btnPrev) {
     if (currentImg < images1.length - 2) {
-      images1[currentImg].style.display = 'none';
+      shiftLeft(currentImg);
       currentImg++;
-      images1[currentImg].style.display = 'block';
       btnPrev.style.display = 'block';
       btnNext.style.display = 'block';
-      console.log(`cuurentImg is now ${currentImg}`);
+      console.log(`curentImg is now ${currentImg}`);
     } else {
-      images1[currentImg].style.display = 'none';
+      shiftLeft(currentImg);
       currentImg++;
-      images1[currentImg].style.display = 'block';
       btnNext.style.display = 'none';
       console.log(`cuurentImg is now ${currentImg}`);
     }
   }
   function prevImg(imgSliderID, btnPrev, btnNext) {
     if (currentImg > 1) {
-      images1[currentImg].style.display = 'none';
+      shiftRight(currentImg);
       currentImg--;
-      images1[currentImg].style.display = 'block';
       btnPrev.style.display = 'block';
       btnNext.style.display = 'block';
       console.log(`cuurentImg is now ${currentImg}`);
     } else {
-      images1[currentImg].style.display = 'none';
+      shiftRight(currentImg);
       currentImg--;
-      images1[currentImg].style.display = 'block';
       btnPrev.style.display = 'none';
       console.log(`cuurentImg is now ${currentImg}`);
     }
