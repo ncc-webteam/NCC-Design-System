@@ -114,6 +114,24 @@
       @include ani;
       transform: translateX(100%);
     }
+    .indicator-wrapper {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      top: calc(100% - 10px);
+      .dot-indicator {
+        margin: 0px 5px;
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 6px;
+        background-color: $gray-500;
+      }
+      .dot-indicator.current {
+        background-color: white;
+      }
+    }
   }
   &:hover {
     box-shadow: none;

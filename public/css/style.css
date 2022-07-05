@@ -11721,6 +11721,24 @@ textarea.form-control-lg {
     transition: none;
   }
 }
+.card-slider .img-wrapper .indicator-wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: calc(100% - 10px);
+}
+.card-slider .img-wrapper .indicator-wrapper .dot-indicator {
+  margin: 0px 5px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #adb5bd;
+}
+.card-slider .img-wrapper .indicator-wrapper .dot-indicator.current {
+  background-color: white;
+}
 .card-slider:hover {
   box-shadow: none;
 }
