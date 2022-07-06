@@ -1,0 +1,100 @@
+{% extends "documentation.njk" %}
+
+{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+{% import "_pattern_macros/breadcrumb.njk" as breadcrumbmacro %}
+{% import "_pattern_macros/general_card.njk" as generalcard %}
+
+{% set title = "Images" %}
+
+{% block breadcrumb %}
+  {{ breadcrumbmacro.breadcrumb(page.url, title) }}
+{% endblock %}
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ docsaccordion.docsaccordion(page.url) }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5">    
+
+  <h1>Images</h1>
+  <p class="lead">This page will provide the details of setting up a developer environment on your system. Before you start, make sure you have the latest version of Node.js installed on your system.</p>
+
+  
+    <h2>Default colours</h2>
+    
+  <div class="row gx-2 gx-md-3 gx-lg-4 gy-2 gy-md-3 gy-lg-4">
+  
+    <div class="col-lg-3 col-6">
+      <div class="card section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #050505;">
+        </div>
+        <div class="card-body p-4">
+          <h3 class="card-title h5">Black<br>#050505</h3>
+        </div>        
+      </div>
+    </div>
+      
+    <div class="col-lg-3 col-6">
+      <div class="card section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #006666;">
+        </div>
+        <div class="card-body p-4">
+          <h3 class="card-title h5">Teal<br>#006666</h3>
+        </div>        
+      </div>
+    </div>
+      
+    <div class="col-lg-3 col-6">
+      <div class="card section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #3366CC;">
+        </div>
+        <div class="card-body p-4">
+          <h3 class="card-title h5">Link blue<br>#3366CC</h3>
+        </div>        
+      </div>
+    </div>
+      
+    <div class="col-lg-3 col-6">
+      <div class="card section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #00823B;">
+        </div>
+        <div class="card-body p-4">
+          <h3 class="card-title h5">Green<br>#00823B</h3>
+        </div>        
+      </div>
+    </div>
+      
+    <div class="col-lg-3 col-6">
+      <div class="card section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #B32017;">
+        </div>
+        <div class="card-body p-4">
+          <h3 class="card-title h5">Red<br>#B32017</h3>
+        </div>        
+      </div>
+    </div>
+      
+    <div class="col-lg-3 col-6">
+      <div class="card section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #BE4600;">
+        </div>
+        <div class="card-body p-4">
+          <h3 class="card-title h5">Orange<br>#BE4600</h3>
+        </div>        
+      </div>
+    </div>
+  
+   
+  
+  </div>
+
+
+
+
+    
+
+</div>
+
+{% endblock %}

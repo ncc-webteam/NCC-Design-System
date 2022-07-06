@@ -188,16 +188,16 @@
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a href="#">Colour</a>
+            <a class="{% if '/styles/colour' in currenturl %}active{% endif %}" href="{{ '/styles/colour' | url }}">Colour</a>
           </li>
           <li>
-            <a href="#">Images</a>
+            <a class="{% if '/styles/images' in currenturl %}active{% endif %}" href="{{ '/styles/images' | url }}">Images</a>
           </li>
           <li>
-            <a href="#">Typography</a>
+            <a class="{% if '/styles/typography' in currenturl %}active{% endif %}" href="{{ '/styles/typography' | url }}">Typography</a>
           </li>
           <li>
-            <a href="#">Branding</a>
+            <a class="{% if '/styles/branding' in currenturl %}active{% endif %}" href="{{ '/styles/branding' | url }}">Branding</a>
           </li>
         </ul>
       </div>
