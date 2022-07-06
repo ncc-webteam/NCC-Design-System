@@ -1,0 +1,66 @@
+{% extends "documentation.njk" %}
+
+{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+{% import "_pattern_macros/breadcrumb.njk" as breadcrumbmacro %}
+{% import "_pattern_macros/general_card.njk" as generalcard %}
+
+{% set title = "Branding" %}
+
+{% block breadcrumb %}
+  {{ breadcrumbmacro.breadcrumb(page.url, title) }}
+{% endblock %}
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ docsaccordion.docsaccordion(page.url) }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5">    
+
+  <h1>Branding</h1>
+    <p class="lead">These logos here are for display purposes, for usage <a href="/NCC-Design-System/public/img/Norfolk%20County%20Council%20logos%202022.zip" download>download the files</a> and use accordingly to guidance.</p>
+
+  
+    
+   
+    
+    
+  <div class="row gx-2 gx-md-3 gx-lg-4 gy-2 gy-md-3 gy-lg-4">
+      <h2>Monotone black logos</h2>
+  
+    <h3>Large</h3>
+    <img style="width: auto;" class="img-fluid" src="/NCC-Design-System/public/img/ncc-logos/New-NCC-Logo-DoubleDecker-black-large.png" alt="Norfolk County Council logo">
+      
+      <h3>Medium</h3>
+    <img style="width: auto;" src="/NCC-Design-System/public/img/ncc-logos/New-NCC-Logo-DoubleDecker-black-medium.png" alt="Norfolk County Council logo">
+      
+      <h3>Small</h3>
+    <img style="width: auto;" src="/NCC-Design-System/public/img/ncc-logos/New-NCC-Logo-DoubleDecker-black-small.png" alt="Norfolk County Council logo">
+   
+  
+  </div>
+    
+    <div class="row gx-2 gx-md-3 gx-lg-4 gy-2 gy-md-3 gy-lg-4">
+      <h2>Monotone black logos</h2>
+  
+    <h3>Large</h3>
+    <img style="width: auto;" class="img-fluid" src="/NCC-Design-System/public/img/ncc-logos/New-NCC-Logo-DoubleDecker-coloured-large.png" alt="Norfolk County Council logo">
+      
+      <h3>Medium</h3>
+    <img style="width: auto;" src="/NCC-Design-System/public/img/ncc-logos/New-NCC-Logo-DoubleDecker-coloured-medium.png" alt="Norfolk County Council logo">
+      
+      <h3>Small</h3>
+    <img style="width: auto;" src="/NCC-Design-System/public/img/ncc-logos/New-NCC-Logo-DoubleDecker-coloured-small.png" alt="Norfolk County Council logo">
+   
+  
+  </div>
+
+
+
+
+    
+
+</div>
+
+{% endblock %}
