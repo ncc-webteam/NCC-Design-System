@@ -89,6 +89,7 @@
 
     .immersion-image {
       display: block;
+      transition: background 0.5s linear;
     }
   }
   &:hover {

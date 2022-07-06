@@ -11852,6 +11852,7 @@ textarea.form-control-lg {
 }
 .immersion-card .img-wrapper .immersion-image {
   display: block;
+  transition: background 0.5s linear;
 }
 .immersion-card:hover {
   box-shadow: none;

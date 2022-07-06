@@ -695,7 +695,7 @@
 
 <script>
   // IMMERSION CARD STUFF --------------------------------------------------------
-
+  
   // for all cards
   const allImages = document.getElementsByClassName("immersion-image");
 
@@ -717,14 +717,31 @@
 
   console.log(`currentImg is currently ${currentImg}`);
 
-  window.onload = function() {
+  // fade function - https://stackoverflow.com/questions/33505032/fade-in-image-javascript
+  function fadeIn(current, prev) {
+    current.style.opacity = 0;
+    var tick = function () {
+      current.style.opacity = +current.style.opacity + 0.01;
+      if (+current.style.opacity < 1) {
+        (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)
+      }
+      prev.style.display = 'none';
+    };
+    tick();
+  }
 
-    setTimeout(function () {
-      images1[0].style.display = 'none';
-      images1[1].style.display = 'block';
-    }, 2000);
+  let imageCycle = 0;
 
-  };
+  const changePicture = function() {
+    imageCycle++;
+    if (imageCycle > images1.length - 1) {
+      imageCycle = 0;
+    }
+    images1[imageCycle].style.display = 'block';
+    fadeIn(images1[imageCycle], images1[imageCycle - 1]);
+  }
+
+  window.setInterval(changePicture, 4000);
 
   // END IMMERSION CARD ----------------------------------------------------------
 </script>
