@@ -3,6 +3,7 @@
   border-radius: 15px;
   padding: 0px;
   position: relative;
+  //overflow: visible;
 
   .slider-btn {
     @include ani;
@@ -85,11 +86,17 @@
   .img-wrapper {
     border-radius: 15px;
     display: flex;
-    max-height: 350px;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    //overflow: visible;
 
     .immersion-image {
       display: block;
       transition: background 0.5s linear;
+      height: 400px;
+      min-height: 400px;
+      max-height: 400px;
     }
   }
   &:hover {
