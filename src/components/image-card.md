@@ -1,5 +1,5 @@
 ---
-layout: _sources/image-card-source.njk
+layout: _sources/_components/image-card-source.njk
 title: Image Card
 ---
 

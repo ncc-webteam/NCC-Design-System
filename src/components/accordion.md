@@ -1,5 +1,5 @@
 ---
-layout: _sources/accordion-source.njk
+layout: _sources/_components/accordion-source.njk
 title: Accordion
 ---
 

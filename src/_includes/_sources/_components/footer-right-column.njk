@@ -1,0 +1,33 @@
+{% extends "documentation.njk" %}
+
+{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+{% import "_pattern_macros/breadcrumb.njk" as breadcrumbmacro %}
+{% import "_pattern_macros/general_card.njk" as generalcard %}
+
+{% block breadcrumb %}
+  {{ breadcrumbmacro.breadcrumb(page.url, title) }}
+{% endblock %}
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ docsaccordion.docsaccordion(page.url) }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5"> 
+  <h1>Footer right column (global) - #71</h1>
+
+  {{ content | safe }}
+
+  <div class="row {{rowDefaults}}">
+    <div id="components-help-section" class="col-12">
+      <h2>Need help?</h2>
+      <ul>
+        <li>Take part in the 'Breadcrumbs' discussion on GitHub and share your research</li>
+        <li>Propose a change - read more about how to propose changes in GitHub</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,4 +1,4 @@
 ---
-layout: _sources/immersion-card-source.njk
+layout: _sources/_components/immersion-card-source.njk
 title: Immersion card
 ---
