@@ -1,0 +1,41 @@
+{% extends "documentation.njk" %}
+
+{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+{% import "_pattern_macros/breadcrumb.njk" as breadcrumbmacro %}
+{% import "_pattern_macros/general_card.njk" as generalcard %}
+
+{% set title = "Colour" %}
+
+{% block breadcrumb %}
+  {{ breadcrumbmacro.breadcrumb(page.url, title) }}
+{% endblock %}
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ docsaccordion.docsaccordion(page.url) }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5">    
+
+  <h1>Navigation page</h1>
+  <p class="lead">This page will provide the details of setting up a developer environment on your system. Before you start, make sure you have the latest version of Node.js installed on your system.</p>
+
+  
+    <h2>Default colours</h2>
+    
+
+  <div class="row gx-2 gx-md-3 gx-lg-4 gy-2 gy-md-3 gy-lg-4">
+  
+   
+  
+  </div>
+
+
+
+
+    
+
+</div>
+
+{% endblock %}

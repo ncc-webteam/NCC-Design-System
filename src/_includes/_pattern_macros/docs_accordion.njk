@@ -37,16 +37,10 @@
             <a id="developer-environment-setup-link" class="docs-accordion-link {% if '/developer-environment-setup/' in currenturl %}active{% endif %}"  href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
           </li>
           <li>
-            <a href="#"></a>
+            <a class="{% if '/getting-started/browsers-and-devices' in currenturl %}active{% endif %}" href="{{ '/getting-started/browsers-and-devices' | url }}">Browsers and devices</a>
           </li>
           <li>
-            <a href="#">Breadcrumbs</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Troubleshooting</a>
+            <a class="{% if '/getting-started/accessibility' in currenturl %}active{% endif %}" href="{{ '/getting-started/accessibility' | url }}">Accessibility</a>
           </li>
         </ul>
       </div>
@@ -75,7 +69,7 @@
         data-bs-target="#collapseTwo"
         aria-expanded="false"
         aria-controls="collapseTwo">
-        Content
+        Forms
       </button>
       {% endif %}
     </h2>
@@ -83,22 +77,13 @@
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="getting-started-linkTwo" href="{{ '/getting-started' | url }}">How to get started</a>
+            <a class="{% if '/forms/overview' in currenturl %}active{% endif %}" href="{{ '/forms/overview' | url }}">Overview</a>
           </li>
-          <li>
-            <a id="developer-environment-setup-linkTwo" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
+            <li>
+            <a class="{% if '/forms/checkboxes-and-radio-buttons' in currenturl %}active{% endif %}" href="{{ '/forms/checkboxes-and-radio-buttons' | url }}">Checkboxes and radio</a>
           </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Breadcrumbs</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Troubleshooting</a>
+            <li>
+            <a class="{% if '/forms/validation' in currenturl %}active{% endif %}" href="{{ '/forms/validation' | url }}">Validation</a>
           </li>
         </ul>
       </div>
@@ -287,22 +272,22 @@
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="getting-started-linkSix" href="{{ '/getting-started' | url }}">How to get started</a>
+            <a class="docs-accordion-link {% if '/standard-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/standard-page' | url }}">Standard page</a>
           </li>
           <li>
-            <a id="developer-environment-setup-linkSix" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
+            <a class="docs-accordion-link {% if '/anchor-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/anchor-page' | url }}">Anchor page</a>
           </li>
-          <li>
-            <a href="#"></a>
+            <li>
+            <a class="docs-accordion-link {% if '/chaptered-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/chaptered-page' | url }}">Chaptered page</a>
           </li>
-          <li>
-            <a href="#">Breadcrumbs</a>
+            <li>
+            <a class="docs-accordion-link {% if '/step-by-step-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/step-by-step-page' | url }}">Step by step page</a>
           </li>
-          <li>
-            <a href="#"></a>
+            <li>
+            <a class="docs-accordion-link {% if '/umbrella-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/umbrella-page' | url }}">Umbrella page</a>
           </li>
-          <li>
-            <a href="#">Troubleshooting</a>
+            <li>
+            <a class="docs-accordion-link {% if '/navigation-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/navigation-page' | url }}">Navigation page</a>
           </li>
         </ul>
       </div>
