@@ -287,22 +287,22 @@
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="getting-started-linkSix" href="{{ '/getting-started' | url }}">How to get started</a>
+            <a class="docs-accordion-link {% if '/standard-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/standard-page' | url }}">Standard page</a>
           </li>
           <li>
-            <a id="developer-environment-setup-linkSix" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
+            <a class="docs-accordion-link {% if '/anchor-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/anchor-page' | url }}">Anchor page</a>
           </li>
-          <li>
-            <a href="#"></a>
+            <li>
+            <a class="docs-accordion-link {% if '/chaptered-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/chaptered-page' | url }}">Chaptered page</a>
           </li>
-          <li>
-            <a href="#">Breadcrumbs</a>
+            <li>
+            <a class="docs-accordion-link {% if '/step-by-step-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/step-by-step-page' | url }}">Step by step page</a>
           </li>
-          <li>
-            <a href="#"></a>
+            <li>
+            <a class="docs-accordion-link {% if '/umbrella-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/umbrella-page' | url }}">Umbrella page</a>
           </li>
-          <li>
-            <a href="#">Troubleshooting</a>
+            <li>
+            <a class="docs-accordion-link {% if '/navigation-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/navigation-page' | url }}">Navigation page</a>
           </li>
         </ul>
       </div>
