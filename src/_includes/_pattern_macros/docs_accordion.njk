@@ -75,7 +75,7 @@
         data-bs-target="#collapseTwo"
         aria-expanded="false"
         aria-controls="collapseTwo">
-        Content
+        Forms
       </button>
       {% endif %}
     </h2>
@@ -83,22 +83,13 @@
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a id="getting-started-linkTwo" href="{{ '/getting-started' | url }}">How to get started</a>
+            <a class="{% if '/forms/overview' in currenturl %}active{% endif %}" href="{{ '/forms/overview' | url }}">Overview</a>
           </li>
-          <li>
-            <a id="developer-environment-setup-linkTwo" href="{{ '/getting-started/developer-environment-setup' | url }}">Developer environment setup</a>
+            <li>
+            <a class="{% if '/forms/checkboxes-and-radio-buttons' in currenturl %}active{% endif %}" href="{{ '/forms/checkboxes-and-radio-buttons' | url }}">Checkboxes and radio</a>
           </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Breadcrumbs</a>
-          </li>
-          <li>
-            <a href="#"></a>
-          </li>
-          <li>
-            <a href="#">Troubleshooting</a>
+            <li>
+            <a class="{% if '/forms/validation' in currenturl %}active{% endif %}" href="{{ '/forms/validation' | url }}">Validation</a>
           </li>
         </ul>
       </div>
