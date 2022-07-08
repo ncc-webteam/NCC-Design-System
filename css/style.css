@@ -11851,6 +11851,7 @@ textarea.form-control-lg {
   flex-direction: column;
   align-items: center;
   height: 400px;
+  position: relative;
 }
 .immersion-card .img-wrapper .immersion-image {
   display: block;
@@ -11858,6 +11859,21 @@ textarea.form-control-lg {
   height: 400px;
   min-height: 400px;
   max-height: 400px;
+  position: absolute;
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 10s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+}
+.immersion-card .img-wrapper .immersion-image:nth-child(2) {
+  animation-delay: -8s;
+  -webkit-animation-delay: -8s;
+}
+.immersion-card .img-wrapper .immersion-image:nth-child(3) {
+  animation-delay: -4s;
+  -webkit-animation-delay: -4s;
 }
 .immersion-card:hover {
   box-shadow: none;
@@ -11877,6 +11893,40 @@ textarea.form-control-lg {
   transform: none;
 }
 
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .timeline-component {
   border-top: solid #adb5bd 1px;
   border-bottom: solid #adb5bd 1px;

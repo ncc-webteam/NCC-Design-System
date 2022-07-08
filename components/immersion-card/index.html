@@ -693,7 +693,7 @@
 
 <script>
   // IMMERSION CARD STUFF --------------------------------------------------------
-  
+  /*
   // for all cards
   const allImages = document.getElementsByClassName("immersion-image");
 
@@ -705,7 +705,7 @@
     const idString = img.id.split("-");
     if (idString[1] === '1') {
       images1.push(img);
-      img.display = 'block';
+      img.display = 'none';
       console.log(`added image ${img.id} to list`);
     }
   }
@@ -732,8 +732,8 @@
   const changePicture = function() {
     if (imageCycle < images1.length - 1) {
       images1[imageCycle + 1].style.display = 'block';
-      images1[imageCycle].style.display = 'none';
       fadeIn(images1[imageCycle + 1]);
+      images1[imageCycle].style.display = 'none';
       imageCycle++;
     } else {
       // back to first image
@@ -746,6 +746,7 @@
 
   window.setInterval(changePicture, 4000);
 
+  */
   // END IMMERSION CARD ----------------------------------------------------------
 </script>
 
