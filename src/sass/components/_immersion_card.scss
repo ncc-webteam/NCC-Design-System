@@ -92,6 +92,12 @@
     //overflow: visible;
     position: relative;
 
+    video {
+      height: 400px;
+      min-height: 400px;
+      max-height: 400px;
+    }
+
     .immersion-image {
       display: block;
       transition: background 0.5s linear;
