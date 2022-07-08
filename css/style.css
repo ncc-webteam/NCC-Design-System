@@ -11853,6 +11853,11 @@ textarea.form-control-lg {
   height: 400px;
   position: relative;
 }
+.immersion-card .img-wrapper video {
+  height: 400px;
+  min-height: 400px;
+  max-height: 400px;
+}
 .immersion-card .img-wrapper .immersion-image {
   display: block;
   transition: background 0.5s linear;
