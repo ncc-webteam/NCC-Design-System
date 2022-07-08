@@ -90,6 +90,7 @@
     align-items: center;
     height: 400px;
     //overflow: visible;
+    position: relative;
 
     .immersion-image {
       display: block;
@@ -97,18 +98,82 @@
       height: 400px;
       min-height: 400px;
       max-height: 400px;
+      position: absolute;
+
+      // seems to have the best effects in equal multiples of 3,2,1
+      // ( 3,2,1,  6,4,2  12,8,4  etc. )
+      // it seems to be similar for other amounts of images,
+      // eg. 4,3,2,1,  8,6,4,2...  for 4 images.
+
+      -webkit-animation-name: fade;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-duration: 10s;
+      animation-name: fade;
+      animation-iteration-count: infinite;
+      animation-duration: 12s;
+
+      &:nth-child(2) {
+        animation-delay: -8s;
+        -webkit-animation-delay: -8s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: -4s;
+        -webkit-animation-delay: -4s;
+      }
     }
   }
   &:hover {
     box-shadow: none;
-    
-    img { transform: none; }
-    .card-title { text-decoration: none; }
+
+    img {
+      transform: none;
+    }
+    .card-title {
+      text-decoration: none;
+    }
   }
   &:focus-within {
     box-shadow: none;
     background-color: transparent;
     outline: none;
-    img { transform: none; }
+    img {
+      transform: none;
+    }
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
