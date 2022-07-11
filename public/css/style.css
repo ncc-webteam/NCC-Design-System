@@ -11860,34 +11860,33 @@ textarea.form-control-lg {
 }
 .immersion-card .img-wrapper .immersion-image {
   display: block;
-  transition: background 0.5s linear;
   height: 400px;
   min-height: 400px;
   max-height: 400px;
   position: absolute;
+  transition: 1s;
+}
+.immersion-card:hover, .immersion-card:focus-within {
+  box-shadow: none;
+}
+.immersion-card:hover .card-title, .immersion-card:focus-within .card-title {
+  text-decoration: none;
+}
+.immersion-card:hover .img-wrapper .immersion-image, .immersion-card:focus-within .img-wrapper .immersion-image {
   -webkit-animation-name: fade;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 10s;
+  -webkit-animation-duration: 12s;
   animation-name: fade;
   animation-iteration-count: infinite;
   animation-duration: 12s;
 }
-.immersion-card .img-wrapper .immersion-image:nth-child(2) {
+.immersion-card:hover .img-wrapper .immersion-image:nth-child(2), .immersion-card:focus-within .img-wrapper .immersion-image:nth-child(2) {
   animation-delay: -8s;
   -webkit-animation-delay: -8s;
 }
-.immersion-card .img-wrapper .immersion-image:nth-child(3) {
+.immersion-card:hover .img-wrapper .immersion-image:nth-child(3), .immersion-card:focus-within .img-wrapper .immersion-image:nth-child(3) {
   animation-delay: -4s;
   -webkit-animation-delay: -4s;
-}
-.immersion-card:hover {
-  box-shadow: none;
-}
-.immersion-card:hover img {
-  transform: none;
-}
-.immersion-card:hover .card-title {
-  text-decoration: none;
 }
 .immersion-card:focus-within {
   box-shadow: none;
@@ -11901,35 +11900,41 @@ textarea.form-control-lg {
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
+    transform: scale(1);
   }
-  20% {
+  2% {
     opacity: 1;
   }
   33% {
     opacity: 1;
+    transform: scale(1.1);
   }
-  53% {
+  40% {
     opacity: 0;
   }
   100% {
     opacity: 0;
+    transform: scale(1);
   }
 }
 @keyframes fade {
   0% {
     opacity: 0;
+    transform: scale(1);
   }
-  20% {
+  2% {
     opacity: 1;
   }
   33% {
     opacity: 1;
+    transform: scale(1.1);
   }
-  53% {
+  40% {
     opacity: 0;
   }
   100% {
     opacity: 0;
+    transform: scale(1);
   }
 }
 .swiper-v2 {
