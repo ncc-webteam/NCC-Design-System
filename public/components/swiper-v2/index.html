@@ -19,7 +19,7 @@
     <meta name="theme-color" content="#ffffff">
     
     
-  <title>Hero - NCC Design System</title>
+  <title>Swiper v2 - NCC Design System</title>
 </head>
 
 
@@ -152,7 +152,7 @@
 
         
         
-        <li class="breadcrumb-item active">Hero</li>
+        <li class="breadcrumb-item active">Swiper v2</li>
       </ol>
     </nav>
   </div>
@@ -570,7 +570,7 @@
             <a id="header-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/header">#76 - Header (global)</a>
           </li>
           <li>
-            <a id="hero-link" class="docs-accordion-link active" href="/NCC-Design-System/public/components/hero">#77 - Hero</a>
+            <a id="hero-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/hero">#77 - Hero</a>
           </li>
           <li>
             <a id="image-card-link" class="docs-accordion-link " href="/NCC-Design-System/public/components/image-card">#81 - Image card</a>
@@ -597,7 +597,7 @@
             <a id="immersion-card-link" class="immersion-card-link " href="/NCC-Design-System/public/components/immersion-card">Immersion card</a>
           </li>
           <li>
-            <a id="swiper-v2-link" class="swiper-v2-link " href="/NCC-Design-System/public/components/swiper-v2">Swiper v2</a>
+            <a id="swiper-v2-link" class="swiper-v2-link active" href="/NCC-Design-System/public/components/swiper-v2">Swiper v2</a>
           </li>
         </ul>
       </div>
@@ -645,20 +645,107 @@
 </div>
 
 <div class="components-main-section col-12 col-lg-8 mb-5"> 
-  <h1>Hero - #77</h1>
-
+  <h1>Swiper v2 (CSS only)</h1>
   
-    
-  <div class="row mt-0 mb-5 g-md-4 g-2">
-    <div id="components-help-section" class="col-12">
-      <h2>Need help?</h2>
-      <ul>
-        <li>Take part in the 'Breadcrumbs' discussion on GitHub and share your research</li>
-        <li>Propose a change - read more about how to propose changes in GitHub</li>
-      </ul>
+  <div class="row mt-0 mb-5 g-md-4 g-2 gy-4">
+    <div class="swiper-v2">
+      <div class="swiper-wrapper">
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="img-wrapper ratio ratio-16x9">
+              <img src="/NCC-Design-System/public/img/lb_16x9.jpg" class="card-img-top" alt="image for Card 1">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title h4"><a class="stretched-link" href="/NCC-Design-System/public/swiper-v2/">Card 1</a></h2>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrapper ratio ratio-16x9">
+              <img src="/NCC-Design-System/public/img/lb_16x9.jpg" class="card-img-top" alt="image for Card 2">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title h4"><a class="stretched-link" href="/NCC-Design-System/public/swiper-v2/">Card 2</a></h2>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrapper ratio ratio-16x9">
+              <img src="/NCC-Design-System/public/img/lb_16x9.jpg" class="card-img-top" alt="image for Card 3">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title h4"><a class="stretched-link" href="/NCC-Design-System/public/swiper-v2/">Card 3</a></h2>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrapper ratio ratio-16x9">
+              <img src="/NCC-Design-System/public/img/lb_16x9.jpg" class="card-img-top" alt="image for Card 4">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title h4"><a class="stretched-link" href="/NCC-Design-System/public/swiper-v2/">Card 4</a></h2>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrapper ratio ratio-16x9">
+              <img src="/NCC-Design-System/public/img/lb_16x9.jpg" class="card-img-top" alt="image for Card 5">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title h4"><a class="stretched-link" href="/NCC-Design-System/public/swiper-v2/">Card 5</a></h2>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  
+
+  <hr class="nccds-hr">
+
+  <h3>Need help?</h3>
+  <p>To help make sure that this page is useful, relevant and up to date, you can:</p>
+  <ul>
+    <li><a href="/NCC-Design-System/public/components/swiper-v2/">take part in the 'Swiper v2' discussion on GitHub and share your research</a></li>
+    <li><a href="/NCC-Design-System/public/components/swiper-v2/">propose a change</a> - read more about how to propose changes in GitHub</li>
+  </ul>
+  <a href="/NCC-Design-System/public/components/swiper-v2/" class="btn btn-outline-dark github-link">Discuss on GitHub</a>
+
 </div>
+
+
+<script>
+  function makeActiveTab(buttonID) {
+    // first clear all active indicators
+    const allTabItems = document.getElementsByClassName('tabitem');
+    const allTabButtons = document.getElementsByClassName('tabbutton');
+    Array.prototype.forEach.call(allTabItems, function(e) {
+      e.classList.remove("active");
+    });
+    Array.prototype.forEach.call(allTabButtons, function(e) {
+      e.classList.remove("active");
+    });
+
+    // add active indicators to relevant items
+    const idString = buttonID.split("-");
+    let button = document.getElementById(buttonID);
+    let newTabItem = document.getElementById(`${idString[0]}-tabitem-${idString[2]}`);
+    button.classList.add("active");
+    newTabItem.classList.add("active"); // show new tab
+  }
+
+  function copyText(buttonID) {
+    const idString = buttonID.split("-");
+    let button = document.getElementById(buttonID);
+    let tabContents = document.getElementById(`${idString[0]}-tabcontents-${idString[2]}`);
+
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(button.value);
+
+    /* currently using button value. there should be a way to only have to enter code once,
+    without worrying about "code style" formatting. */ 
+
+    button.innerHTML = "Copied!";
+    setInterval(function () {button.innerHTML = "Copy"}, 3000);
+  }
+</script>
 
 
 

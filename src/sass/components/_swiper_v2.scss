@@ -1,0 +1,35 @@
+.swiper-v2 {
+  height: 200px;
+  //border: solid green 2px;
+  position: static;
+  padding: 10px;
+  .swiper-wrapper {
+    position: relative;
+    //border: solid orange 2px;
+    height: 100%;
+    overflow-x: scroll;
+  }
+  .card-wrapper {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    .card {
+      width: 200px;
+      border-radius: 10px;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      .card-body {
+        padding: 10px;
+      }
+
+      .card-title {
+        a {
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+}
