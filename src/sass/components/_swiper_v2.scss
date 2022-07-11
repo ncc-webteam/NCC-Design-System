@@ -2,23 +2,37 @@
   height: 200px;
   //border: solid green 2px;
   position: static;
-  padding: 10px;
+  padding: 0;
   .swiper-wrapper {
     position: relative;
     //border: solid orange 2px;
     height: 100%;
     overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   .card-wrapper {
     display: flex;
     position: absolute;
     height: 100%;
     .card {
+      scroll-snap-align: start;
       width: 200px;
       border-radius: 10px;
 
-      &:not(:last-child) {
-        margin-right: 15px;
+      margin: 20px 10px 20px 10px;
+
+      // &:not(:last-child) {
+      //   margin-right: 15px;
+      // }
+
+      &:hover {
+        box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.5);
       }
 
       .card-body {
