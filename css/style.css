@@ -11938,7 +11938,7 @@ textarea.form-control-lg {
   }
 }
 .swiper-v2 {
-  height: 200px;
+  height: 250px;
   position: static;
   padding: 0;
 }
@@ -11947,24 +11947,35 @@ textarea.form-control-lg {
   height: 100%;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 .swiper-v2 .swiper-wrapper::-webkit-scrollbar {
-  display: none;
+  width: 10px;
+  height: 10px;
+}
+.swiper-v2 .swiper-wrapper::-webkit-scrollbar-track {
+  background: #212529;
+}
+.swiper-v2 .swiper-wrapper::-webkit-scrollbar-thumb {
+  background: #ced4da;
+}
+.swiper-v2 .swiper-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #e9ecef;
 }
 .swiper-v2 .card-wrapper {
   display: flex;
   position: absolute;
   height: 100%;
+  align-items: flex-end;
 }
 .swiper-v2 .card-wrapper .card {
   scroll-snap-align: start;
   width: 200px;
   border-radius: 10px;
-  margin: 20px 10px 20px 10px;
+  max-height: 200px;
+  margin: 20px 20px 20px 0px;
 }
 .swiper-v2 .card-wrapper .card:hover {
   box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.5);
@@ -11974,6 +11985,46 @@ textarea.form-control-lg {
 }
 .swiper-v2 .card-wrapper .card .card-title a {
   font-size: 1.125rem;
+}
+
+.swiper-v2.netflix-style .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+.swiper-v2.netflix-style .card-wrapper {
+  height: 180px;
+  padding: 0px;
+  align-items: stretch;
+}
+.swiper-v2.netflix-style .card-wrapper:hover .card {
+  transform: translateX(-20px);
+}
+.swiper-v2.netflix-style .card-wrapper .card {
+  margin: 0px;
+}
+.swiper-v2.netflix-style .card-wrapper .card .card-details {
+  color: #f8f9fa;
+  display: none;
+  font-size: 0.875rem;
+}
+.swiper-v2.netflix-style .card-wrapper .card:hover ~ .card {
+  transform: translateX(20px);
+}
+.swiper-v2.netflix-style .card-wrapper .card:hover {
+  transform: scale(1.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .swiper-v2.netflix-style .card-wrapper .card:hover {
+    animation: none;
+    transition: none;
+  }
+}
+.swiper-v2.netflix-style .card-wrapper .card:hover .card-details {
+  display: block;
+}
+.swiper-v2.netflix-style .card-wrapper .card:hover .card-title {
+  font-size: 0.875rem;
 }
 
 .timeline-component {
