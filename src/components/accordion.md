@@ -60,5 +60,3 @@ We updated this component in December 2021 to solve an accessibility issue where
 Read about the research and development that went into improving the accordion component.
 
 The team made sure the component is accessible, for example that users can interact with it using just the keyboard.
-
-

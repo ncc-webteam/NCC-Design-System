@@ -19,9 +19,24 @@
   <p class="lead">Documentation for all of the components used in NCC sites including examples, options, and use cases.</p>
 
   <h2>How to use components</h2>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, nobis. Odit, quisquam possimus rerum aperiam, cum nesciunt ipsa impedit voluptatum omnis explicabo aut assumenda eius fuga eveniet nisi vero non corporis totam blanditiis labore ducimus, quod et aliquam quidem? Possimus quidem ipsam reprehenderit delectus cum quam modi voluptatibus voluptates nulla fuga laboriosam, at, doloremque tempore ullam libero sed temporibus? Delectus molestias, hic aspernatur laudantium animi ipsum! Aut quibusdam ex laborum nemo in, eius harum itaque pariatur optio consequatur consectetur aperiam provident ratione, officiis ut odit earum nihil sapiente aspernatur perferendis magnam. Ab soluta quibusdam saepe cumque incidunt placeat ducimus minus quaerat, earum libero accusamus veniam error deleniti aliquam. Veritatis distinctio quo tenetur architecto quod ex, harum deleniti officia. Vel cupiditate suscipit ut ad molestiae, quam, rem dicta error, labore laborum sunt veniam dolore asperiores ullam fugit optio. Voluptate alias doloremque quibusdam pariatur maxime assumenda est aperiam corrupti quae? Quod eum illum dolorum quaerat praesentium accusantium, magnam dicta, tempore natus libero soluta quae voluptas modi! Totam commodi provident harum dicta explicabo sed deserunt unde consectetur rem quo, nobis aperiam iure ipsum nisi distinctio doloribus quae incidunt quasi labore eius libero a! Ipsam nostrum quibusdam provident quisquam, tenetur expedita numquam vel excepturi?</p>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, nobis. Odit, quisquam possimus rerum aperiam, cum nesciunt ipsa impedit voluptatum omnis explicabo aut assumenda eius fuga eveniet nisi vero non corporis totam blanditiis labore ducimus, quod et aliquam quidem?</p>
 
   {{ content | safe }}
+
+  <h2>Components guide</h2>
+  <p>Here is a breakdown to the different types of components and their usage</p>
+  <div class="row {{rowDefaults}}">
+    <div class="col-12 col-md-4">
+    {{ generalcard.generalcard('', 'Cards', '', '', '', 'Various cards including general card, image card, promo card, etc.', '', '#', 'card-light') }}
+    </div>
+    <div class="col-12 col-md-4">
+    {{ generalcard.generalcard('', 'Global components', '', '', '', 'Header, footer, ', '', '#', 'card-light') }}
+    </div>
+    <div class="col-12 col-md-4">
+    {{ generalcard.generalcard('', 'Large components', '', '', '', 'Stages, carousels, banners, ', '', '#', 'card-light') }}
+    </div>
+  </div>
+
 
 </div>
 
