@@ -289,6 +289,9 @@
             <li>
             <a class="docs-accordion-link {% if '/navigation-page' in currenturl %}active{% endif %}" href="{{ '/layouts/navigation-page' | url }}">Navigation page</a>
           </li>
+          <li>
+            <a id="structure-and-columns-link" class="docs-accordion-link {% if '/structure-and-columns/' in currenturl %}active{% endif %}" href="{{ '/layouts/structure-and-columns' | url }}">Structure & columns</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -326,9 +329,6 @@
         <ul class="accordion-list">
           <li>
             <a id="components-link" class="docs-accordion-link {% if '/components/' == currenturl %}active{% endif %}" href="{{ '/components' | url }}">Introduction</a>
-          </li>
-          <li>
-            <a id="structure-and-columns-link" class="docs-accordion-link {% if '/structure-and-columns/' in currenturl %}active{% endif %}" href="{{ '/components/structure-and-columns' | url }}">Structure & columns</a>
           </li>
           <li>
             <a id="accordion-link" class="docs-accordion-link {% if '/accordion/' in currenturl %}active{% endif %}" href="{{ '/components/accordion' | url }}">#10 - Accordion</a>
