@@ -1,0 +1,33 @@
+{% extends "documentation.njk" %}
+
+{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+{% import "_pattern_macros/breadcrumb.njk" as breadcrumbmacro %}
+{% import "_pattern_macros/general_card.njk" as generalcard %}
+
+{% set title = 'Markdown guide' %}
+
+{% block breadcrumb %}
+  {{ breadcrumbmacro.breadcrumb(page.url, title) }}
+{% endblock %}
+
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ docsaccordion.docsaccordion(page.url) }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5">    
+  <h1>Markdown guide</h1>
+  <p class="lead">Markdown is a quick and convenient way to write content. This page will show you how to use markdown, providing a simple "cheat-sheet" of commands from headers, to lists, to images.</p>
+
+  {{ content | safe }}
+  
+  <h2>Here is a list of Markdown resources</h2>
+  <ul>
+    <li><a href="https://www.markdownguide.org/basic-syntax/">Markdown guide</a></li>
+  </ul>
+
+</div>
+
+{% endblock %}
