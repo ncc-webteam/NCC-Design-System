@@ -49,7 +49,7 @@
 
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
-      {% if '/content/' in currenturl %}
+      {% if '/forms/' in currenturl %}
       <button
         id="headingTwoButton"
         class="accordion-button"
@@ -58,7 +58,7 @@
         data-bs-target="#collapseTwo"
         aria-expanded="true"
         aria-controls="collapseTwo">
-        Content
+        Forms
       </button>
       {% else %}
       <button
@@ -73,7 +73,7 @@
       </button>
       {% endif %}
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse {% if '/content/' in currenturl %}show{% endif %}" aria-labelledby="headingTwo">
+    <div id="collapseTwo" class="accordion-collapse collapse {% if '/forms/' in currenturl %}show{% endif %}" aria-labelledby="headingTwo">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
@@ -244,7 +244,7 @@
   
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingSix">
-      {% if '/page-templates/' in currenturl %}
+      {% if '/layouts/' in currenturl %}
       <button
         id="headingSixButton"
         class="accordion-button"
@@ -253,7 +253,7 @@
         data-bs-target="#collapseSix"
         aria-expanded="true"
         aria-controls="collapseSix">
-        Page templates
+        Layouts
       </button>
       {% else %}
       <button
@@ -264,30 +264,30 @@
         data-bs-target="#collapseSix"
         aria-expanded="false"
         aria-controls="collapseSix">
-        Page templates
+        Layouts
       </button>
       {% endif %}
     </h2>
-    <div id="collapseSix" class="accordion-collapse collapse {% if '/page-templates/' in currenturl %}show{% endif %}" aria-labelledby="headingSix">
+    <div id="collapseSix" class="accordion-collapse collapse {% if '/layouts/' in currenturl %}show{% endif %}" aria-labelledby="headingSix">
       <div class="accordion-body">
         <ul class="accordion-list">
           <li>
-            <a class="docs-accordion-link {% if '/standard-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/standard-page' | url }}">Standard page</a>
+            <a class="docs-accordion-link {% if '/standard-page' in currenturl %}active{% endif %}" href="{{ '/layouts/standard-page' | url }}">Standard page</a>
           </li>
           <li>
-            <a class="docs-accordion-link {% if '/anchor-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/anchor-page' | url }}">Anchor page</a>
+            <a class="docs-accordion-link {% if '/anchor-page' in currenturl %}active{% endif %}" href="{{ '/layouts/anchor-page' | url }}">Anchor page</a>
           </li>
             <li>
-            <a class="docs-accordion-link {% if '/chaptered-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/chaptered-page' | url }}">Chaptered page</a>
+            <a class="docs-accordion-link {% if '/chaptered-page' in currenturl %}active{% endif %}" href="{{ '/layouts/chaptered-page' | url }}">Chaptered page</a>
           </li>
             <li>
-            <a class="docs-accordion-link {% if '/step-by-step-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/step-by-step-page' | url }}">Step by step page</a>
+            <a class="docs-accordion-link {% if '/step-by-step-page' in currenturl %}active{% endif %}" href="{{ '/layouts/step-by-step-page' | url }}">Step by step page</a>
           </li>
             <li>
-            <a class="docs-accordion-link {% if '/umbrella-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/umbrella-page' | url }}">Umbrella page</a>
+            <a class="docs-accordion-link {% if '/umbrella-page' in currenturl %}active{% endif %}" href="{{ '/layouts/umbrella-page' | url }}">Umbrella page</a>
           </li>
             <li>
-            <a class="docs-accordion-link {% if '/navigation-page' in currenturl %}active{% endif %}" href="{{ '/page-templates/navigation-page' | url }}">Navigation page</a>
+            <a class="docs-accordion-link {% if '/navigation-page' in currenturl %}active{% endif %}" href="{{ '/layouts/navigation-page' | url }}">Navigation page</a>
           </li>
         </ul>
       </div>
