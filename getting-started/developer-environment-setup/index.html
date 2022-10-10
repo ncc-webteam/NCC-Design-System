@@ -656,20 +656,57 @@
 <div class="components-main-section col-12 col-lg-8 mb-5">    
 
   <h1>Developer environment setup</h1>
-  <p class="lead">This page will provide the details of setting up a developer environment on your system. Before you start, make sure you have the latest version of Node.js installed on your system.</p>
+  <p class="lead">This page will provide the details of setting up a developer environment on your system. Make sure to refer to the <a href="#further-setup">further setup</a> section which goes over some important steps you might need later, such as GitHub Pages setup and adding additional directories.</p>
 
-  <h2>Full setup - start from zero</h2>
+  <h2 class="mt-5">Prerequisites</h2>
 
-  <ol>
-    <li><p class="mt-5">Create a new folder. This will be your project directory. It doesn't matter what you call this folder but make sure it's relevant and memorable to you.</p></li>
+  <p>In order to make changes to existing sites or develop new ones, you must first install and configure Node.js and Git.</p>
 
-    <li><p class="mt-5">Open a terminal window in the project folder and type: <kbd>npm init -y</kbd></p></li>
+  <ol class="setup-steps-list">
+    <li>Install Node.js from <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+    <li>Install Git from <a href="https://git-scm.com/">https://git-scm.com/</a></li>
+  </ol>
 
-    <li><p class="mt-5">Now type: <kbd>npm install @11ty/eleventy sass npm-run-all</kbd></p></li>
+  <p>The links given will also include installation and setup instructions.</p>
 
-    <li><p class="mt-5">Create the file: <code>.eleventy.js</code></p></li>
+  <p>If installing on a NCC computer, you should install using the software center.</p>
 
-    <li><p class="mt-5">Insert the following code into <code>.eleventy.js</code>:</p>
+  <p>There are several ways to make use of Git. The choice is yours, but the recomended way is to use the built-in Git functionality within Visual Studio Code, which can be installed from the software center or downloaded <a href="https://code.visualstudio.com/">here</a>.</p>
+  
+  <p>
+    You will have to link Git with your GitHub account if you want to publish your work or contribute to existing projects. If using VSCode, simply enter the following commands into your command line:
+    <br><br>
+    <kbd>git config --global user.name "&lt;your GitHub username&gt;"</kbd>
+    <br>
+    <kbd>git config --global user.email "&lt;your GitHub email&gt;"</kbd>
+    <br><br>
+    When you try to modify a GitHub repository for the first time, VSCode will authenticate your account via your browser, assuming you are logged in to GitHub on your browser. This should be a quick and easy process.
+  </p>
+
+  <h2 class="mt-5">Setting up a new repository</h2>
+
+  <p>If you wish to create a new repository, you may do so in two ways - using the provided template repository, or creating a new one from scratch.</p>
+
+  <h3 class="mt-4">Easy setup - using template</h2>
+
+  <ol class="setup-steps-list">
+    <li>Go to <a href="https://github.com/ncc-webteam/ncc-eleventy-template">ncc-eleventy-template</a></li>
+    <li>Click the 'Use this template' button and let GitHub guide you through creating a new repository!
+    <img style="width: 100%;" src="/NCC-Design-System/public/img/templatescreenshot.png" alt="Screenshot of the front page of the 'ncc-eleventy-template' repository."></li>
+  </ol>
+
+  <h3 class="mt-4">Full setup - start from zero</h2>
+
+  <ol class="setup-steps-list">
+    <li>Create a new folder. This will be your project directory. It doesn't matter what you call this folder but make sure it's relevant and memorable to you.</li>
+
+    <li>Open a terminal window in the project folder and type: <kbd>npm init -y</kbd></li>
+
+    <li>Now type: <kbd>npm install @11ty/eleventy sass npm-run-all</kbd></li>
+
+    <li>Create the file: <code>.eleventy.js</code></li>
+
+    <li>Insert the following code into <code>.eleventy.js</code>:
     <pre><code class="language-js">let Nunjucks = require(&quot;nunjucks&quot;);
 
 module.exports = function(eleventyConfig) {
@@ -691,42 +728,61 @@ module.exports = function(eleventyConfig) {
   };
 };</code></pre></li>
 
-    <li><p class="mt-5">Replace the content of the <code>scripts</code> block in <code>package.json</code> with the following:</p><pre><code class="language-json">"watch:sass": "sass --watch src/sass:public/css",
+    <li>Replace the content of the <code>scripts</code> block in <code>package.json</code> with the following:<pre><code class="language-json">"watch:sass": "sass --watch src/sass:public/css",
 "build:sass": "sass src/sass:public/css",
 "watch:eleventy": "eleventy --serve",
 "build:eleventy": "eleventy",
 "start": "npm-run-all build:sass --parallel watch:*",
 "build": "npm-run-all build:*"</code></pre></li>
 
-    <li><p class="mt-5">Create directory <code>src</code> and in <code>src</code>, create directory <code>_includes</code></p></li>
+    <li>Create directory <code>src</code> and in <code>src</code>, create directory <code>_includes</code></li>
 
-    <li><p class="mt-5">In <code>_includes</code>, create the file <code>template.njk</code></p></li>
+    <li>In <code>_includes</code>, create the file <code>template.njk</code></li>
 
-    <li><p class="mt-5">In <code>template.njk</code>, paste in some boilerplate HTML with the addition of <br><kbd>{% block main %}{% endblock %}</kbd> somewhere in the body (i.e. inside the <kbd>&lt;main&gt;</kbd> tag)</p></li>
+    <li>In <code>template.njk</code>, paste in some boilerplate HTML with the addition of <br><kbd>{% block main %}{% endblock %}</kbd> somewhere in the body (i.e. inside the <kbd>&lt;main&gt;</kbd> tag)</li>
 
-    <li><p class="mt-5">In <code>src</code>, create the file <code>index.njk</code></p></li>
+    <li>In <code>src</code>, create the file <code>index.njk</code></li>
 
-    <li><p class="mt-5">In <code>index.njk</code>, enter the following:</p><pre><code class="language-html">{% extends "template.njk" %}
+    <li>In <code>index.njk</code>, enter the following:<pre><code class="language-html">{% extends "template.njk" %}
 {% block main %}
   &lt;p&gt;Some random HTML&lt;/p&gt;
 {% endblock %}</code></pre></li>
 
-    <li><p class="mt-5">In <code>src</code>, create directory <code>sass</code> and inside, add a <code>style.scss</code> file with some basic styling.</p></li>
+    <li>In <code>src</code>, create directory <code>sass</code> and inside, add a <code>style.scss</code> file with some basic styling.</li>
 
-    <li><p class="mt-5">Link the CSS in template.njk ( <kbd>&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/style.css&quot;&gt;</kbd> )</p></li>
+    <li>Link the CSS in template.njk ( <kbd>&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/style.css&quot;&gt;</kbd> )</li>
 
-    <li><p class="mt-5">Insert the following into <code>.eleventy.js</code>, within the <code>module.exports</code> block:</p><pre><code class="language-js">eleventyConfig.addWatchTarget("./src/sass/");
+    <li>Insert the following into <code>.eleventy.js</code>, within the <code>module.exports</code> block:<pre><code class="language-js">eleventyConfig.addWatchTarget("./src/sass/");
 eleventyConfig.addPassthroughCopy("./src/img/");</code></pre></li>
   </ol>
 
-  <p class="lead my-5">Everything should now be fully working!</p>
+  <p>Everything should now be fully working!</p>
 
-  <h2>Easy setup - using template</h2>
+  <h2 id="further-setup" class="mt-5">Further setup</h2>
 
-  <ol>
-    <li><p class="mt-5">Click the 'Use this template' button and let GitHub guide you through creating a new repository!</p>
-    <img style="width: 100%;" src="/NCC-Design-System/public/img/templatescreenshot.png" alt="Screenshot of the front page of the 'ncc-eleventy-template' repository."></li>
-  </ol>
+  <h3 class="mt-4">Using GitHub Pages</h2>
+
+  <p>GitHub pages is a really convenient way to get our sites usable. We are provided with a url to a live deployment of our project which we can share with others. We can also use our own custom domains.</p>
+    
+  <p>In order to get our sites working with GitHub Pages, we must first create a file with the name <code>index.html</code> within our root directory - this is where our <code>.eleventy.js</code> file is located. The contents of <code>index.html</code> must be as follows: </p>
+
+  <pre><code>&lt;!doctype html&gt;
+&lt;meta http-equiv="refresh" content="0; url=/NCC-Design-System/public/"&gt;
+&lt;title&gt;Browsersync pathPrefix Redirect&lt;/title&gt;
+&lt;a href="/NCC-Design-System/public/"&gt;Go to /NCC-Design-System/public/&lt;/a&gt;
+</code></pre>
+
+  <p>Note that you must replace the <code>"/NCC-Design-System/"</code> part of the url with the name of your repository. This is case sensitive.</p>
+
+  <p>The reason we do this is because eleventy places the processed, front-facing HTML files in the <code>/public</code> folder. However, GitHub Pages needs an <code>index.html</code> file in the root directory to use as a home page. This file simply redirects the user to the actual home page located within <code>/public</code>.</p>
+
+  <h3 class="mt-4">Adding additional directories</h2>
+
+  <p>In step 14 of the full setup guide, we add some code to <code>.eleventy.js</code>. This code is responsible for telling eleventy to look inside a particular folder to process the contents and add them to the front-facing <code>/public</code> folder.</p>
+
+  <p>In other words, we need to do this if we want a directory for our CSS files, images, scripts, etc. For example: </p><pre class="language-js"><code>eleventyConfig.addWatchTarget("./src/sass/");</code></pre> <p>allows eleventy to "watch" the <code>.scss</code> files inside the <code>/sass</code> folder, which allows us to view changes made to those files dynamically.</p>
+
+  <p>On the other hand, </p><pre><code class="language-js">eleventyConfig.addPassthroughCopy("./src/img/");</code></pre> <p>will create a copy of the <code>/src/img</code> folder inside <code>/public</code>, which will allow our sites to access the images we place inside the folder. This same logic can be applied to other folders too, such as a <code>/src/scripts</code> folder for our JavaScript files.</p>
 
 </div>
 
