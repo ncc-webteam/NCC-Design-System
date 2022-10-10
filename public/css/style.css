@@ -13081,6 +13081,14 @@ a:focus {
   outline: none;
 }
 
+.setup-steps-list {
+  margin: 40px 0px;
+}
+.setup-steps-list li {
+  font-size: 1.125rem;
+  margin: 20px 0px;
+}
+
 pre {
   font-size: 1.125rem;
   border-radius: 6px;
