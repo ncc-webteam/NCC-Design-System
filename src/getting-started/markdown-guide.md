@@ -5,7 +5,7 @@ title: Markdown guide
 
 ---------------------------------------------------
 
-Everything below this line (<hr>), including the line itself, has been written in Markdown. This is because classes cannot be added to elements in Markdown, i.e. the <p> element with the class "lead" was written as HTML in the 'source' file for this page. 
+Everything below this line (`<hr>`), including the line itself, has been written in Markdown. This is because classes cannot be added to elements in Markdown, i.e. the `<p>` element with the class "lead" was written as HTML in the 'source' file for this page. 
 
 The following two screenshots will make this idea more clear:
 
@@ -23,7 +23,7 @@ So that should give a rough idea of how the Markdown files are structured in rel
 
 To write a paragraph, simply type some text.
 
-Headings are written by placing a # before the heading text. A single # is a <h1>, ## is a <h2>, etc.
+Headings are written by placing a # before the heading text. A single # is a `<h1>`, ## is a `<h2>`, etc.
 
 The guide at the bottom of the page explains Markdown syntax very clearly.
 
