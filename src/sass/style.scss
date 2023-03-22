@@ -227,3 +227,11 @@ p code {
   opacity: 1;
   height: 2px !important;
 }
+
+.markdown-content {
+  max-width: 100%;
+
+  img {
+    max-width: 100%;
+  }
+}
