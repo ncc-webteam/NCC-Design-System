@@ -111,6 +111,10 @@
       outline: none;
       text-decoration: underline;
     }
+
+    code {
+      color: $focus-text-colour;
+    }
   }
 }
 

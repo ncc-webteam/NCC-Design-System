@@ -11238,6 +11238,9 @@ textarea.form-control-lg {
   outline: none;
   text-decoration: underline;
 }
+.card:focus-within code {
+  color: #0b0c0c;
+}
 
 .nohover:hover {
   box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);

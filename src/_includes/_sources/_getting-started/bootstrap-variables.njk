@@ -1,0 +1,326 @@
+{% extends "documentation.njk" %}
+
+{% import "_pattern_macros/docs_accordion.njk" as docsaccordion %}
+{% import "_pattern_macros/breadcrumb.njk" as breadcrumbmacro %}
+{% import "_pattern_macros/general_card.njk" as generalcard %}
+
+{% set title = 'Bootstrap Variables' %}
+
+{% block breadcrumb %}
+  {{ breadcrumbmacro.breadcrumb(page.url, title) }}
+{% endblock %}
+
+
+{% block componentdesc %}
+
+<div class="components-list-section col-lg-4 col-12">
+  {{ docsaccordion.docsaccordion(page.url) }}
+</div>
+
+<div class="components-main-section col-12 col-lg-8 mb-5">
+  <h1>Bootstrap Variables</h1>
+  <p class="lead">This is a place for us to document our changes to Bootstrap source code i.e. make changes to variables. Its also where we can record colour choices per site.</p>
+
+  <h2 class="mt-5">Focus styling</h2>
+  <p>Focus styling for interactive elements (links/buttons...) is kept consistant throughout all of our sites. We want to utilise a bright yellow background with black text / outlines, or a single yellow outline depending on the element.</p>
+
+  <p>Try using tab to put the two cards in focus, in order to see what the focus styling looks like.</p>
+
+  <div class="row gx-2 gx-md-3 gx-lg-4 gy-2 gy-md-3 gy-lg-4">
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #0b0c0c;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#0b0c0c</p>
+          <h3 class="card-title h5">"Focus black"</h3>
+          <p class="card-text"><code>$focus-text-colour</code></p>
+          <h3 class="card-title h3"><a class="stretched-link" href="#"></a></h3>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #ffdd00;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#ffdd00</p>
+          <h3 class="card-title h5">"Focus yellow"</h3>
+          <p class="card-text"><code>$focus-colour</code></p>
+          <h3 class="card-title h3"><a class="stretched-link" href="#"></a></h3>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <h2 class="mt-5">Page widths</h2>
+  <p>The container widths are kept mostly the same as BS defaults, with the exception of some of the largest sizes (in bold).</p>
+
+  <table class="table">
+    <thead>
+      <tr>
+      <th></th>
+      <th>Extra small<div class="fw-normal">&lt;576px</div></th>
+      <th>Small<div class="fw-normal">≥576px</div></th>
+      <th>Medium<div class="fw-normal">≥768px</div></th>
+      <th>Large<div class="fw-normal">≥992px</div></th>
+      <th>X-Large<div class="fw-normal">≥1200px</div></th>
+      <th>XX-Large<div class="fw-normal">≥1400px</div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td><code>.container</code></td>
+      <td><span class="text-muted">100%</span></td>
+      <td>540px</td>
+      <td>720px</td>
+      <td>960px</td>
+      <td><strong style="font-weight: 900">1170px</strong> <del>1140px</del></td>
+      <td><strong style="font-weight: 900">1170px</strong> <del>1320px</del></td>
+      </tr>
+      <tr>
+      <td><code>.container-sm</code></td>
+      <td><span class="text-muted">100%</span></td>
+      <td>540px</td>
+      <td>720px</td>
+      <td>960px</td>
+      <td><strong style="font-weight: 900">1170px</strong> <del>1140px</del></td>
+      <td><strong style="font-weight: 900">1170px</strong> <del>1320px</del></td>
+      </tr>
+      <tr>
+      <td><code>.container-md</code></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td>720px</td>
+      <td>960px</td>
+      <td><strong style="font-weight: 900">1170px</strong> <del>1140px</del></td>
+      <td><strong style="font-weight: 900">1170px</strong> <del>1320px</del></td>
+      </tr>
+      <tr>
+      <td><code>.container-lg</code></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td>960px</td>
+      <td><strong style="font-weight: 900">1170px</strong> <del>1140px</del></td>
+      <td><strong style="font-weight: 900">1170px</strong> <del>1320px</del></td>
+      </tr>
+      <tr>
+      <td><code>.container-xl</code></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><strong style="font-weight: 900">1170px</strong> <del>1140px</del></td>
+      <td><strong style="font-weight: 900">1170px</strong> <del>1320px</del></td>
+      </tr>
+      <tr>
+      <td><code>.container-xxl</code></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><strong style="font-weight: 900">1170px</strong> <del>1320px</del></td>
+      </tr>
+      <tr>
+      <td><code>.container-fluid</code></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      <td><span class="text-muted">100%</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h2 class="mt-5">Norfolk colours</h2>
+
+  <div class="row gx-2 gx-md-3 gx-lg-4 gy-2 gy-md-3 gy-lg-4">
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #050505;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#050505</p>
+          <h3 class="card-title h5">Black</h3>
+          <p class="card-text">Primary text colour.</p>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #006666;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#006666</p>
+          <h3 class="card-title h5">Teal</h3>
+          <p>Primary colour theme for all Norfolk.gov sites.</p>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #3366CC;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#3366CC</p>
+          <h3 class="card-title h5">Link blue</h3>
+          <p class="card-text">Used for links.</p>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <h2 class="mt-5">Museums colours</h2>
+
+  <div class="row gx-2 gx-md-3 gx-lg-4 gy-2 gy-md-3 gy-lg-4">
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #050505;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#050505</p>
+          <h3 class="card-title h5">Black</h3>
+          <p class="card-text">Primary text colour.</p>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #00235d;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#00235d</p>
+          <h3 class="card-title h5">"Museums blue"</h3>
+          <p class="card-text">Primary base colour theme for Museums. This is to be overridden by individual Museums pages.</p>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #3366CC;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#3366CC</p>
+          <h3 class="card-title h5">Link blue</h3>
+          <p class="card-text">Used for links.</p>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <h3 class="mt-4">Museum themes</h3>
+
+  <div class="row gx-2 gx-md-3 gx-lg-4 gy-2 gy-md-3 gy-lg-4">
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #42145F;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#42145F</p>
+          <h3 class="card-title h5">Norwich Castle Museum &amp; Art Gallery</h3>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #597730;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#597730</p>
+          <h3 class="card-title h5">Gressenhall Farm and Workhouse</h3>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #161E69;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#161E69</p>
+          <h3 class="card-title h5">Time and Tide (Great Yarmouth)</h3>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #CB4363;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#CB4363</p>
+          <h3 class="card-title h5">Museum of Norwich</h3>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #CF171D;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#CF171D</p>
+          <h3 class="card-title h5">Elizabethan House (Great Yarmouth)</h3>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #B32017;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#B32017</p>
+          <h3 class="card-title h5">Strangers' Hall (Norwich)</h3>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #80623C;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#80623C</p>
+          <h3 class="card-title h5">Lynn Museum</h3>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #0070A5;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#0070A5</p>
+          <h3 class="card-title h5">Cromer Museum</h3>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #7E6B71;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#7E6B71</p>
+          <h3 class="card-title h5">Tolhouse Gaol (Great Yarmouth)</h3>
+        </div>        
+      </div>
+    </div>
+    <div class="col-lg-3 col-6">
+      <div class="card card-light section-nav-card h-100">
+        <div class="img-wrapper" style="padding-top: 62.5%; background: #4C7285;">
+        </div>
+        <div class="card-body p-4">
+          <p class="card-extra-info">#4C7285</p>
+          <h3 class="card-title h5">Ancient House (Thetford)</h3>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  {# <div class="markdown-content">
+    {{ content | safe }}
+  </div> #}
+
+</div>
+
+{% endblock %}
