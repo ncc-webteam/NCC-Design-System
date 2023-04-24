@@ -614,6 +614,9 @@
           <li>
             <a id="swiper-v2-link" class="swiper-v2-link " href="/NCC-Design-System/public/components/swiper-v2">Swiper v2</a>
           </li>
+          <li>
+            <a id="ncd-search-link" class="ncd-search-link " href="/NCC-Design-System/public/components/ncd-search">NCD search widget</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -675,12 +678,138 @@
 <h2>Principles</h2>
 <h3>Aspire</h3>
 <p>Great pages should ASPIRE to be:</p>
-<h4><strong>Accessible</strong> to folks with varying cognitive and physical abilities and disabilities</h4>
-<h4>Secure</h4>
-<h4>Performant</h4>
-<h4>Inclisive</h4>
-<h4>Responsive</h4>
-<h4>Ethical</h4>
+<ul>
+<li>
+<p><strong>Accessible</strong> to folks with varying cognitive and physical abilities and disabilities.</p>
+<blockquote>
+<p>Accessibility is at the forefront of our considerations. It is much easier to bake these considerations in at the start than to retroactively add them. That means colour contrasts should always be checked (WCAG Level AA - 4.5 colour ratio) and semantic HTML should always be used.</p>
+</blockquote>
+<ul>
+<li><a href="https://contrast-ratio.com/">Quick WCAG colour checker</a></li>
+<li><a href="https://contrastchecker.com/">Advanced WCAG colour checker</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Secure</strong> and reliable for storing, manipulating, and transferring information.</p>
+</li>
+<li>
+<p><strong>Performant</strong> on average devices and in constrained or unreliable network conditions.</p>
+</li>
+<li>
+<p><strong>Inclisive</strong> to diverse audiences and produced by diverse teams to create better experiences.</p>
+</li>
+<li>
+<p><strong>Responsive</strong> in adapting the user interface contextually to any screen.</p>
+</li>
+<li>
+<p><strong>Ethical</strong> in how users’ preferences and data are handled.</p>
+</li>
+</ul>
+<h2>Strategy</h2>
+<h3>Simple appeals to everyone</h3>
+<p>Our audience is vast and varied, the best way to provide content to them is to make things simple. Don't waffle and certainly don't overload the user.</p>
+<h3>Content is key</h3>
+<p>The user comes first always. All design elements are there to support the user on their journey to their content.</p>
+<h3>Smart defaults</h3>
+<p>Making components customisation gives us flexibility in achieving a desired look for a desired effect. However our defaults should always be carefully chosen.</p>
+<h2>Typography</h2>
+<h3>Line height</h3>
+<pre><code>main *, aside * {
+  line-height: 180%;
+}
+h1, h2 {
+  line-height: 120%;  
+}
+h3 {
+  line-height: 130%;
+}
+</code></pre>
+<h3>REM</h3>
+<p>All REM values consider this added to root:</p>
+<pre><code>:root {
+  font-size: 16px;
+}
+</code></pre>
+<h3>Overriding heading/utility classes</h3>
+<pre><code>.h1 {font-size: 3rem !important; line-height: 120%;}
+.h2 {margin-top: 30px; font-size:  2rem !important;}
+.h3 {font-size: 1.5rem !important;}
+.h4 {font-size: 1.25rem !important;}
+.h5 {font-size: 1.125rem !important;}
+.h1 {line-height: 120%;}
+.h2 {line-height: 120%;}
+.h3 {line-height: 130%;}
+</code></pre>
+<p>You can make any heading look like another by setting the classes as listed above.</p>
+<h2>Layout</h2>
+<h3>Grid</h3>
+<h4>Baseline</h4>
+<ul>
+<li>Do you have a baseline grid? Why?</li>
+<li>Is it ever OK to place something off the grid?</li>
+<li>Does the baseline grid differ between content and typography?</li>
+</ul>
+<h4>Columns</h4>
+<ul>
+<li>Do you use a column system or a horizontal grid?</li>
+<li>Are there any best practices around maximum content column widths, or the maximum number of content columns?</li>
+<li>How do gutters work?</li>
+</ul>
+<h4>Spacing</h4>
+<ul>
+<li>Do you have a common set of spacings?</li>
+<li>What are the best practices for applying these different levels of spacing?</li>
+<li>What is the corresponding spacing in code? For example:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Spacing    -</th>
+<th>Sass variable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4px</td>
+<td>$spacing-xxs</td>
+</tr>
+<tr>
+<td>8px</td>
+<td>$spacing-xs</td>
+</tr>
+<tr>
+<td>16px</td>
+<td>$spacing-s</td>
+</tr>
+<tr>
+<td>24px</td>
+<td>$spacing-m</td>
+</tr>
+<tr>
+<td>48px</td>
+<td>$spacing-l</td>
+</tr>
+<tr>
+<td>96px</td>
+<td>$spacing-xl</td>
+</tr>
+</tbody>
+</table>
+<p>Breakpoints</p>
+<p>Do you have well-defined breakpoints? Documenting them here can help make it clear when and how to adjust content responsively, e.g.</p>
+<p><img src="/NCC-Design-System/public/img/breakpoints-zh-old.jpg" alt="Diagram showing different breakpoints on various screen sizes" title="Breakpoints"></p>
+<pre><code>// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+</code></pre>
 
   </div>
 
