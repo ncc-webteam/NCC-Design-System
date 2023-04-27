@@ -672,15 +672,53 @@
 <p>It links customers directly to the search results page in the Norfolk Community Directory based on the valued entered by the customer.</p>
 <p>The search widget can be generic (offering keyword and location search fields)</p>
 <p>or customised around a topic (offering a particular category or additional information (AI) field).</p>
+<p><img src="/NCC-Design-System/public/img/ncd-1.jpg" alt=""></p>
 <h2>Configure a new category or AI field</h2>
 <h3>Determine what you want to search</h3>
 <p>The NCD organises Categories and Additional Information (AI) fields with a 1-4 digit number. So to create a widget to search these category or AI topics, you first need to find what their numbers are in the NCD.</p>
 <p>By selecting a category or AI field in the Directory you can see these numbers in the URL.</p>
 <p>For example, if you select the category of &quot;Childcare&quot;, you will see &quot;CategoryID=73&quot; in the URL.</p>
 <p>https://communitydirectory.norfolk.gov.uk/Search?CategoryId=73&amp;SM=ServiceSearch&amp;UDG=True&amp;SME=True</p>
+<p><img src="/NCC-Design-System/public/img/ncd-2.jpg" alt=""></p>
 <p>Or, for the AI field &quot;Funded places: 2 year old funded places&quot;, the URL shows</p>
 <p>AI%5b0%5d=130</p>
 <p>https://communitydirectory.norfolk.gov.uk/Search?AI%5b0%5d=130&amp;UDG=True&amp;OrderBy=Relevance&amp;SM=ServiceSearch&amp;SME=True</p>
+<p><img src="/NCC-Design-System/public/img/ncd-3.jpg" alt=""></p>
+<h3>Create a new category or AI setting in SItecore</h3>
+<p>In the Content Editor go to Content/Norfolk/Settings/Norfolk Community Directory/ and then choose either &quot;Additional Info&quot; or &quot;Content&quot;.</p>
+<p>In this example we will create a new AI field for '2 year old funded places'</p>
+<p>Right click on the &quot;Additional Info&quot; settings folder, and choose, Insert/Data</p>
+<p><img src="/NCC-Design-System/public/img/ncd-4.jpg" alt=""></p>
+<p>A pop up asking you to name the new AI data. Give it a plain English name that makes sense.  Click OK.</p>
+<p><img src="/NCC-Design-System/public/img/ncd-5.jpg" alt=""></p>
+<p>The new AI data will be created. Note, the 'Value' just copies the name.</p>
+<p><img src="/NCC-Design-System/public/img/ncd-6.jpg" alt=""></p>
+<p>You must overwrite the Value filed with the appropriate AI number found in the NCD Url. This number lets the widget find the AI or category your want to search for.</p>
+<p><img src="/NCC-Design-System/public/img/ncd-7.jpg" alt=""></p>
+<p><img src="/NCC-Design-System/public/img/ncd-8.jpg" alt=""></p>
+<p>Save your work. Then you can see the new AI data in the Setting folders.</p>
+<h3>Create and Configure your new widget</h3>
+<h4>Create</h4>
+<p>In Content/Norfolk/Shared Folder/Norfolk Community Directory right click to Insert a new &quot;Norfolk Community Directory&quot; component.</p>
+<p><img src="/NCC-Design-System/public/img/ncd-9.jpg" alt=""></p>
+<p>Enter a name for the new widget</p>
+<p><img src="/NCC-Design-System/public/img/ncd-10.jpg" alt=""></p>
+<h4>Configure</h4>
+<p>Title: This is the text that shows on the Widget. It may be helpful to start the title with &quot;Find local...&quot;</p>
+<p>Keyword search: This used for a generic search (no defined AI or Category number). For a basic location search, un-tick &quot;keyword search&quot;</p>
+<p><img src="/NCC-Design-System/public/img/ncd-11.jpg" alt=""></p>
+<p>The Category and Additional Information drop downs contain the data values that are created in Settings. For this example, we choose, 2 year old funded childcare.</p>
+<p><img src="/NCC-Design-System/public/img/ncd-12.jpg" alt=""></p>
+<p>Save your work. You can now see the new component in under the Norfolk Community Directory folder.</p>
+<p><img src="/NCC-Design-System/public/img/ncd-13.jpg" alt=""></p>
+<h3>Add the component to a page</h3>
+<p>In Experience Editor, add a component to the right hand side bar. Choose the Norfolk Community Directory (one with the green logo)</p>
+<p><img src="/NCC-Design-System/public/img/ncd-14.jpg" alt=""></p>
+<p>Select the component that you created from the list of all Directory widgets.</p>
+<p><img src="/NCC-Design-System/public/img/ncd-15.jpg" alt=""></p>
+<p>Note: The widget will not work from the experience editor. To test the widget, choose 'Versions/Other/Preview' and test if from this screen.</p>
+<p><img src="/NCC-Design-System/public/img/ncd-16.jpg" alt=""></p>
+<p>Save your work, submit/approve to publish.</p>
 
     
   <div class="row mt-0 mb-5 g-md-4 g-2">
